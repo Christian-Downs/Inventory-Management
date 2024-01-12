@@ -1,0 +1,12 @@
+.no-bakcground {
+  background: none !important;
+}
+.modal-content {
+  background: none !important;
+  border: none !important;
+}
+.table-responsive {
+  overflow: auto !important;
+  height: 400px !important;
+}
+
