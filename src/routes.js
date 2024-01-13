@@ -24,6 +24,7 @@ import TableList from "views/TableList.js";
 import Typography from "views/Typography.js";
 import UserProfile from "views/UserProfile.js";
 import Inventory from "views/Inventory";
+import Packages from "views/Packages";
 
 var routes = [
   {
@@ -31,6 +32,14 @@ var routes = [
     name: "inventory",
     icon: "tim-icons icon-app",
     component: <Inventory />,
+    layout: "/admin",
+  },
+    {
+    path: "/Package",
+    name: "Package",
+    rtlName: "طباعة",
+    icon: "tim-icons icon-basket-simple",
+    component: <Packages />,
     layout: "/admin",
   },
   {
@@ -89,13 +98,6 @@ var routes = [
     component: <Typography />,
     layout: "/admin",
   },
-  {
-    path: "/rtl-support",
-    name: "RTL Support",
-    rtlName: "ار تي ال",
-    icon: "tim-icons icon-world",
-    component: <Rtl />,
-    layout: "/rtl",
-  },
+
 ];
 export default routes;

@@ -68,3 +68,9 @@ export async function getItemById(id) {
     const response = await axios.get(`${serverUrl}/api/inventory/${id}`);
     return response.data;
 }
+
+export async function deleteItemsById(id) {
+  const serverUrl = process.env.REACT_APP_SERVER_URL;
+  const response = await axios.delete(`${serverUrl}/api/inventory/${id}`);
+  return response.data;
+}

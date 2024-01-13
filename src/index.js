@@ -41,7 +41,7 @@ root.render(
           {/* <Route path="/rtl/*" element={<RTLLayout />} /> */}
           <Route
             path="*"
-            element={<Navigate to="/admin/dashboard" replace />}
+            element={<Navigate to="/admin/inventory" replace />}
           />
         </Routes>
       </BrowserRouter>

@@ -24,7 +24,7 @@ const AddItemModal = ({ isOpen, toggle, addItem }) => {
       description: "",
       quantity: 0,
       cost: 0,
-      price: 0,
+      rent_price: 0,
       image: "",
       checked_out: false
   });
@@ -36,20 +36,28 @@ const AddItemModal = ({ isOpen, toggle, addItem }) => {
   };
 
   const handleSubmit = (e) => {
-    if(!newItem.name || !newItem.description || !newItem.quantity || !newItem.cost || !newItem.price || !newItem.image){
-        alert("Please fill out all fields");
+    if (
+      !newItem.name ||
+      !newItem.description ||
+      !newItem.quantity ||
+      !newItem.rent_price ||
+      !newItem.cost ||
+      !newItem.image
+    ) {
+      alert("Please fill out all fields");
     } else {
-        e.preventDefault();
-        addItem(newItem);
-        toggle();
+      e.preventDefault();
+      addItem(newItem);
+      toggle();
     }
   };
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     if (file) {
-        setNewItem({ ...newItem, image: file });
+
         getBase64(file, (result) => {
+            setNewItem({ ...newItem, image: result });
             setPreview(result);
             console.log(result);
         });
@@ -63,13 +71,14 @@ const AddItemModal = ({ isOpen, toggle, addItem }) => {
   }
 
   const closeModal = () => { 
-    setNewItem({      name: "",
+    setNewItem({
+      name: "",
       description: "",
       quantity: 0,
       cost: 0,
-      price: 0,
+      rent_price: 0,
       image: "",
-      checked_out: false
+      checked_out: false,
     });
     setPreview(null);
     toggle();
@@ -125,12 +134,12 @@ const AddItemModal = ({ isOpen, toggle, addItem }) => {
                 placeholder="Cost"
                 onChange={handleInputChange}
               />
-              <Label for="price">Price</Label>
+              <Label for="rent_price">Rent Price</Label>
               <Input
                 type="number"
-                name="price"
-                id="price"
-                placeholder="Price"
+                name="rent_price"
+                id="rent_price"
+                placeholder="Rent Price"
                 onChange={handleInputChange}
               />
               {/* Image upload input */}
