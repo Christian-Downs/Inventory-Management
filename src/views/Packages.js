@@ -10,12 +10,22 @@ import {
 } from "reactstrap";import { useState } from "react";
 import { Input, FormGroup, Label, Button } from "reactstrap";
 import { getPackages } from "Controller/PackageController";
+import PackageTable from "components/Tables/PackageTable";
+import { checkOutPackages } from "Controller/PackageController";
+import { checkInPackages } from "Controller/PackageController";
+import { deletePackagesById } from "Controller/PackageController";
 
 function Packages() {
   const [searchTerm, setSearchTerm] = useState(""); // "a"
   const [packages, setPackages] = useState([]); // [1, 2, 3]
     const [selectedIds, setSelectedIds] = useState([]); // [1, 2, 3]
     const [isLoading, setIsLoading] = useState(true);
+    const [modal, setModal] = useState(false);
+    const [refreshInventory, setRefreshInventory] = useState(false);
+
+    const toggle = () => {
+        setModal(!modal);
+    }
 
     useEffect(() => {
         const fetchItems = async () => {
@@ -28,6 +38,45 @@ function Packages() {
         fetchItems();
     }, [])
 
+
+    const checkOut = () => {
+        if(selectedIds.length !== 0){
+            console.log("Sending selected ids to checkout: " + selectedIds)
+            checkOutPackages(selectedIds);
+            setRefreshInventory(true);
+            clearedSelectedIds()
+        }
+    }
+    const clearedSelectedIds = () => {
+        setSelectedIds([]);
+    };
+
+
+    const checkIn = () => {
+        if (selectedIds.length !== 0) {
+          console.log("Sending selected ids to checkin: " + selectedIds);
+          checkInPackages(selectedIds);
+          setRefreshInventory(true);
+          clearedSelectedIds();
+        }
+    }
+
+    const deleteItems = () => {
+        if(selectedIds.length !== 0){
+            for (var i = 0; i < selectedIds.length; i++) {
+                console.log("Sending selected ids to delete: " + selectedIds[i]);
+                deletePackagesById(selectedIds[i]);
+            }
+            clearedSelectedIds();
+            setRefreshInventory(true);
+            
+
+        }
+    }
+
+    const addTestItem = () => {
+
+    }
 
 
     if (isLoading) {
@@ -42,33 +91,33 @@ function Packages() {
               <CardHeader>
                 <CardTitle tag="h4">Packages</CardTitle>
               </CardHeader>
-              <Input
-                type="text"
-                placeholder="Search..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                style={{ width: "98%", marginLeft: "1%" }}
-              />
               <CardBody>
-                <Table className="tablesorter ps-child" responsive>
-                    <thead className="text-primary">
-                        <tr>
-                            <th>Select</th>
-                            <th>id</th>
-                            <th>Checked Out</th>
-                            <th>Item Name</th>
-                            <th>Item Description</th>
-                            <th>Quantity</th>
-                            <th>Cost</th>
-                            <th>Price</th>
-                            <th>Image</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-
-
-                    </tbody>
-                </Table>
+                <PackageTable
+                  selectedIds={selectedIds}
+                  setSelectedIds={setSelectedIds}
+                  refreshInventory={refreshInventory}
+                  setRefreshInventory={setRefreshInventory}
+                />
+                <Button color="primary" onClick={toggle}>
+                  {" "}
+                  Add Item{" "}
+                </Button>
+                <Button color="info" onClick={checkOut}>
+                  {" "}
+                  Check Out Items
+                </Button>
+                <Button color="info" onClick={checkIn}>
+                  {" "}
+                  Check In Items
+                </Button>
+                <Button color="danger" onClick={deleteItems}>
+                  {" "}
+                  Delete Items
+                </Button>
+                <Button color="warning" onClick={addTestItem}>
+                  {" "}
+                  Add Test Item
+                </Button>
               </CardBody>
             </Card>
           </Col>

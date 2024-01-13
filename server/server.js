@@ -286,7 +286,8 @@ app.get('/api/packages/:id', (req, res) => {
 
 //add package
 app.post('/api/packages', (req, res) => {
-  const { name, description, price, checked_out } = req.body;
+  const { name, description, price } = req.body;
+  const checked_out = false;
   db.run(`INSERT INTO package (name, description, price, checked_out) VALUES (?, ?, ?, ?)`, [name, description, price, checked_out], function (err) {
     if (err) {
       console.error(err.message);
@@ -326,6 +327,24 @@ app.put("/api/packages/check-out/:id", (req, res) => {
   );
 });
 
+//check out packages
+app.put("/api/packages/check-out-packages", (req, res) => {
+  const { ids } = req.body;
+  console.log("Checking out: " + ids);
+
+  db.run(
+    `UPDATE package SET checked_out = true WHERE id IN (${ids})`,
+    function (err) {
+      if (err) {
+        console.error(err.message);
+        res.json({ success: false, error: err.message });
+      } else {
+        getPackages(res);
+      }
+    }
+  );
+});
+
 //check in package
 app.put("/api/packages/check-in/:id", (req, res) => {
   const id = req.params.id;
@@ -345,6 +364,22 @@ app.put("/api/packages/check-in/:id", (req, res) => {
   );
 });
 
+//check in packages
+app.put("/api/packages/check-in-packages", (req, res) => {
+  const { ids } = req.body;
+  console.log("Checking in: " + ids)
+  db.run(
+    `UPDATE package SET checked_out = false WHERE id IN (${ids})`,
+    function (err) {
+      if (err) {
+        console.error(err.message);
+        res.json({ success: false, error: err.message });
+      } else {
+        getPackages(res);
+      }
+    }
+  );
+});
 //update package
 app.put("/api/packages/:id", (req, res) => {
   const id = req.params.id;

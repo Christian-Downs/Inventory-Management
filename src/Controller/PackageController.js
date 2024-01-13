@@ -14,7 +14,7 @@ export async function getPackages() {
         package1.name,
         package1.description,
         package1.price,
-        package1.image,
+        //package1.image,
         package1.checked_out
       )
   );
