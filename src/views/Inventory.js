@@ -25,7 +25,11 @@ import { getInventory } from "Controller/InventoryController.js";
 import { createInventoryItem } from "Controller/InventoryController";
 import { getItemById } from "Controller/InventoryController";
 
+import InventoryTable  from "components/Tables/InventoryTable";
+
 function Inventory() {
+  const [refreshInventory, setRefreshInventory] = useState(false);
+
   const [searchTerm, setSearchTerm] = useState(""); // "a"
 
   const [modal, setModal] = useState(false);
@@ -63,6 +67,7 @@ function Inventory() {
         console.log(item);
         setItems([...items, item[0]]);
         console.log(items);
+        setRefreshInventory(true);
       });
     });
   };
@@ -85,6 +90,7 @@ function Inventory() {
       console.log(newItems);
       clearedSelectedIds();
       setItems(newItems);
+      setRefreshInventory(true);
     }
   };
 
@@ -94,6 +100,7 @@ function Inventory() {
       console.log(newItems);
       clearedSelectedIds();
       setItems(newItems);
+      setRefreshInventory(true);
     }
   };
 
@@ -105,6 +112,7 @@ function Inventory() {
       var newItems = await getInventory();
       clearedSelectedIds();
       setItems(newItems);
+      setRefreshInventory(true);
     }
   };
 
@@ -132,94 +140,14 @@ function Inventory() {
             <CardHeader>
               <CardTitle tag="h4">Inventory Table</CardTitle>
             </CardHeader>
-            <Input
-              type="text"
-              placeholder="Search..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              style={{ width: "98%", marginLeft: "1%" }}
-            />
+
             <CardBody>
-              <Table className="tablesorter ps-child" responsive>
-                <thead className="text-primary">
-                  <tr>
-                    <th>Select</th>
-                    <th>id</th>
-                    <th>Checked Out</th>
-                    <th>Item Name</th>
-                    <th>Item Description</th>
-                    <th>Quantity</th>
-                    <th>Cost</th>
-                    <th>Price</th>
-                    <th>Image</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {items
-                    .filter((item) => {
-                      if (searchTerm != "") {
-                        if (item.name && item.description) {
-                          if (
-                            item.name
-                              .toLowerCase()
-                              .includes(searchTerm.toLowerCase()) ||
-                            item.description
-                              .toLowerCase()
-                              .includes(searchTerm.toLowerCase())
-                          ) {
-                            return item;
-                          }
-                        }
-                      } else {
-                        return item;
-                      }
-                    })
-                    .map(
-                      (item, index) => (
-                        (item.string_checked_out = item.checked_out
-                          ? "True"
-                          : "False"),
-                        (
-                          <tr key={index}>
-                            <td>
-                              <FormGroup check>
-                                <Label check style={{ textAlign: "center" }}>
-                                  <Input
-                                    type="checkbox"
-                                    style={{
-                                      visibility: "visible",
-                                      opacity: 1,
-                                      position: "relative",
-                                      left: "0px",
-                                      top: "0px",
-                                    }}
-                                    onChange={(e) =>
-                                      handleCheckboxChange(e, item.id)
-                                    }
-                                    checked={selectedIds.includes(item.id)}
-                                  />
-                                </Label>
-                              </FormGroup>
-                            </td>
-                            <td>{item.id}</td>
-                            <td>{item.string_checked_out}</td>
-                            <td>{item.name}</td>
-                            <td>{item.description}</td>
-                            <td>{item.quantity}</td>
-                            <td className="text-center">${item.cost}</td>
-                            <td className="text-center">${item.rent_price}</td>
-                            <td>
-                              <img
-                                src={item.image}
-                                style={{ width: "60px", height: "50PX" }}
-                              />
-                            </td>
-                          </tr>
-                        )
-                      )
-                    )}
-                </tbody>
-              </Table>
+              <InventoryTable 
+              selectedIds = {selectedIds}
+              setSelectedIds = {setSelectedIds}
+              refreshInventory = {refreshInventory}
+              setRefreshInventory = {setRefreshInventory}
+              />
               <Button color="primary" onClick={toggle}>
                 {" "}
                 Add Item{" "}
