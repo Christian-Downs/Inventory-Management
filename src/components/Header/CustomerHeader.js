@@ -8,7 +8,7 @@ import { Link, Route, Routes } from "react-router-dom";
 
 function CustomerHeader() {
   console.log("CustomerHeader");
-
+  console.log("Testing")
   var routesLength = routes.filter((prop) => prop.customer).length;
   var coulmnSize = 12 / routesLength;
 
