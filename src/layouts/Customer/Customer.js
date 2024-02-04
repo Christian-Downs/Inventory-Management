@@ -25,19 +25,20 @@ import AdminNavbar from "components/Navbars/AdminNavbar.js";
 import Footer from "components/Footer/Footer.js";
 import Sidebar from "components/Sidebar/Sidebar.js";
 import FixedPlugin from "components/FixedPlugin/FixedPlugin.js";
+import CustomerFooter from "components/Footer/CustomerFooter.js";
 
 import routes from "routes.js";
-import "assets/scss/black-dashboard-react.scss";
-import "assets/demo/demo.css";
-import "assets/css/nucleo-icons.css";
-import "@fortawesome/fontawesome-free/css/all.min.css";
 
+import "assets/css/customer.css"
 import logo from "assets/img/react-logo.png";
 import { BackgroundColorContext } from "contexts/BackgroundColorContext";
+import CustomerHeader from "components/Header/CustomerHeader";
+
 
 var ps;
 
-function Admin(props) {
+function Customer(props) {
+    console.log("Customer")
   const location = useLocation();
   const mainPanelRef = React.useRef(null);
   const [sidebarOpened, setsidebarOpened] = React.useState(
@@ -84,9 +85,10 @@ function Admin(props) {
   };
   const getRoutes = (routes) => {
     return routes.map((prop, key) => {
-      if (prop.layout === "/admin") {
+      if (prop.layout === "") {
         return (
-          <Route path={prop.path} element={prop.component} key={key} exact />        );
+          <Route path={prop.path} element={prop.component} key={key} exact />
+        );
       } else {
         return null;
       }
@@ -98,14 +100,15 @@ function Admin(props) {
         return routes[i].name;
       }
     }
-    return "Brand";
+    return "Memorable Nights";
   };
   return (
     <BackgroundColorContext.Consumer>
       {({ color, changeColor }) => (
+        changeColor("red"),
         <React.Fragment>
           <div className="wrapper">
-            <Sidebar
+            {/* <Sidebar
               routes={routes}
               logo={{
                 outterLink: "https://www.Memorable-Nights.com/",
@@ -113,24 +116,19 @@ function Admin(props) {
                 imgSrc: logo,
               }}
               toggleSidebar={toggleSidebar}
-            />
-            <div className="main-panel" ref={mainPanelRef} data={color}>
-              <AdminNavbar
-                brandText={getBrandText(location.pathname)}
-                toggleSidebar={toggleSidebar}
-                sidebarOpened={sidebarOpened}
+            /> */}
+            <div className="main-panel-customer" ref={mainPanelRef} data={"green"}>
+              <CustomerHeader 
+                
               />
               <Routes>
                 {getRoutes(routes)}
                 <Route
-                  path="/"
-                  element={<Navigate to="/admin/dashboard" replace />}
+                  path="*"
+                  element={<Navigate to="/Home" replace />}
                 />
               </Routes>
-              {
-                // we don't want the Footer to be rendered on map page
-                location.pathname === "/admin/maps" ? null : <Footer fluid />
-              }
+              <CustomerFooter fluid />
             </div>
           </div>
           <FixedPlugin bgColor={color} handleBgClick={changeColor} />
@@ -140,4 +138,5 @@ function Admin(props) {
   );
 }
 
-export default Admin;
+
+export default Customer;

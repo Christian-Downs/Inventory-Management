@@ -1,0 +1,42 @@
+html{
+}
+body {
+    background-color: white !important;
+}
+.main-panel-customer {
+}
+.footer{
+    padding: 24px 0 24px 250px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.footer .nav {
+    display: inline-block;
+    float: center;
+    margin-bottom: 0;
+    padding-left: 30px;
+    list-style: none;
+    align-items: center;
+    
+}
+
+.footer .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.p {
+    color:black !important;
+}
+
+.h1{
+    color:black !important;
+}

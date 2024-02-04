@@ -16,6 +16,7 @@
 
 */
 import Dashboard from "views/Dashboard.js";
+import Home from "views/Customer/Home.js";
 import Icons from "views/Icons.js";
 import Map from "views/Map.js";
 import Notifications from "views/Notifications.js";
@@ -27,6 +28,27 @@ import Inventory from "views/Inventory";
 import Packages from "views/Packages";
 
 var routes = [
+  {
+    path: "/Home",
+    name: "Home",
+    icon: "tim-icons icon-chart-pie-36",
+    component: <Home />,
+    layout: "",
+    customer: true,
+  },
+  {
+    path: "/themes",
+    name: "Themes",
+    customer: true,
+  },
+  {
+    path: "/book",
+    name: "Book",
+    icon: "tim-icons icon-chart-pie-36",
+    component: <Dashboard />,
+    layout: "",
+    customer: true,
+  },
   {
     path: "/inventory",
     name: "inventory",

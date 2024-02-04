@@ -1,0 +1,74 @@
+.customerHeader {
+  background-color: #ffe6e6;
+  padding: 4em;
+  text-align: center;
+}
+
+.title {
+font: normal normal normal 32px/1.4em 'playfair display',
+    serif;
+  font-size: 3em;
+  font-weight: bold;
+  color: #0e0202;
+  margin-bottom: 0.1em;
+  margin-top: 0em;
+    padding-top: 0
+}
+
+.subtitle {
+  font: normal normal normal 16px/1.4em 'playfair display',
+    serif;
+  font-size: 1.5em;
+  font-weight: lighter;
+  color: #0e0202;
+    margin-bottom: 0.1em;
+}
+
+.title-location {
+  font: normal normal normal 16px/1.4em 'playfair display',
+    serif;
+  font-size: 1em;
+  /* font-weight: bold; */
+  color: #0e0202;
+  margin-bottom: 0.1em;
+  margin-top: 0em;
+    padding-top: 0
+}
+
+.customer-routing-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+    font: 'playfair display', serif;
+    color: RGB(41, 41, 41);
+    /* color: RGB(93, 93, 93); */
+    font-size: 1em;
+    transition: color 0.4s ease 0s;
+    text-weight: bold;
+}
+
+.customer-routing-links:hover {
+    color: RGB(93, 93, 93);
+}
+
+.book-now-button {
+    background-color: #ffffff !important;
+    color: rgb(0, 0, 0) !important;
+    background-image: none !important;
+    border: none;
+    border-radius: 0.5em;
+    padding: 0.5em 1em;
+    margin-top: 1em;
+    font: 'playfair display', serif;
+    font-size: 1em;
+    transition: background-color 0.4s ease 0s;
+    float: right;
+    position: relative;
+    
+}
+
+.header-book-now-holder {
+
+    text-align: right;;
+}

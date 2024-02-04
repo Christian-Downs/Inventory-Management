@@ -1,0 +1,74 @@
+.slick-track {
+    margin: none !important;
+}
+
+.slick-slide {
+    padding: 0 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    /* Adjust as necessary */
+}
+
+
+.slick-slide img {
+    width: auto;
+    height: 100%;
+    display:block;
+    
+    /* Adjust as necessary */
+}
+
+.custom-arrow {
+    /* Example styles, adjust as needed */
+    display: block;
+    background: rgb(185, 19, 19);
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.slick-prev,
+.slick-next {
+    /* Ensure the arrows are visible */
+    color: black;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+    opacity: 1;
+    color: black;
+    /* Change this as needed */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-prev:before {
+    content: '←';
+    /* This is a left-pointing arrow */
+}
+
+.slick-next:before {
+    content: '→';
+    /* This is a right-pointing arrow */
+}
+.slick-prev {
+    left: 0px !important;
+    /* Adjust as necessary */
+    z-index: 2;
+    background-color: red !important;
+}
+
+.slick-next {
+    right: 0px !important;
+    /* Adjust as necessary */
+    z-index: 2;
+    background-color: red !important;
+}
+.customer-content {
+    padding: 0em;
+    text-align: center;
+}
+
+
