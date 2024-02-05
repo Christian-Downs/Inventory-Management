@@ -38,10 +38,11 @@ var routes = [
     customer: true,
   },
   {
-    path: "/theme/:theme",
+    path: "/theme/:themeName",
     name: "Themes",
     customer: true,
     component: <Theme />,
+    layout:'',
 
   },
   {

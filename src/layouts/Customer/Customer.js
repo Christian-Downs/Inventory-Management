@@ -125,7 +125,7 @@ function Customer(props) {
                 {getRoutes(routes)}
                 <Route
                   path="*"
-                  element={<Navigate to="/Home" replace />}
+                  element={<Navigate to="/Home" />}
                 />
               </Routes>
               <CustomerFooter fluid />

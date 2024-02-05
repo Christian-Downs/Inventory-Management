@@ -106,6 +106,7 @@ function CustomerHeader() {
                         <Link
                           className="customer-routing-links"
                           href={prop.path}
+                          to={prop.path}
                         >
                           {prop.name}
                         </Link>
