@@ -72,3 +72,12 @@ font: normal normal normal 32px/1.4em 'playfair display',
 
     text-align: right;;
 }
+
+.customer-dropdown-header {
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    margin-top:0 !important;
+    padding-top: 0 !important;
+}
+

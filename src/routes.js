@@ -26,6 +26,7 @@ import Typography from "views/Typography.js";
 import UserProfile from "views/UserProfile.js";
 import Inventory from "views/Inventory";
 import Packages from "views/Packages";
+import Theme from "views/Customer/Theme";
 
 var routes = [
   {
@@ -37,9 +38,11 @@ var routes = [
     customer: true,
   },
   {
-    path: "/themes",
+    path: "/theme/:theme",
     name: "Themes",
     customer: true,
+    component: <Theme />,
+
   },
   {
     path: "/book",

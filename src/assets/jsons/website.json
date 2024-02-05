@@ -1,5 +1,35 @@
 {
     "name": "Memorable Nights",
     "subtitle": "A night to remember",
-    "title_location": "Edwardsville, IL  |  St. Louis"
+    "title_location": "Edwardsville, IL  |  St. Louis",
+    "themes":{
+        "Taylor Swift":{
+            "sections":[
+                {
+                    "type": "Text",
+                    "title": "Taylor Swift",
+                    "description": "A night to remember",
+                    "link": "taylor_swift"
+                },
+                {
+                    "type": "Image",
+                    "image": "https://images.unsplash.com/photo-1551230598-4d1c3c21f33a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                }
+            ]
+        },
+        "Gaming":{
+            "sections":[
+                {
+                    "type": "Text",
+                    "title": "Gaming",
+                    "description": "A night to remember",
+                    "link": "gaming"
+                },
+                {
+                    "type": "Image",
+                    "image": "https://images.unsplash.com/photo-1551230598-4d1c3c21f33a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                }
+            ]
+        }
+    }
 }
