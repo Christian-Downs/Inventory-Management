@@ -10,15 +10,17 @@ const inventoryRoutes = require('./inventory/inventoryRoutes');
 const packageRoutes = require('./package/packageRoutes');
 const orderRoutes = require('./order/orderRoutes');
 const addonRoutes = require('./addon/addonRoutes');
-
+const calanderRoutes = require('./calander/calanderRoutes');
 
 app.use(express.json());
 app.use(cors());
 
 app.use('/api/inventory', inventoryRoutes);
-// app.use('/package', packageRoutes);
-// app.use('/order', orderRoutes);
-// app.use('/addon', addonRoutes);
+app.use('/api/package', packageRoutes);
+app.use('/api/order', orderRoutes);
+app.use('/api/addon', addonRoutes);
+app.use('/api/calander', calanderRoutes);
+
 
 app.listen(3001, () => {
     console.log(`Server is running on port ${process.env.PORT}`);
