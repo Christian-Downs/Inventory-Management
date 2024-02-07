@@ -21,7 +21,23 @@ const getUnavailableDays = (req, res) => {
             res.status(400).json({ "error": err.message });
             return;
         }
-        res.json(rows);
+        var package_unavailable = {}
+        var unavailableDays = []
+
+        rows.forEach(row => {
+            var start = new Date(row.Start_Date)
+            var end = new Date(row.End_Date)
+            var date = new Date(start)
+            while (date <= end) {
+                unavailableDays.push(date.toISOString().split('T')[0])
+                date.setDate(date.getDate() + 1)
+            }
+            package_unavailable[row.ID] = unavailableDays
+            unavailableDays = []
+        });
+
+        res.json(package_unavailable);
+        // res.json(rows);
     });
 };
 
