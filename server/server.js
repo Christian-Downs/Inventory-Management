@@ -10,7 +10,7 @@ const inventoryRoutes = require('./inventory/inventoryRoutes');
 const packageRoutes = require('./package/packageRoutes');
 const orderRoutes = require('./order/orderRoutes');
 const addonRoutes = require('./addon/addonRoutes');
-const calanderRoutes = require('./calander/calanderRoutes');
+const calendarRoutes = require('./calendar/calendarRoutes');
 
 app.use(express.json());
 app.use(cors());
@@ -19,7 +19,7 @@ app.use('/api/inventory', inventoryRoutes);
 app.use('/api/package', packageRoutes);
 app.use('/api/order', orderRoutes);
 app.use('/api/addon', addonRoutes);
-app.use('/api/calander', calanderRoutes);
+app.use('/api/calendar', calendarRoutes);
 
 
 app.listen(3001, () => {

@@ -1,4 +1,4 @@
-// calander controller
+// calendar controller
 const sqlite3 = require('sqlite3').verbose();
 
 // Connect to the database
@@ -11,7 +11,7 @@ const db = new sqlite3.Database('./db/inventory.db', (err) => {
 
 // Get all packages that are rented
 const getUnavailableDays = (req, res) => {
-    console.log("Get Calander")
+    console.log("Get calendar")
     const sql = `SELECT p.ID, p.Name , o.Start_Date, o.End_Date  FROM Package p 
     join Order_Package op ON p.ID = op.packageID 
     join "Order" o on o.ID = op.orderID 
@@ -40,6 +40,8 @@ const getUnavailableDays = (req, res) => {
         // res.json(rows);
     });
 };
+
+
 
 module.exports = {
     getUnavailableDays
