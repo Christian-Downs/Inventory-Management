@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import CustomCalendar from 'components/Calendar/CustomCalendar';
+import dayjs from 'dayjs';
+import axios from 'axios';
 
 const BookingPage = () => {
+    const [value, setValue] = React.useState(dayjs());
+
     const [theme, setTheme] = useState('light');
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -28,16 +32,26 @@ const BookingPage = () => {
         console.log('Booking now...');
     };
 
+    axios.get(process.env.REACT_APP_SERVER_URL + "/api/calendar").then(function (response) {
+        console.log(response.data)
+    })
+
 
     const disabledDates = [
-        new Date('2023-03-01'),
-        new Date('2023-03-02'),
+        new Date('2024-02-09'),
+        new Date('2024-02-11'),
     ];
+
+    console.log(disabledDates)
+    
 
     return (
         <div>
             <h1>Booking Page</h1>
-            <CustomCalendar disabledDates = {disabledDates}/>
+            <CustomCalendar 
+            value = {value}
+            setValue = {setValue}
+            disabledDates = {disabledDates}/>
             <select value={theme} onChange={handleThemeChange}>
                 <option value="light">Light Theme</option>
                 <option value="dark">Dark Theme</option>
