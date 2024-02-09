@@ -1,0 +1,82 @@
+/* Custom styles.css
+.booking-row {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: red;
+  }
+  
+  /* Adjustments for when columns are side by side 
+  @media (min-width: 768px) { /* Adjust based on Bootstrap's md breakpoint 
+    .booking-left-col {
+        justify-content: right;
+        justify-self: right;
+    } 
+    .booking-right-col-row {
+        justify-content: left;
+        background-color: red;
+    }
+  }
+  
+  /* Adjustments for when columns are stacked 
+  @media (max-width: 767px) {
+    .booking-left-col, .booking-right-col-row {
+        justify-content: center;
+        justify-self: center;
+        background-color: blue;
+    }
+  }
+   */
+
+
+   /* This might be unnecessary if the utility classes handle the layout well */
+
+.booking-row {
+    padding-top: 10px;
+}
+.booking-right-col-row label,
+.booking-right-col-row button {
+    display: flex;
+    justify-content: center; /* Center content */
+    /* width: 100%; Ensure full width for alignment */
+}
+
+@media (max-width: 768px) {
+    .booking-left-col, .booking-right-col-row {
+        justify-content: center; /* Align to the center */
+        justify-self: center; /* Align to the center */
+    }
+
+    .booking-button {
+        justify-self: center;
+        width: 100%; /* Add some space between the button and the next element */
+    }
+
+    .button-col {
+        justify-content: center; /* Align to the center */
+        justify-self: center; /* Align to the center */
+        flex-basis: content !important;
+    }
+    
+}
+
+/* For larger screens, you might want to adjust the internal alignment */
+@media (min-width: 768px) {
+    .booking-left-col{
+        justify-content: right !important;
+        justify-self: right !important;
+    }
+
+    /* Adjustments for larger screens if necessary */
+    .booking-right-col-row label,
+    .booking-right-col-row ,
+    .booking-right-col-row div {
+        justify-content: left !important; /* Align to the left */
+         /* Align to the left */
+         /* color: red; */
+    }
+
+    .booking-right-col {
+        justify-content: left !important;
+        justify-self: left !important;
+    }
+}

@@ -5,6 +5,7 @@ import { formToJSON } from "axios";
 import { parseJsonText } from "typescript";
 import "assets/css/customer.css"
 import { Col, Image, Row } from "react-bootstrap";
+import BookingPage from "./Book";
 
 
 
@@ -14,6 +15,7 @@ const Theme = () => {
   console.log(themeName)
   const theme = website.themes[themeName]
   const rows = theme.rows
+  const id = theme.id
   console.log(rows)
 
   console.log(theme)
@@ -35,7 +37,6 @@ const Theme = () => {
     console.log(section)
     return (
       <div>
-        text
         <h2>{section.title}</h2>
         <p>{section.description}</p>
       </div>
@@ -46,8 +47,7 @@ const Theme = () => {
 
   return (
     <div>
-      <h2>Theme Page</h2>
-      <p>Theme Name: {themeName}</p>
+      <h1>{themeName}</h1>
       {rows.map(row => {
         const colSize = 12/ row.length
         console.log(colSize)
@@ -64,6 +64,8 @@ const Theme = () => {
           }
         </Row>);
       })}
+      
+        <BookingPage theme = {theme} />
     </div>
   );
 };
