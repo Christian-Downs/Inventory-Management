@@ -6,6 +6,7 @@ import { parseJsonText } from "typescript";
 import "assets/css/customer.css"
 import { Col, Image, Row } from "react-bootstrap";
 import BookingPage from "./Book";
+import "assets/css/theme.css"
 
 
 
@@ -38,20 +39,33 @@ const Theme = () => {
     return (
       <div>
         <h2>{section.title}</h2>
-        <p>{section.description}</p>
+        <ul className="custom-marker">
+          <li>{section.description}</li>
+        </ul>
+        {/* <p>{section.description}</p> */}
       </div>
     )
   }
+  var color = "#ffe6e6"
 
+  const colorChanger = () => {
+    if (color == "#ffe6e6") {
+      color = "whiite"
+    }
+    else {
+      color = "#ffe6e6"
+    }
+    return color;
+  }
 
 
   return (
     <div>
-      <h1>{themeName}</h1>
+      <h1 className="theme-top">{themeName}</h1>
       {rows.map(row => {
         const colSize = 12/ row.length
         console.log(colSize)
-        return(<Row>
+        return(<Row style = {{backgroundColor: colorChanger()}}>
           {row.map(section => {
             switch (section.type) {
               case "Text":

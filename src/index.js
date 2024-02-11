@@ -24,7 +24,6 @@ import CustomerLayout from "layouts/Customer/Customer.js";
 // import RTLLayout from "layouts/RTL/RTL.js";
 
 
-
 import ThemeContextWrapper from "./components/ThemeWrapper/ThemeWrapper";
 import BackgroundColorWrapper from "./components/BackgroundColorWrapper/BackgroundColorWrapper";
 
@@ -32,6 +31,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <ThemeContextWrapper>
+    
     <BackgroundColorWrapper>
       <BrowserRouter>
         <Routes>
