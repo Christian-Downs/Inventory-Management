@@ -1,34 +1,81 @@
 // Server for inventory app
 
-
-require('dotenv').config();
-const sqlite3 = require('sqlite3').verbose();
-const express = require('express');
-const cors = require('cors');
+require("dotenv").config();
+const sqlite3 = require("sqlite3").verbose();
+let db = new sqlite3.Database("./db/inventory.db", (err) => {
+  if (err) {
+    console.error(err.message);
+  }
+  console.log("Connected to the inventory database.");
+});
+const express = require("express");
+const cors = require("cors");
 const app = express();
-const inventoryRoutes = require('./inventory/inventoryRoutes');
-const packageRoutes = require('./package/packageRoutes');
-const orderRoutes = require('./order/orderRoutes');
-const addonRoutes = require('./addon/addonRoutes');
-const calendarRoutes = require('./calendar/calendarRoutes');
+const inventoryRoutes = require("./inventory/inventoryRoutes");
+const packageRoutes = require("./package/packageRoutes");
+const orderRoutes = require("./order/orderRoutes");
+const addonRoutes = require("./addon/addonRoutes");
+const calendarRoutes = require("./calendar/calendarRoutes");
 
 app.use(express.json());
 app.use(cors());
 
-app.use('/api/inventory', inventoryRoutes);
-app.use('/api/package', packageRoutes);
-app.use('/api/order', orderRoutes);
-app.use('/api/addon', addonRoutes);
-app.use('/api/calendar', calendarRoutes);
+app.use("/api/inventory", inventoryRoutes);
+app.use("/api/package", packageRoutes);
+app.use("/api/order", orderRoutes);
+app.use("/api/addon", addonRoutes);
+app.use("/api/calendar", calendarRoutes);
+
+function createOrder(res) {
+  return new Promise((resolve, reject) => {
+    const sql = "insert into 'Order' (customer_name) values ('bob')";
+    let orderId;
+    db.run(sql, [], function (err) {
+      if (err) {
+        reject(err);
+      }
+      orderId = this.lastID;
+      // res.json(this.lastID);
+      resolve(orderId);
+    });
+    // return orderId
+  });
+}
+
+function addToOrderPackage(orderId) {
+  return new Promise((resolve, reject) => {
+    const sqlAddToPackageOrderTable = `
+        insert into 'Order_Package' (order_id, package_id) values (?, 1)
+        `;
+    db.run(sqlAddToPackageOrderTable, [orderId], function (err) {
+      if (err) {
+        reject(err);
+      }
+      resolve(this.lastID);
+    });
+  });
+}
+
+app.use("/api/test", async (req, res) => {
+  try {
+    let orderId = await createOrder(res);
+
+    if (orderId) {
+      let packageOrderTableId = await addToOrderPackage(orderId);
+      res.json({ orderId, packageOrderTableId });
+    } else {
+      res.status(400).json({ error: "Error creating order" });
+    }
+  } catch (err) {
+    res.status(400).json({ error: err.message });
+  }
+});
 
 const port = process.env.PORT || 3001;
 
 app.listen(port, () => {
-    console.log(`Server is running on port ${process.env.PORT}`);
+  console.log(`Server is running on port ${process.env.PORT}`);
 });
-
-
-
 
 // // connect to database
 // let db = new sqlite3.Database('./db/inventory.db', (err) => {
@@ -37,8 +84,6 @@ app.listen(port, () => {
 //   }
 //   console.log('Connected to the inventory database.');
 // });
-
-
 
 // app.get('/', (req, res) => {
 //     res.send('server is running');
@@ -53,9 +98,6 @@ app.listen(port, () => {
 //       res.json(rows);
 //     });
 // }
-
-
-
 
 // // get item by id
 // const getItemById = (res, id) => {
@@ -155,7 +197,6 @@ app.listen(port, () => {
 //   );
 // });
 
-
 // //check in item
 // app.put("/api/inventory/check-in/:id", (req, res) => {
 //   const id = req.params.id;
@@ -197,7 +238,6 @@ app.listen(port, () => {
 //   const id = req.params.id;
 //   const { name, description, quantity, rent_price, cost, checked_out, image } = req.body;
 
-
 //   db.run(
 //     `UPDATE inventory SET name = ?, description = ?, quantity = ?, rent_price = ?, cost = ?, checked_out = ?, image = ? WHERE id = ?`,
 //     [name, description, quantity, rent_price, cost, checked_out, image, id],
@@ -211,9 +251,7 @@ app.listen(port, () => {
 //     }
 //   );
 
-
 // });
-
 
 // //Upadate Any Column
 // app.put("/api/inventory/update-any-column/:id/:column", (req, res) => {
@@ -236,14 +274,13 @@ app.listen(port, () => {
 //   );
 // });
 
-
 // // Packages Tables
 
 // // create Package Table
 // // db.run(`Create table if not exists package (
-// //         id integer primary key, 
-// //         name text, 
-// //         description text, 
+// //         id integer primary key,
+// //         name text,
+// //         description text,
 // //         price real,
 // //         checked_out bool)`, (err) => {
 // //   if (err) {
@@ -251,7 +288,6 @@ app.listen(port, () => {
 // //   }
 // //   console.log('Created package table');
 // // });
-
 
 // // get packages
 // const getPackages = (res) => {
@@ -400,17 +436,13 @@ app.listen(port, () => {
 //   );
 // });
 
-
-
-
 // // Package to Inventory Tables
 // // Package to Inventory one to many relationship
 
-
 // // create package to inventory table
 // db.run(`Create table if not exists package_to_inventory (
-//         id integer primary key, 
-//         package_id integer, 
+//         id integer primary key,
+//         package_id integer,
 //         inventory_id integer,
 //         FOREIGN KEY(package_id) REFERENCES package(id),
 //         FOREIGN KEY(inventory_id) REFERENCES inventory(id))`, (err) => {
@@ -528,15 +560,13 @@ app.listen(port, () => {
 //   );
 // });
 
-
-
 // // Orders Table
 
 // // create orders table
 // db.run(`Create table if not exists orders (
-//         id integer primary key, 
-//         customer_name text, 
-//         customer_phone text, 
+//         id integer primary key,
+//         customer_name text,
+//         customer_phone text,
 //         customer_email text,
 //         customer_address text,
 //         start_date text,
@@ -547,7 +577,6 @@ app.listen(port, () => {
 //   }
 //   console.log('Created orders table');
 // });
-
 
 // // get orders
 // const getOrders = (res) => {
@@ -623,19 +652,13 @@ app.listen(port, () => {
 //   );
 // });
 
-
-
-
-
-
-
 // // Order to Package Tables
 // // Order to Package one to many relationship
 
 // // create order to package table
 // db.run(`Create table if not exists order_to_package (
-//         id integer primary key, 
-//         order_id integer, 
+//         id integer primary key,
+//         order_id integer,
 //         package_id integer,
 //         FOREIGN KEY(order_id) REFERENCES orders(id),
 //         FOREIGN KEY(package_id) REFERENCES package(id))`, (err) => {
@@ -684,7 +707,6 @@ app.listen(port, () => {
 //     res.json(rows);
 //   });
 // }
-
 
 // //get all order to package
 // app.get('/api/order-to-package', (req, res) => {
@@ -754,16 +776,13 @@ app.listen(port, () => {
 //   );
 // });
 
-
-
-
 // // Order to Inventory Tables
 // // Order to Inventory one to many relationship
 
 // // create order to inventory table
 // db.run(`Create table if not exists order_to_inventory (
-//         id integer primary key, 
-//         order_id integer, 
+//         id integer primary key,
+//         order_id integer,
 //         inventory_id integer,
 //         FOREIGN KEY(order_id) REFERENCES orders(id),
 //         FOREIGN KEY(inventory_id) REFERENCES inventory(id))`, (err) => {
@@ -813,7 +832,6 @@ app.listen(port, () => {
 //   });
 // }
 
-
 // //get all order to inventory
 // app.get('/api/order-to-inventory', (req, res) => {
 //   console.log('Getting all order to inventory');
@@ -840,8 +858,6 @@ app.listen(port, () => {
 //   console.log('Getting order to inventory with inventory id: ' + id);
 //   getOrderToInventoryByInventoryId(res, id);
 // });
-
-
 
 // //add order to inventory
 // app.post('/api/order-to-inventory', (req, res) => {
@@ -883,9 +899,6 @@ app.listen(port, () => {
 //       }
 //     );
 // });
-
-
-
 
 // app.listen(3001, () => {
 //   console.log(`Server started on ${process.env.REACT_APP_SERVER_URL}`);

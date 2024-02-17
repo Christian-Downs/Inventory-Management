@@ -20,7 +20,7 @@ const db = new sqlite3.Database('./db/inventory.db', (err) => {
 const getOrder = (req, res) => {
     console.log("Get Order")
     const sql = `SELECT * FROM 'order'`;
-    db.all(sql, [], (err, rows) => {
+    db.all(sql, [], function(err){
         if (err) {
             res.status(400).json({ "error": err.message });
             return;
@@ -81,6 +81,9 @@ const updateOrder = (req, res) => {
         res.json({ changes: this.changes });
     });
 };
+
+
+
 
 module.exports = {
     getOrder,

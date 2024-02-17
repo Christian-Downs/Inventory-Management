@@ -101,47 +101,6 @@ const BookingPage = ({ theme }) => {
             </Row>
         </form>
     );
-    // return (
-
-    //     <form>
-    //         <Row className='justify-conetent-center booking-row' fluid>
-    //             <Col md="6" className='booking-left-col'>
-    //                 <CustomCalendar
-    //                     value={value}
-    //                     setValue={setValue}
-    //                     disabledDates={disabledDates} />
-    //                 {/* <select value={theme} onChange={handleThemeChange}>
-    //                 <option value="light">Light Theme</option>
-    //                 <option value="dark">Dark Theme</option>
-    //             </select> */}
-    //             </Col>
-    //             <Col md="6" className='booking-right-col'>
-    //                 <Row className='booking-right-col-row'>
-    //                     <label>
-    //                         Name:
-    //                         <input type="text" value={name} onChange={handleNameChange} />
-    //                     </label>
-    //                 </Row>
-    //                 <Row className='booking-right-col-row'>
-    //                     <label>
-    //                         Email:
-    //                         <input type="email" value={email} onChange={handleEmailChange} />
-    //                     </label>
-    //                 </Row>
-    //                 <Row className='booking-right-col-row'>
-    //                     <label>
-    //                         Phone Number:
-    //                         <input type="tel" value={phoneNumber} onChange={handlePhoneNumberChange} />
-    //                     </label>
-    //                 </Row>
-    //                 <Row className='booking-right-col-row'>
-    //                     <button type="button" onClick={handleBooking}>Book Now</button>
-    //                 </Row>
-    //             </Col>
-    //         </Row>
-    //     </form>
-
-    // );
 };
 
 export default BookingPage;
