@@ -21,10 +21,12 @@
 .custom-arrow {
     /* Example styles, adjust as needed */
     display: block;
-    background: rgb(185, 19, 19);
+    background: rgb(12 9 9 / 45%)  !important;
     padding: 10px;
     border-radius: 50%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-right: 20px;
+    margin-left: 20px;
 }
 .slick-prev,
 .slick-next {
@@ -57,14 +59,14 @@
     left: 0px !important;
     /* Adjust as necessary */
     z-index: 2;
-    background-color: red !important;
+    /* background-color: red !important; */
 }
 
 .slick-next {
     right: 0px !important;
     /* Adjust as necessary */
     z-index: 2;
-    background-color: red !important;
+    /* background-color: red !important; */
 }
 .customer-content {
     padding: 0em;
