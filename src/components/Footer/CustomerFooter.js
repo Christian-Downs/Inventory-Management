@@ -5,7 +5,7 @@ import instagram_icon from '../../assets/icons/instagram_icon.png';
 
 const CustomerFooter = () => {
     return (
-      <footer className="footer">
+      <footer className="footer" style={{paddingLeft:0}}>
         <Container fluid>
           <Nav>
             <NavItem>

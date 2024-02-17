@@ -1,0 +1,40 @@
+h2 {
+    justify-content: center;
+    text-align: center;
+}
+p {
+    justify-content: center;
+    text-align: center;
+}
+
+li{
+    justify-content: center !important;
+    text-align: center !important;
+    color: black !important;
+    content: "\2605"    !important;
+}
+
+.custom-marker {
+    list-style-type: none;
+}
+
+.custom-marker li::before{
+    content: "\2605" !important;
+    margin-right: 10px;
+}
+
+.theme-top {
+    text-align: center;
+    font-family: 'Apple Chancery', cursive !important;
+    
+}
+
+/* @font-face {
+    font-family: 'Pacifico';
+    src: url('assets/fonts/Pacifico-Regular.ttf');
+} */
+
+@font-face {
+    font-family: 'Apple Chancery';
+    src: url('assets/fonts/Apple Chancery Italic.ttf');
+}

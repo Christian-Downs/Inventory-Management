@@ -5,6 +5,8 @@ import { formToJSON } from "axios";
 import { parseJsonText } from "typescript";
 import "assets/css/customer.css"
 import { Col, Image, Row } from "react-bootstrap";
+import BookingPage from "./Book";
+import "assets/css/theme.css"
 
 
 
@@ -14,6 +16,7 @@ const Theme = () => {
   console.log(themeName)
   const theme = website.themes[themeName]
   const rows = theme.rows
+  const id = theme.id
   console.log(rows)
 
   console.log(theme)
@@ -35,23 +38,34 @@ const Theme = () => {
     console.log(section)
     return (
       <div>
-        text
         <h2>{section.title}</h2>
-        <p>{section.description}</p>
+        <ul className="custom-marker">
+          <li>{section.description}</li>
+        </ul>
+        {/* <p>{section.description}</p> */}
       </div>
     )
   }
+  var color = "#ffe6e6"
 
+  const colorChanger = () => {
+    if (color == "#ffe6e6") {
+      color = "whiite"
+    }
+    else {
+      color = "#ffe6e6"
+    }
+    return color;
+  }
 
 
   return (
     <div>
-      <h2>Theme Page</h2>
-      <p>Theme Name: {themeName}</p>
+      <h1 className="theme-top">{themeName}</h1>
       {rows.map(row => {
         const colSize = 12/ row.length
         console.log(colSize)
-        return(<Row>
+        return(<Row style = {{backgroundColor: colorChanger()}}>
           {row.map(section => {
             switch (section.type) {
               case "Text":
@@ -64,6 +78,8 @@ const Theme = () => {
           }
         </Row>);
       })}
+      
+        <BookingPage theme = {theme} />
     </div>
   );
 };

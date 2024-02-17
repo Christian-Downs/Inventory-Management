@@ -4,6 +4,7 @@
     "title_location": "Edwardsville, IL  |  St. Louis",
     "themes": {
         "Taylor Swift": {
+            "id": 1,
             "rows": [
                 [
                     {
@@ -41,6 +42,7 @@
             ]
         },
         "Gaming": {
+            "id": 2,
             "rows": [
                 [
                     {

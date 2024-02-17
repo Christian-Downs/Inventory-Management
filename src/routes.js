@@ -27,6 +27,7 @@ import UserProfile from "views/UserProfile.js";
 import Inventory from "views/Inventory";
 import Packages from "views/Packages";
 import Theme from "views/Customer/Theme";
+import Book from "views/Customer/Book";
 
 var routes = [
   {
@@ -49,7 +50,7 @@ var routes = [
     path: "/book",
     name: "Book",
     icon: "tim-icons icon-chart-pie-36",
-    component: <Dashboard />,
+    component: <Book />,
     layout: "",
     customer: true,
   },
