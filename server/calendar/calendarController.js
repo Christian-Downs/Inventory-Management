@@ -15,7 +15,7 @@ const getUnavailableDays = (req, res) => {
     const sql = `SELECT p.ID, p.Name , o.date  FROM Package p 
     join Order_Package op ON p.ID = op.package_id 
     join "Order" o on o.ID = op.order_id 
-    where o.date >  Date('now') `;
+    where Date(o.date) >=  Date('now') `;
     db.all(sql, [], (err, rows) => {
         if (err) {
             res.status(400).json({ "error": err.message });
