@@ -22,8 +22,8 @@ function NextArrow(props) {
   const { className, style, onClick } = props;
   return (
     <div
-      className={`${className} custom-arrow`} // Add a custom class for additional styling
-      style={{ ...style, display: "block", zIndex: 2 }} // Ensure the arrow has a high z-index and is displayed
+      className={`${className} custom-arrow`}
+      style={{ ...style, display: "block", zIndex: 2 }}
       onClick={onClick}
     />
   );
@@ -33,8 +33,8 @@ function PrevArrow(props) {
   const { className, style, onClick } = props;
   return (
     <div
-      className={`${className} custom-arrow`} // Add a custom class for additional styling
-      style={{ ...style, display: "block", zIndex: 2 }} // Ensure the arrow has a high z-index and is displayed
+      className={`${className} custom-arrow`}
+      style={{ ...style, display: "block", zIndex: 2 }}
       onClick={onClick}
     />
   );
