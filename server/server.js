@@ -26,50 +26,7 @@ app.use("/api/order", orderRoutes);
 app.use("/api/addon", addonRoutes);
 app.use("/api/calendar", calendarRoutes);
 
-function createOrder(res) {
-  return new Promise((resolve, reject) => {
-    const sql = "insert into 'Order' (customer_name) values ('bob')";
-    let orderId;
-    db.run(sql, [], function (err) {
-      if (err) {
-        reject(err);
-      }
-      orderId = this.lastID;
-      // res.json(this.lastID);
-      resolve(orderId);
-    });
-    // return orderId
-  });
-}
 
-function addToOrderPackage(orderId) {
-  return new Promise((resolve, reject) => {
-    const sqlAddToPackageOrderTable = `
-        insert into 'Order_Package' (order_id, package_id) values (?, 1)
-        `;
-    db.run(sqlAddToPackageOrderTable, [orderId], function (err) {
-      if (err) {
-        reject(err);
-      }
-      resolve(this.lastID);
-    });
-  });
-}
-
-app.use("/api/test", async (req, res) => {
-  try {
-    let orderId = await createOrder(res);
-
-    if (orderId) {
-      let packageOrderTableId = await addToOrderPackage(orderId);
-      res.json({ orderId, packageOrderTableId });
-    } else {
-      res.status(400).json({ error: "Error creating order" });
-    }
-  } catch (err) {
-    res.status(400).json({ error: err.message });
-  }
-});
 
 const port = process.env.PORT || 3001;
 
