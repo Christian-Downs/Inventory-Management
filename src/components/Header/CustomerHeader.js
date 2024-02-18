@@ -51,7 +51,7 @@ function CustomerHeader() {
     <div>
       <Row>
         <Col xs="12">
-          <div className="customerHeader">
+          <div className="customer-header pinkbg">
             <h1 className="title">{website.name}</h1>
             <h3 className="subtitle">{website.subtitle}</h3>
             <p className="title-location">{website.title_location}</p>

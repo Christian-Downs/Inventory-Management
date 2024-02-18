@@ -40,7 +40,7 @@ var routes = [
   },
   {
     path: "/theme/:themeName",
-    name: "Themes",
+    name: "Themed Packages",
     customer: true,
     component: <Theme />,
     layout:'',

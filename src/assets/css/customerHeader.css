@@ -1,7 +1,22 @@
-.customerHeader {
-  background-color: #ffe6e6;
-  padding: 4em;
+.customer-header {
+  padding-top: 2rem;
+  padding-right: 4rem;
+  padding-left: 4rem;
+  display: flex;
+  flex-direction: column;
   text-align: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.row-padding {
+  padding: .5rem 0;
+}
+
+.pinkbg {
+  background-color: #ffe6e6;
 }
 
 .title {
@@ -41,15 +56,18 @@ font: normal normal normal 32px/1.4em 'playfair display',
     align-items: center;
     margin-top: 1em;
     font: 'playfair display', serif;
-    color: RGB(41, 41, 41);
-    /* color: RGB(93, 93, 93); */
+    color: #181a1b;
     font-size: 1em;
+    padding-bottom: 1rem;
     transition: color 0.4s ease 0s;
-    text-weight: bold;
+    font-weight: bold;
+    height: max-content;
 }
 
 .customer-routing-links:hover {
-    color: RGB(93, 93, 93);
+    border-bottom: .25rem solid #181a1b;
+    color: black;
+    transition: color 0.4s ease 0s;
 }
 
 .book-now-button {

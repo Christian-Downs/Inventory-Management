@@ -64,43 +64,72 @@ function Home(props) {
   return (
     <>
       <div className="customer-content">
-        <Row>
-          <Col xs="12">
+        <Row className="row-padding">
+          <Col>
             <CarouselCustom />
           </Col>
         </Row>
-        <Row>
+        <Row className="pinkbg row-padding">
           <Col>
-            <div style={{ width: "100%", height: "100%" }}>
-              <h1 style={{ color: "black" }}>Welcome to our website</h1>
+          <div className="customer-info">
+              <h1 className="row-padding">Our Services</h1>
+              <div className="subpoints">
+                <div>
+                  <h3>Party packages</h3>
+                  <h4>Additional info can be included here, or an image can be used in its place.</h4>
+                </div>
+                <div>
+                  <h3>Set up & styling</h3>
+                  <h4>Additional info can be included here, or an image can be used in its place.</h4>
+                </div>
+                <div>
+                  <h3>Free delivery</h3>
+                  <h4>Additional info can be included here, or an image can be used in its place.</h4>
+                </div>
+              </div>
             </div>
           </Col>
           <Col>
-            <img src="https://plus.unsplash.com/premium_photo-1661778564867-793e81325e80?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dGVlcGVlJTIwdmVydGljYWx8ZW58MHx8MHx8fDA%3D" />
+            <img className="max-400"
+              src="https://plus.unsplash.com/premium_photo-1689609949815-bdb46c0f2397?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dhttps://plus.unsplash.com/premium_photo-1689609949815-bdb46c0f2397?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
           </Col>
           <Col>
-            <div
-              className="customer-info"
-              style={{ width: "100%", height: "100%" }}
-            >
-              <h1>Our Services</h1>
-              <p>Service 1</p>
-              <p>Service 2</p>
-              <p>Service 3</p>
+            <div className="customer-info">
+              <h1 className="row-padding">Why Choose Us?</h1>
+              <div className="subpoints">
+                <div>
+                  <h3>Hassle-free & simple</h3>
+                  <h4>Additional info can be included here, or an image can be used in its place.</h4>
+                </div>
+                <div>
+                  <h3>Affordable pricing</h3>
+                  <h4>Additional info can be included here, or an image can be used in its place.</h4>
+                </div>
+                <div>
+                  <h3>Memorable experiences</h3>
+                  <h4>Additional info can be included here, or an image can be used in its place.</h4>
+                </div>
+              </div>
             </div>
           </Col>
-        </Row>
+        </Row> 
         <Row>
-          <Col>
-            <Row>Test1</Row>
-            <Row>Test2</Row>
-            <Row>Test3</Row>
-          </Col>
-          <Col>
-            <Row>Test4</Row>
-            <Row>Test5</Row>
-            <Row>Test6</Row>
-          </Col>
+         <Col></Col>
+         <Col>
+          <div className="row-padding">
+            <img className="max-400"
+            src="https://plus.unsplash.com/premium_photo-1689609949815-bdb46c0f2397?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dhttps://plus.unsplash.com/premium_photo-1689609949815-bdb46c0f2397?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+            <h3>Additional info can be included here, or an image can be used in its place.</h3>
+          </div>
+         </Col>
+         <Col>
+          <div className="row-padding">
+            <h3>Additional info can be included here, or an image can be used in its place.</h3>
+            <img className="max-400"
+            src="https://plus.unsplash.com/premium_photo-1689609949815-bdb46c0f2397?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dhttps://plus.unsplash.com/premium_photo-1689609949815-bdb46c0f2397?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+          </div>
+         </Col>
+         <Col></Col>
         </Row>
         <ContactPage />
       </div>
