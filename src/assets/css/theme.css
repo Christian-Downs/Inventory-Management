@@ -10,7 +10,7 @@ p {
 li{
     justify-content: center !important;
     text-align: center !important;
-    color: black !important;
+    color: #2e2e2e !important;
     content: "\2605"    !important;
 }
 

@@ -13,11 +13,12 @@ const ContactPage = () => {
 
     return (
         <div className="contact-page-container row-padding">
-            <h1>Contact Page</h1>
             <div className="contact-cont pinkbg align-center">
+            <h1>Contact Us!</h1>
                 <form onSubmit={handleSubmit}>
                     <label htmlFor="name">Name:</label>
                     <input
+                        className="input-box row-padding"
                         type="text"
                         id="name"
                         value={name}
@@ -25,6 +26,7 @@ const ContactPage = () => {
                     />
                     <label htmlFor="email">Email:</label>
                     <input
+                        className="input-box row-padding"
                         type="email"
                         id="email"
                         value={email}
@@ -32,11 +34,12 @@ const ContactPage = () => {
                     />
                     <label htmlFor="message">Message:</label>
                     <textarea
+                        className="input-box"
                         id="message"
                         value={message}
                         onChange={(e) => setMessage(e.target.value)}
                     ></textarea>
-                    <button type="submit">Submit</button>
+                    <button type="submit" className="submit-button">Submit</button>
                 </form>
             </div>
         </div>

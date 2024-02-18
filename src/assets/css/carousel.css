@@ -33,7 +33,7 @@
 .slick-prev,
 .slick-next {
     /* Ensure the arrows are visible */
-    color: black;
+    background-color: #2e2e2e !important;
 }
 
 .slick-prev:before,
@@ -42,7 +42,7 @@
     font-size: 20px;
     line-height: 1;
     opacity: 1;
-    color: black;
+    color: #2e2e2e;
     /* Change this as needed */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
