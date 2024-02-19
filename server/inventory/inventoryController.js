@@ -45,7 +45,7 @@ const getItemById = (req, res) => {
 // Add inventory item
 const addInventory = (req, res) => {
     const { name, description, quantity } = req.body;
-    const sql = `INSERT INTO inventory (name, description, quantity) VALUES (?, ?, ?)`;
+    const sql = `INSERT INTO inventory (name, description, cost, link, image) VALUES (?, ?, ?)`;
     db.run(sql, [name, description, quantity], function (err) {
         if (err) {
             res.status(400).json({ "error": err.message });

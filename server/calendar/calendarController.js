@@ -22,16 +22,19 @@ const getUnavailableDays = (req, res) => {
             return;
         }
         var package_unavailable = {}
-        var unavailableDays = []
-
         rows.forEach(row => {
-            var date = new Date(row.date)
-            while (date <= end) {
-                unavailableDays.push(date.toISOString().split('T')[0])
-                date.setDate(date.getDate() + 1)
+            var date = new Date(row.date);
+
+            if (package_unavailable[row.ID] == undefined) {
+              package_unavailable[row.ID] = [];
             }
-            package_unavailable[row.ID] = unavailableDays
-            unavailableDays = []
+
+            if (date != undefined) {
+              date_string = date.toISOString().split("T")[0];
+              if (!package_unavailable[row.ID].includes(date_string)) {
+                package_unavailable[row.ID].push(date_string);
+              }
+            }
         });
 
         res.json(package_unavailable);
