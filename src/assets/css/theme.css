@@ -26,13 +26,7 @@ li{
 .theme-top {
     text-align: center;
     font-family: 'Apple Chancery', cursive !important;
-    
 }
-
-/* @font-face {
-    font-family: 'Pacifico';
-    src: url('assets/fonts/Pacifico-Regular.ttf');
-} */
 
 @font-face {
     font-family: 'Apple Chancery';

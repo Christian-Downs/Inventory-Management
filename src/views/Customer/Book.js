@@ -55,49 +55,49 @@ const BookingPage = ({ theme }) => {
 
 
     return (
-        <form>
-            <Row className=' booking-row'>
-                {/* For the calendar column, ensure it's centered on small screens */}
-                <Col md={6} className='booking-left-col d-flex align-items-center '>
+        <form className='contact-page-container row-padding'>
+            <Row className="align-center">
+                <h1>Book Now!</h1>
+            </Row>
+            <Row className='pinkbg align-center row-padding'>
+                <div className="align-booking-items align-center contact-cont">
                     <CustomCalendar
                         value={value}
                         setValue={setValue}
                         disabledDates={disabledDates}
                     />
-                </Col>
-                {/* For the form column, ensure items are centered as well */}
-                <Col md={6} className='booking-right-col'>
-                    {/* Use d-flex and  to center form items on small screens */}
-                    <Row className='d-flex  booking-right-col-row'>
-                        <Col xs={12} md={8}> {/* Adjust md={8} to control the form width on larger screens */}
+                    <Col>
+                    <Row className='row-padding'>
+                        <Col>
                             <label>
                                 Name:
-                                <input type="text" value={name} onChange={handleNameChange} />
+                                <input className="input-box" type="text" value={name} onChange={handleNameChange} />
                             </label>
                         </Col>
                     </Row>
-                    <Row className='d-flex  booking-right-col-row'>
-                        <Col xs={12} md={8}>
+                    <Row className='row-padding'>
+                        <Col>
                             <label>
                                 Email:
-                                <input type="email" value={email} onChange={handleEmailChange} />
+                                <input className="input-box" type="email" value={email} onChange={handleEmailChange} />
                             </label>
                         </Col>
                     </Row>
-                    <Row className='d-flex  booking-right-col-row'>
-                        <Col xs={12} md={8}>
+                    <Row className='row-padding'>
+                        <Col>
                             <label>
                                 Phone Number:
-                                <input type="tel" value={phoneNumber} onChange={handlePhoneNumberChange} />
+                                <input className="input-box" type="tel" value={phoneNumber} onChange={handlePhoneNumberChange} />
                             </label>
                         </Col>
                     </Row>
-                    <Row className='d-flex  booking-right-col-row'>
-                        <Col xs={12} md={8} className='button-col'>
+                    <Row className='row-padding'>
+                        <Col>
                             <button type="button" className = "booking-button" onClick={handleBooking}>Book Now</button>
                         </Col>
                     </Row>
-                </Col>
+                    </Col>
+                </div>
             </Row>
         </form>
     );
