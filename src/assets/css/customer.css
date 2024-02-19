@@ -32,14 +32,19 @@ body {
 }
 
 .main-panel-customer p, h1, h2, h3, h4, h5, h6, h7, h8, h9, h0 {
-    color:black !important;
+    color: black !important;
 }
 
 .h1{
-    color:black !important;
+    color: #2e2e2e;
 }
 
 .booking-row {
     justify-content: center;
     align-content: center;
+}
+
+* {
+    font-family: 'playfair display', serif;
+    color: #2e2e2e;
 }

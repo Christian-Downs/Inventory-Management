@@ -91,7 +91,7 @@ function Home(props) {
           </Col>
           <Col>
             <img className="max-400"
-              src="https://plus.unsplash.com/premium_photo-1689609949815-bdb46c0f2397?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dhttps://plus.unsplash.com/premium_photo-1689609949815-bdb46c0f2397?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+              src="https://static.wixstatic.com/media/d710b4_3471d61f0267453094a6d4e19f533ca2~mv2_d_1632_1224_s_2.jpg/v1/fill/w_1632,h_1224,al_c/d710b4_3471d61f0267453094a6d4e19f533ca2~mv2_d_1632_1224_s_2.jpg" />
           </Col>
           <Col>
             <div className="customer-info">
@@ -116,17 +116,17 @@ function Home(props) {
         <Row>
          <Col></Col>
          <Col>
-          <div className="row-padding">
+          <div className="row-padding ladder-animation">
             <img className="max-400"
-            src="https://plus.unsplash.com/premium_photo-1689609949815-bdb46c0f2397?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dhttps://plus.unsplash.com/premium_photo-1689609949815-bdb46c0f2397?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+            src="https://i.pinimg.com/originals/cd/59/56/cd59565449fc469cc0320b2016f135bc.jpg" />
             <h3>Additional info can be included here, or an image can be used in its place.</h3>
           </div>
          </Col>
          <Col>
-          <div className="row-padding">
+          <div className="ladder-animation pt-75">
             <h3>Additional info can be included here, or an image can be used in its place.</h3>
             <img className="max-400"
-            src="https://plus.unsplash.com/premium_photo-1689609949815-bdb46c0f2397?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dhttps://plus.unsplash.com/premium_photo-1689609949815-bdb46c0f2397?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+            src="https://pinkscharming.com/wp-content/uploads/2018/08/Two-beautifully-decorated-kids-tents-at-our-tee-pee-party.jpg" />
           </div>
          </Col>
          <Col></Col>
