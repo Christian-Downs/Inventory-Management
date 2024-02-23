@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Inventory-Management/static/css/main.9f5c4395.css",
-    "main.js": "/Inventory-Management/static/js/main.70216e58.js",
+    "main.js": "/Inventory-Management/static/js/main.5ed4b089.js",
     "static/media/fa-solid-900.ttf": "/Inventory-Management/static/media/fa-solid-900.4a2cd718d7031b732e76.ttf",
     "static/media/fa-brands-400.ttf": "/Inventory-Management/static/media/fa-brands-400.150de8eaa454d669c405.ttf",
     "static/media/fa-solid-900.woff2": "/Inventory-Management/static/media/fa-solid-900.bb975c966c37455a1bc3.woff2",
@@ -25,10 +25,10 @@
     "static/media/slick.woff": "/Inventory-Management/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/Inventory-Management/index.html",
     "main.9f5c4395.css.map": "/Inventory-Management/static/css/main.9f5c4395.css.map",
-    "main.70216e58.js.map": "/Inventory-Management/static/js/main.70216e58.js.map"
+    "main.5ed4b089.js.map": "/Inventory-Management/static/js/main.5ed4b089.js.map"
   },
   "entrypoints": [
     "static/css/main.9f5c4395.css",
-    "static/js/main.70216e58.js"
+    "static/js/main.5ed4b089.js"
   ]
 }
