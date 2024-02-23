@@ -6,31 +6,23 @@ export class Package {
     description: string;
     price: number;
     image: string;
-    checked_out: boolean;
 
     constructor(id: number,
          name: string,
           description: string,
            price: number,
-            checked_out: boolean) {
+            image: string){
         this.id = id;
         this.name = name;
         this.description = description;
         this.price = price;
-        this.checked_out = checked_out;
+        this.image = image;
     }
 
     public getId(): number {
         return this.id;
     }
 
-    public checkOut(): void {
-        this.checked_out = true;
-    }
-
-    public checkIn(): void {
-        this.checked_out = false;
-    }
 
     public updatePackage(): void {
         updatePackage(this);

@@ -5,37 +5,25 @@ import { updateInventoryItem, checkInItem, checkOutItem } from "../Controller/In
 export class InventoryItem {
     id: number;
     name: string;
-    quantity: number;
     description: string;
     rent_price: number;
     cost: number;
     image: string;
-    checked_out: boolean;
+    link: string;
 
 
-    constructor(id: number, name: string, description: string , quantity: number, rent_price: number, cost: number, image: string, checked_out: boolean) {
+    constructor(id: number, name: string, description: string, rent_price: number, cost: number, image: string, link: string) {
         this.id = id;
         this.name = name;
-        this.quantity = quantity;
         this.description = description;
         this.rent_price = rent_price;
         this.cost = cost;
         this.image = image;
-        this.checked_out = checked_out;
+        this.link = link;
     }
 
     public getId(): number {
         return this.id;
-    }
-
-    public checkOut(): void {
-        this.checked_out = true;
-        checkOutItem(this);
-    }
-
-    public checkIn(): void {
-        this.checked_out = false;
-        checkInItem(this);
     }
 
 

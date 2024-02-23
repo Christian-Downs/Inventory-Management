@@ -11,14 +11,13 @@ export async function getInventory() {
     items = items.map(
       (item) =>
         new InventoryItem(
-          item.id,
-          item.name,
-          item.description,
-          item.quantity,
-          item.rent_price,
-          item.cost,
-          item.image,
-          item.checked_out
+          item.ID,
+          item.Name,
+          item.Description,
+          item.Rent_Price,
+          item.Cost,
+          item.Image,
+          item.Link
         )
     );
     console.log(items);

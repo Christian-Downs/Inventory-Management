@@ -47,7 +47,7 @@ function InventoryTable({
       setItems(items1);
       console.log(items1.image);
       setIsLoading(false);
-      if(setRefreshInventory){
+      if (setRefreshInventory) {
         setRefreshInventory(false);
       }
     });
@@ -65,6 +65,15 @@ function InventoryTable({
       setSelectedIds(selectedIds.filter((itemId) => itemId !== id));
     }
   };
+
+
+  const convertImage = (item) => {
+    if (item.image.contains("http")) {
+      return item.image;
+    } else {
+
+    }
+  }
 
   if (refreshInventory) {
     fetchItems();
@@ -94,6 +103,7 @@ function InventoryTable({
             <th>Cost</th>
             <th>Price</th>
             <th>Image</th>
+            <th>Buy More</th>
           </tr>
         </thead>
         <tbody>
@@ -148,9 +158,14 @@ function InventoryTable({
                     <td className="text-center">${item.rent_price}</td>
                     <td>
                       <img
-                        src={item.image}
+                        src={convertImage(item)}
                         style={{ width: "60px", height: "50PX" }}
                       />
+                    </td>
+                    <td>
+                      <a href={item.link} target="_blank">
+                        <Button>Buy More</Button>
+                      </a>
                     </td>
                   </tr>
                 )

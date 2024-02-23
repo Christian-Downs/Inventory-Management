@@ -90,7 +90,6 @@ function PackageTable({
           <tr>
             <th>Select</th>
             <th>id</th>
-            <th>Checked Out</th>
             <th>Name</th>
             <th>Description</th>
             <th>Cost</th>
@@ -140,7 +139,6 @@ function PackageTable({
                       </FormGroup>
                     </td>
                     <td>{item.id}</td>
-                    <td>{item.string_checked_out}</td>
                     <td>{item.name}</td>
                     <td>{item.description}</td>
                     <td>${item.price}</td>
