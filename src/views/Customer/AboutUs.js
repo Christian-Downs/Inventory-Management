@@ -13,7 +13,7 @@ const AboutUs = () => {
         {/* <h1 className="row-padding">About Us</h1> */}
         <Row className="row-padding">
           <Col>
-            <h2 className='about-us-header'>Meet the Downs'</h2>
+            <h2 className='about-us-header'>Meet the Downs' updated</h2>
             <p className='about-us-info'>
               We are a company that provides a variety of services to our
               customers. We have been in business for over 10 years and have
