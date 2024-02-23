@@ -9,11 +9,33 @@ import BookingPage from "./Book";
 import "assets/css/theme.css"
 
 
+const AllThemes = () => {
 
 
-const Theme = () => {
-  const { themeName } = useParams();
-  console.log(themeName)
+  return (
+    <div>
+      <h1>Themes</h1>
+      <Row>
+        {Object.keys(website.themes).map(themeName => {
+          const theme = website.themes[themeName]
+          return (
+            <Col>
+              <a href={"/theme/" + themeName}>
+                <Image src={theme.image} />
+                <h2>{themeName}</h2>
+              </a>
+            </Col>
+          )
+        })}
+      </Row>
+    </div>
+  )
+}
+
+
+
+
+const SingleTheme = ({ themeName }) => {
   const theme = website.themes[themeName]
   const rows = theme.rows
   const id = theme.id
@@ -58,8 +80,8 @@ const Theme = () => {
     return color;
   }
 
-
-  return (
+  if(themeName != undefined){
+      return (
     <div>
       <h1 className="theme-top">{themeName}</h1>
       {rows.map(row => {
@@ -82,6 +104,27 @@ const Theme = () => {
         <BookingPage theme = {theme} />
     </div>
   );
+  } else {
+    return (
+      <div>
+        <h1>No theme found</h1>
+      </div>
+    )
+  }
+}
+
+
+const Theme = () => {
+  const { themeName } = useParams();
+  console.log(themeName)
+  if(themeName == undefined){
+    return AllThemes()
+  } else {
+    return SingleTheme({themeName})
+  }
+  
+
+
 };
 
 export default Theme;

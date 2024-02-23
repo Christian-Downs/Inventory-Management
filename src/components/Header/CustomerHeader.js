@@ -34,7 +34,6 @@ function CustomerHeader() {
     } else {
       // dropdownMenuRef.current.style.display = "none";
     }
-
   }, [dropdownOpen]);
 
   // const getThemes = () => {
@@ -61,7 +60,7 @@ function CustomerHeader() {
             <Row>
               {routes.map((prop, key) => {
                 if (prop.customer) {
-                  if (prop.name === "Themes") {
+                  if (prop.name === "Themed Packages") {
                     return (
                       <Col xs={columnSize} key={key}>
                         <Dropdown
@@ -74,26 +73,27 @@ function CustomerHeader() {
                             nav
                             caret
                             className="customer-routing-links"
-                            style={{paddingBottom: "0px"}}
+                            style={{ paddingBottom: "0px" }}
                           >
                             {prop.name}
                           </DropdownToggle>
-                          <DropdownMenu 
-                            modifiers={{offset:'0,10'}}
+                          <DropdownMenu
+                            modifiers={{ offset: "0,10" }}
                             ref={dropdownMenuRef}
-                            className="customer-dropdown-header">
+                            className="customer-dropdown-header"
+                          >
                             {/* You can map through your themes here */}
                             <DropdownItem header>Theme List</DropdownItem>
-                            {
-                              Object.keys(themes).map((themeName) => {
-                                const link = `/theme/${themeName}`;
-                                return (
+                            {Object.keys(themes).map((themeName) => {
+                              const link = `/theme/${themeName}`;
+                              return (
+                                <Link to={link}>
                                   <DropdownItem key={themeName}>
-                                    <Link to = {link}>{themeName}</Link>
+                                    {themeName}
                                   </DropdownItem>
-                                );
-                              })
-                            }
+                                </Link>
+                              );
+                            })}
                             {/* <DropdownItem>Let's Go Girls</DropdownItem> */}
                             {/* ... other themes */}
                           </DropdownMenu>
