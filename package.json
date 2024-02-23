@@ -2,7 +2,7 @@
   "name": "memorable-nights",
   "version": "1.2.2",
   "private": true,
-  "homepage": "https://demos.creative-tim.com/black-dashboard-react/#/admin/dashboard",
+  "homepage": "https://christian-downs.github.io/Inventory-Management/",
   "dependencies": {
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
@@ -49,7 +49,9 @@
     "eject": "react-scripts eject",
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
     "compile-scss": "sass src/assets/scss/black-dashboard-react.scss src/assets/css/black-dashboard-react.css",
-    "minify-scss": "sass src/assets/scss/black-dashboard-react.scss src/assets/css/black-dashboard-react.min.css --style compressed"
+    "minify-scss": "sass src/assets/scss/black-dashboard-react.scss src/assets/css/black-dashboard-react.min.css --style compressed",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
