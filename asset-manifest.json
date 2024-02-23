@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Inventory-Management/static/css/main.9f5c4395.css",
-    "main.js": "/Inventory-Management/static/js/main.5ed4b089.js",
+    "main.css": "/Inventory-Management/static/css/main.bfdd1321.css",
+    "main.js": "/Inventory-Management/static/js/main.e9b0302a.js",
     "static/media/fa-solid-900.ttf": "/Inventory-Management/static/media/fa-solid-900.4a2cd718d7031b732e76.ttf",
     "static/media/fa-brands-400.ttf": "/Inventory-Management/static/media/fa-brands-400.150de8eaa454d669c405.ttf",
     "static/media/fa-solid-900.woff2": "/Inventory-Management/static/media/fa-solid-900.bb975c966c37455a1bc3.woff2",
@@ -9,6 +9,7 @@
     "static/media/emilyz.jpg": "/Inventory-Management/static/media/emilyz.105ff23d3d4b065ca850.jpg",
     "static/media/Apple Chancery Italic.ttf": "/Inventory-Management/static/media/Apple Chancery Italic.133f864ad380e8fd2566.ttf",
     "static/media/fa-regular-400.ttf": "/Inventory-Management/static/media/fa-regular-400.d87474231f4192884802.ttf",
+    "static/media/aboutus.jpg": "/Inventory-Management/static/media/aboutus.891182200638c18b2092.jpg",
     "static/media/react-logo.png": "/Inventory-Management/static/media/react-logo.561f1671ed326d663356.png",
     "static/media/anime3.png": "/Inventory-Management/static/media/anime3.4438e5067f2029f9e058.png",
     "static/media/nucleo.eot": "/Inventory-Management/static/media/nucleo.bd5cce8bf40be5947637.eot",
@@ -24,11 +25,11 @@
     "static/media/slick.ttf": "/Inventory-Management/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/Inventory-Management/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/Inventory-Management/index.html",
-    "main.9f5c4395.css.map": "/Inventory-Management/static/css/main.9f5c4395.css.map",
-    "main.5ed4b089.js.map": "/Inventory-Management/static/js/main.5ed4b089.js.map"
+    "main.bfdd1321.css.map": "/Inventory-Management/static/css/main.bfdd1321.css.map",
+    "main.e9b0302a.js.map": "/Inventory-Management/static/js/main.e9b0302a.js.map"
   },
   "entrypoints": [
-    "static/css/main.9f5c4395.css",
-    "static/js/main.5ed4b089.js"
+    "static/css/main.bfdd1321.css",
+    "static/js/main.e9b0302a.js"
   ]
 }
