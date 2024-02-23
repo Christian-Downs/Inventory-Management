@@ -60,7 +60,7 @@ function CustomerHeader() {
             <Row>
               {routes.map((prop, key) => {
                 if (prop.customer) {
-                  if (prop.name === "Themed Packages") {
+                  if (prop.name.includes("Theme")) {
                     return (
                       <Col xs={columnSize} key={key}>
                         <Dropdown
