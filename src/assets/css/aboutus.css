@@ -1,0 +1,17 @@
+.about-us-main-image {
+    width: 100%;
+    height: 40rem;
+    object-fit: cover;
+    object-position: center;
+    position: relative;
+    z-index: 1;
+    
+}
+
+.about-us-info {
+    font-family: cursive;
+}
+
+.about-us-header {
+    font-family: cursive;
+}

@@ -28,6 +28,7 @@ import Inventory from "views/Inventory";
 import Packages from "views/Packages";
 import Theme from "views/Customer/Theme";
 import Book from "views/Customer/Book";
+import AboutUs from "views/Customer/AboutUs";
 
 var routes = [
   {
@@ -45,6 +46,12 @@ var routes = [
     component: <Theme />,
     layout:'',
 
+  },{
+    path: "/aboutus",
+    name: "About Us",
+    customer: true,
+    component: <AboutUs />,
+    layout: ""
   },
   {
     path: "/book",
