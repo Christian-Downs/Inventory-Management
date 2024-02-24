@@ -10,17 +10,12 @@ const BookingPage = ({ theme }) => {
 
     const [selectedDate, setSelectedDate] = React.useState(dayjs());
 
-    // const [theme, setTheme] = useState('light');
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
     const [streetAddress, setStreetAddress] = useState('');
     const [city, setCity] = useState('');
     const [zipcode, setZipcode] = useState('');
-
-    // const handleThemeChange = (event) => {
-    //     setTheme(event.target.value);
-    // };
 
     const handleNameChange = (event) => {
         setName(event.target.value);
@@ -38,11 +33,20 @@ const BookingPage = ({ theme }) => {
         setStreetAddress(event.target.value);
     }
 
+    const handleZipcodeChange = (event) => {
+        setZipcode(event.target.value);
+    }
+
+    const handleCityChange = (event) => {
+        setCity(event.target.value);
+    }
+
+
 
     const validateForm = () => {
         var validEmail = false
 
-        if (name == '' || email == "" || phoneNumber == "") {
+        if (name === '' || email === "" || phoneNumber === "" || streetAddress === "" || city === "" || zipcode === '') {
             alert("All fields must be filled out")
             return false;
         }
@@ -86,7 +90,7 @@ const BookingPage = ({ theme }) => {
     };
 
     useEffect(() => {
-        axios.get(process.env.REACT_APP_SERVER_URL + "/api/calendar/"+theme.id).then(function (response) {
+        axios.get(process.env.REACT_APP_SERVER_URL + "/api/calendar/" + theme.id).then(function (response) {
             console.log(response.data)
         }).catch(function (error) {
             console.log(error)
@@ -122,31 +126,39 @@ const BookingPage = ({ theme }) => {
                     {/* Use d-flex and  to center form items on small screens */}
                     <Row className='d-flex  booking-right-col-row'>
                         <Col xs={12} md={8}> {/* Adjust md={8} to control the form width on larger screens */}
-                            <label>
+                            <label for="name">
                                 Name:
-                                <input type="text" value={name} onChange={handleNameChange} />
                             </label>
+                            <input id="name" type="text" value={name} onChange={handleNameChange} />
                         </Col>
                     </Row>
                     <Row className='d-flex  booking-right-col-row'>
                         <Col xs={12} md={8}>
-                            <label>
+                            <label for="email">
                                 Email:
-                                <input type="email" value={email} onChange={handleEmailChange} />
                             </label>
+                            <input id="email" type="email" value={email} onChange={handleEmailChange} />
                         </Col>
                     </Row>
                     <Row className='d-flex  booking-right-col-row'>
                         <Col xs={12} md={8}>
-                            <label>
+                            <label for="phoneNumber">
                                 Phone Number:
-                                <input type="tel" value={phoneNumber} onChange={handlePhoneNumberChange} />
                             </label>
+                            <input id="phoneNumber" type="tel" value={phoneNumber} onChange={handlePhoneNumberChange} />
                         </Col>
                     </Row>
                     <Row className='d-flex  booking-right-col-row'>
                         <label for="streetAddress">Street Address:</label>
                         <input type='text' id="streetAddress" value={streetAddress} onChange={handleStreetAddressChange} />
+                    </Row>
+                    <Row className='d-flex  booking-right-col-row'>
+                        <label for="city">City:</label>
+                        <input type='text' id="city" value={city} onChange={handleCityChange} />
+                    </Row>
+                    <Row className='d-flex  booking-right-col-row'>
+                        <label for="zipcode">Zip Code:</label>
+                        <input type='text' id="zipcode" value={zipcode} onChange={handleZipcodeChange} />
                     </Row>
                     <Row className='d-flex  booking-right-col-row'>
                         <Col xs={12} md={8} className='button-col'>
