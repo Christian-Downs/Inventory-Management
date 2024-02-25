@@ -14,6 +14,10 @@ const BookingPage = ({ theme }) => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
+    const [street, setStreet] = useState('');
+    const [city, setCity] = useState('');
+    const [zip, setZip] = useState('');
+
 
     // const handleThemeChange = (event) => {
     //     setTheme(event.target.value);
@@ -28,6 +32,18 @@ const BookingPage = ({ theme }) => {
     };
 
     const handlePhoneNumberChange = (event) => {
+        setPhoneNumber(event.target.value);
+    };
+
+    const handleStreetChange = (event) => {
+        setPhoneNumber(event.target.value);
+    };
+
+    const handleCityChange = (event) => {
+        setPhoneNumber(event.target.value);
+    };
+
+    const handleZipChange = (event) => {
         setPhoneNumber(event.target.value);
     };
 
@@ -88,6 +104,30 @@ const BookingPage = ({ theme }) => {
                             <label>
                                 Phone Number:
                                 <input className="input-box" type="tel" value={phoneNumber} onChange={handlePhoneNumberChange} />
+                            </label>
+                        </Col>
+                    </Row>
+                    <Row className='row-padding'>
+                        <Col>
+                            <label>
+                                Street Address:
+                                <input className="input-box" type="text" value={street} onChange={handleStreetChange} />
+                            </label>
+                        </Col>
+                    </Row>
+                    <Row className='row-padding'>
+                        <Col>
+                            <label>
+                                City:
+                                <input className="input-box" type="text" value={city} onChange={handleCityChange} />
+                            </label>
+                        </Col>
+                    </Row>
+                    <Row className='row-padding'>
+                        <Col>
+                            <label>
+                                Zip Code:
+                                <input className="input-box" type="zip" value={zip} onChange={handleZipChange} />
                             </label>
                         </Col>
                     </Row>

@@ -23,9 +23,9 @@ const Theme = () => {
 
   const ImageSection = ({ section }) => {
     return (
-      <div>
-        <Image src={section.image} />
-      </div>
+      <Row className="row-padding">
+        <img src={section.image}></img>
+      </Row>
     )
   }
 
@@ -39,7 +39,6 @@ const Theme = () => {
         <ul className="custom-marker">
           <li>{section.description}</li>
         </ul>
-        {/* <p>{section.description}</p> */}
       </div>
     )
   }
@@ -59,47 +58,6 @@ const Theme = () => {
   return (
     <div>
       <h1 className="theme-top row-padding">{themeName}</h1>
-        <Row className="row-padding">
-          <img src="https://cdn.shopify.com/s/files/1/0021/8064/4934/articles/The_Eras_Tour_Cover_1200x.jpg?v=1667319117"></img>
-        </Row>
-        <Row className="pinkbg row-padding">
-          <Col>
-            <div className="customer-info">
-              <div className="subpoints align-center">
-                <div>
-                  <h3>Party packages</h3>
-                  <h4>Additional info can be included here, or an image can be used in its place.</h4>
-                </div>
-                <div>
-                  <h3>Set up & styling</h3>
-                  <h4>Additional info can be included here, or an image can be used in its place.</h4>
-                </div>
-                <div>
-                  <h3>Free delivery</h3>
-                  <h4>Additional info can be included here, or an image can be used in its place.</h4>
-                </div>
-              </div>
-            </div>
-          </Col>
-        </Row> 
-        <Row>
-         <Col></Col>
-         <Col>
-          <div className="row-padding">
-            <img className="max-400"
-            src="https://plus.unsplash.com/premium_photo-1689609949815-bdb46c0f2397?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dhttps://plus.unsplash.com/premium_photo-1689609949815-bdb46c0f2397?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
-            <h3>Additional info can be included here, or an image can be used in its place.</h3>
-          </div>
-         </Col>
-         <Col>
-          <div className="row-padding">
-            <h3>Additional info can be included here, or an image can be used in its place.</h3>
-            <img className="max-400"
-            src="https://plus.unsplash.com/premium_photo-1689609949815-bdb46c0f2397?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dhttps://plus.unsplash.com/premium_photo-1689609949815-bdb46c0f2397?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
-          </div>
-         </Col>
-         <Col></Col>
-        </Row>
         {rows.map(row => {
           const colSize = 12/ row.length
           console.log(colSize)
@@ -110,7 +68,8 @@ const Theme = () => {
                   return (<Col><TextSection section={section} /> </Col>);
                 case "Image":
                   return ( <Col> <ImageSection section={section} /> </Col>);
-
+                default:
+                  return ( <Col></Col>);
               }
             })
             }
