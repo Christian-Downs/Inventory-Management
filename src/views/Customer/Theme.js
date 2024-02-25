@@ -11,7 +11,6 @@ import "assets/css/theme.css"
 
 const Theme = () => {
   const { themeName } = useParams();
-  console.log(themeName)
   const theme = website.themes[themeName]
   const rows = theme.rows
   const id = theme.id
@@ -31,17 +30,25 @@ const Theme = () => {
 
 
   const TextSection = ({ section }) => {
-    console.log("Test")
-    console.log(section)
+    if (!Array.isArray(section.description)) {
+      return (
+        <Row>Descriptions must be formatted as an array!</Row>
+      ); 
+    }
     return (
-      <div>
+      <Row className="row-padding">
         <h2>{section.title}</h2>
         <ul className="custom-marker">
-          <li>{section.description}</li>
+          {section.description.map((element, index) => (
+            <li key={index}>{element}</li>
+          ))}
         </ul>
-      </div>
+      </Row>
     )
   }
+
+
+
   var color = "#ffe6e6"
 
   const colorChanger = () => {

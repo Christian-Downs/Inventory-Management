@@ -9,16 +9,16 @@
                 [
                     {
                         "type": "Text",
-                        "title": "Taylor Swift",
-                        "description": "A night to remember",
+                        "title": "A T-Swift Sleepover",
+                        "description": [
+                            "A sleepover to remember for all of your eras!",
+                            "The party setup is themed to match all of Taylor Swift's iconic eras! This will be a sleepover to remember.",
+                            "***You can customize which eras you'd like to include***"
+                        ],
                         "link": "taylor_swift"
                     },
                     {
                         "type": "Image",
-                        "image": "https://images.unsplash.com/photo-1551230598-4d1c3c21f33a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    },
-                    {
-                        "type":"Image",
                         "image": "https://images.unsplash.com/photo-1551230598-4d1c3c21f33a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     }
                 ],
@@ -26,7 +26,9 @@
                     {
                         "type": "Text",
                         "title": "Taylor Swift",
-                        "description": "A night to remember",
+                        "description": [
+                            "A night to remember"
+                        ],
                         "link": "taylor_swift"
                     },
                     {
@@ -36,7 +38,9 @@
                     {
                         "type": "Text",
                         "title":"Text2",
-                        "description": "Test"
+                        "description": [
+                            "Test"
+                        ]
                     }
                 ]
             ]
@@ -48,7 +52,9 @@
                     {
                         "type": "Text",
                         "title": "Gaming",
-                        "description": "A night to remember",
+                        "description": [
+                            "A night to remember"
+                        ],
                         "link": "gaming"
                     },
                     {

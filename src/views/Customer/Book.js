@@ -67,9 +67,6 @@ const BookingPage = ({ theme }) => {
 
     console.log(disabledDates)
 
-
-
-
     return (
         <form className='contact-page-container row-padding'>
             <Row className="align-center">
