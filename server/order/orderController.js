@@ -1,5 +1,7 @@
 const sqlite3 = require("sqlite3").verbose();
 
+const sendMail = require("../mailer");
+
 // Connect to the database
 const db = new sqlite3.Database("./db/inventory.db", (err) => {
   if (err) {
@@ -114,6 +116,11 @@ const makeOrder = async (req, res) => {
 
     if (orderId) {
       let packageOrderTableId = await addToOrderPackage(orderId, packageId);
+      let message = await sendMail(
+        email,
+        "Order Confirmation",
+        `Thank you for your order. Your order number is ${orderId}`
+      );
       res.json({ orderId, packageOrderTableId });
     } else {
       res.status(400).json({ error: "Error creating order" });
