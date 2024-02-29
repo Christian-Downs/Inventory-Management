@@ -1,0 +1,112 @@
+@font-face {
+    font-family: 'Apple Chancery';
+    src: url('assets/fonts/Apple Chancery Italic.ttf');
+}
+
+@font-face {
+    font-family: 'Amatic SC Bold';
+    src: url('assets/fonts/AmaticSC-Bold.ttf');
+}
+
+.booking-holder-div{
+    background-color: rgb(255, 255, 255);
+
+}
+
+.booking-form-row-top{
+    margin-left: 0;
+}
+
+.booking-header-row{
+    width: 100%;
+    padding-left: 1rem;    
+    padding-bottom:0;
+    margin-left: 0 !important;
+}
+
+.booking-header-text-row{
+    width: 100%;
+
+}
+
+.booking-header-text {
+    font-family: 'Amatic SC Bold', cursive;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.booking-header-subtext-row {
+    width: 100%;
+    padding-left: 1rem;
+}
+
+
+.booking-form-row-top{
+    padding-top: 1rem;
+    width: 100%;
+    background: pink;
+
+    padding-bottom: 1rem;
+    justify-content: center;
+    margin-left: 0 !important;
+}
+.form{
+    width: 100%;
+    justify-content: center;
+}
+
+.form-header {
+    width: 100%;
+    justify-self: center;
+    place-content: center;
+}
+
+.form-row{
+    width: 100%;
+    justify-content: center;
+
+}
+
+.form-general-information {
+    width: 80% !important;
+    margin-left: 10% !important;
+}
+
+.form-input{
+    margin-bottom: 0.5rem;
+}
+
+.form-theme-message{
+    width: 80%;
+    margin-left: 10% !important;
+}
+
+.button-row{
+    width: 80%;
+    justify-content: center;
+    margin-left: 10% !important;
+}
+
+.theme-selector-row{
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    margin-left: 0 !important;
+    
+}
+
+.theme-selector{
+    width: 100%
+}
+
+.message-col{
+    width: 100%;
+    justify-content: center;
+    margin-left: 0 !important;
+    text-align:center;
+}
+
+.container-holder{
+    display:grid;
+    justify-content: center;
+}

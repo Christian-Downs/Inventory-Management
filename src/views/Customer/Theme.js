@@ -110,7 +110,7 @@ const SingleTheme = ({ themeName }) => {
 
   const inquiryButtonHandler = () => {  
     console.log("Inquiry button clicked")
-    navigate("/book/id")
+    navigate("/book", { state: { themeName: themeName } });
   }
 
 

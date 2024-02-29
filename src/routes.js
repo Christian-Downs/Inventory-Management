@@ -28,6 +28,7 @@ import Inventory from "views/Inventory";
 import Packages from "views/Packages";
 import Theme from "views/Customer/Theme";
 import Book from "views/Customer/Book";
+import Inquiry from "views/Customer/Inquiry";
 import AboutUs from "views/Customer/AboutUs";
 
 var routes = [
@@ -44,20 +45,20 @@ var routes = [
     name: "Themes",
     customer: true,
     component: <Theme />,
-    layout:'',
-
-  },{
+    layout: "",
+  },
+  {
     path: "/aboutus",
     name: "About Us",
     customer: true,
     component: <AboutUs />,
-    layout: ""
+    layout: "",
   },
   {
     path: "/book",
     name: "Book",
     icon: "tim-icons icon-chart-pie-36",
-    component: <Book />,
+    component: <Inquiry />,
     layout: "",
     customer: true,
   },
@@ -68,7 +69,7 @@ var routes = [
     component: <Inventory />,
     layout: "/admin",
   },
-    {
+  {
     path: "/Package",
     name: "Package",
     rtlName: "طباعة",
@@ -132,6 +133,5 @@ var routes = [
     component: <Typography />,
     layout: "/admin",
   },
-
 ];
 export default routes;
