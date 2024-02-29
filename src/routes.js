@@ -53,14 +53,14 @@ var routes = [
     component: <AboutUs />,
     layout: ""
   },
-  // {
-  //   path: "/book",
-  //   name: "Book",
-  //   icon: "tim-icons icon-chart-pie-36",
-  //   component: <Book />,
-  //   layout: "",
-  //   customer: true,
-  // },
+  {
+    path: "/book",
+    name: "Book",
+    icon: "tim-icons icon-chart-pie-36",
+    component: <Book />,
+    layout: "",
+    customer: true,
+  },
   {
     path: "/inventory",
     name: "inventory",

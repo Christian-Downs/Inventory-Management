@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Navigate, useNavigate, useParams } from "react-router-dom";
 import website from 'assets/jsons/website.json'
 import { formToJSON } from "axios";
 import { parseJsonText } from "typescript";
@@ -12,6 +12,9 @@ import { set } from "date-fns";
   @import
   url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap')
 </style>;
+
+
+
 
 const AllThemes = () => {
 
@@ -40,10 +43,12 @@ const AllThemes = () => {
 
 
 const SingleTheme = ({ themeName }) => {
+  const navigate = useNavigate();
   const theme = website.themes[themeName]
   const rows = theme.rows
   const id = theme.id
   const themeDescription = theme["Description"];
+  const mainImageString = theme["MainImage"];
   console.log(themeDescription)
   console.log(rows)
 
@@ -53,21 +58,12 @@ const SingleTheme = ({ themeName }) => {
   const [mainImage, setMainImage] = useState('');
   //Load images dynamically
   useEffect(() => {
-    const loadImage = async () => {
-      try {
-        const image = await import(
-          `assets/img/${theme["MainImage"]}`
-        );
-        setMainImage(image.default);
-      } catch (error) {
-        console.error("Failed to load image", error);
-      }
-    };
-
-    if (theme["MainImage"]) {
-      loadImage();
+    if (mainImageString) {
+      loadImage(mainImageString).then((image) => {
+        setMainImage(image);
+      });
     }
-  }, [theme["MainImage"]]);
+  }, [mainImageString]);
 
 
   async function loadImage (imageName) {
@@ -84,28 +80,6 @@ const SingleTheme = ({ themeName }) => {
   const [lowerSecondImages, setSecondLowerImages] = useState([]);
 
   const imageNames = theme["Images"];
-
-  // useEffect(() => {
-  //   var images = [];
-  //   const loadImage = async (imageName) => {
-  //     try {
-  //       const image = await import(`assets/img/${imageName}`);
-  //       images.push(image.default);
-  //     } catch (error) {
-  //       console.error("Failed to load image", error);
-  //     }
-  //   };
-
-  //   if (imageNames) {
-  //     for (let i = 0; i < imageNames.length; i++) {
-  //       loadImage(imageNames[i]);
-  //     }
-  //     imageNames.forEach(async (imageName) => {
-  //       await loadImage(imageName);
-  //     });
-  //     setFirstLowerImages(images);
-  //   }
-  // }, [imageNames]);
 
   useEffect(() => {
     if (imageNames) {
@@ -131,6 +105,12 @@ const SingleTheme = ({ themeName }) => {
         <Image src={section.image} />
       </div>
     )
+  }
+
+
+  const inquiryButtonHandler = () => {  
+    console.log("Inquiry button clicked")
+    navigate("/book/id")
   }
 
 
@@ -180,6 +160,7 @@ const SingleTheme = ({ themeName }) => {
               <Button
                 className="inquiry-button"
                 style={{ background: theme["InquiryButtonColor"] }}
+                onClick={inquiryButtonHandler}
               >
                 Inquiry
               </Button>
@@ -214,18 +195,31 @@ const SingleTheme = ({ themeName }) => {
               </div>
             </Col>
           </Row>
-          <Row className="lower-image-holder-row">
-            <Col className="lower-image-col col-left">
-              {lowerFirstImages.map((image) => {
-                return <Image src={image} />;
-              })}
-            </Col>
-            <Col className="lower-image-col col-right">
-              {lowerSecondImages.map((image) => {
-                return <Image src={image} />;
-              })}
-            </Col>
-          </Row>
+          <div
+            className="lower-image-master-holder"
+            style={{ background: theme["LowerImageBackgroundColor"] }}
+          >
+            <Row className="lower-image-holder-row">
+              <Col className="lower-image-col col-left">
+                {lowerFirstImages.map((image) => {
+                  return (
+                    <div className="lower-image-div">
+                      <Image src={image} className="lower-images" />
+                    </div>
+                  );
+                })}
+              </Col>
+              <Col className="lower-image-col col-right">
+                {lowerSecondImages.map((image) => {
+                  return (
+                    <div className="lower-image-div">
+                      <Image src={image} className="lower-images" />
+                    </div>
+                  );
+                })}
+              </Col>
+            </Row>
+          </div>
 
           {/* <BookingPage theme={theme} /> */}
         </div>

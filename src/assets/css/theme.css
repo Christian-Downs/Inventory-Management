@@ -45,8 +45,8 @@ li{
 }
 
 .lower-image-holder-row {
-    width: 100%;
-    margin-left: 0% !important;
+    width: 80%;
+    margin-left: 10% !important;
 }
 
 .lower-image-col {
@@ -120,4 +120,13 @@ li{
 
 .extra-teepee-text {
     font-weight: bold;
+}
+
+.lower-image-master-holder {
+    padding-top:2rem;
+}
+
+.lower-image-div {
+    padding-top: 0.3rem;
+    padding-right: 0.2rem;
 }
