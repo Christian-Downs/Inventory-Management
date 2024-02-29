@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmemorable_nights=self.webpackChunkmemorable_nights||[]).push([[8284],{8284:(e,s,a)=>{e.exports=a.p+"static/media/DSC09942_GAMER_HERO1.4f9b29943a6e9fd55f16.jpg"}}]);

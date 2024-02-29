@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmemorable_nights=self.webpackChunkmemorable_nights||[]).push([[8904],{8904:(e,s,a)=>{e.exports=a.p+"static/media/bg5.d60a95eb31d6400f802f.jpg"}}]);
