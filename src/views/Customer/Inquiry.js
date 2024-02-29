@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import "assets/css/inquiry.css";
 import { Row, Col, Button } from "react-bootstrap";
 import website from "assets/jsons/website.json";
+import axios from "axios";
 
 function Inquiry() {
   const [name, setName] = useState("");
@@ -28,6 +29,26 @@ function Inquiry() {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission logic here
+    if(name === '' || email === "" || guestCount === "" || phoneNumber === "" || selectedDate === "" || address === "" || selectedTheme === ""){
+        alert("All fields must be filled out");
+        return;
+    }
+    axios.post(process.env.REACT_APP_SERVER_URL + "/api/sendEmail", {
+        email: "Christian.downs.15@gmail.com",
+        subject: "New Booking Inquiry",
+        message: `Name: ${name}\nEmail: ${email}\nGuest Count: ${guestCount}\nPhone Number: ${phoneNumber}\nDate: ${selectedDate}\nAddress: ${address}\nTheme: ${selectedTheme}\nMessage: ${message}`
+    }).then((response) => {
+        console.log(response);
+        alert("Email Sent!");
+        setName("");
+        setEmail("");
+        setGuestCount("");
+        setPhoneNumber("");
+        setSelectedDate("");
+        setAddress("");
+        setSelectedTheme("");
+        setMessage("");
+    });
   };
 
 
