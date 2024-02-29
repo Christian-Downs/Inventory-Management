@@ -38,3 +38,95 @@ li{
     font-family: 'Apple Chancery';
     src: url('assets/fonts/Apple Chancery Italic.ttf');
 }
+
+@font-face{
+    font-family:'Amatic SC Bold';
+    src: url('assets/fonts/AmaticSC-Bold.ttf');
+}
+
+.lower-image-holder-row {
+    width: 80%;
+    margin-left: 10% !important;
+}
+
+.lower-image-col {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
+.header-holder{
+    align-items: center;
+    width: 100% !important;
+    margin-left: 0% !important;
+    height: 20rem;
+}
+
+.info-holder{
+    text-align: center;
+}
+
+.theme-name-holder {
+    text-align: center;
+    font-family: 'Apple Chancery', cursive !important;
+}
+
+.theme-header-image-col{
+    height: 100%;
+}
+
+.theme-image {
+    height: 100%;
+    width: 100%; 
+    object-fit: fill;
+    object-position: left;
+}
+
+.inquiry-button {
+    padding: .9rem 2.5rem !important;
+}
+
+.included-row{
+    height: min-content !important;
+    background-color: bisque;
+    justify-content: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+.included-col{
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    justify-content: center;
+    
+}
+
+.included-header-text{
+    font-family: 'Amatic SC Bold', cursive !important;
+    text-align: center;
+    font-size: 2.5rem !important;
+    margin-bottom: 0;
+}
+
+
+.included-header-teepee-count {
+    text-align: center;
+    padding-top: 0% !important;
+    font-size: 1rem !important;
+}
+
+.included-list-ul{
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.extra-teepee-text {
+    font-weight: bold;
+}
+
+.lower-image-master-holder {
+    padding-top:2rem;
+}
+
+.lower-image-div {
+    padding-top: 0.3rem;
+    padding-right: 0.2rem;
+}

@@ -26,9 +26,22 @@ app.use("/api/order", orderRoutes);
 app.use("/api/addon", addonRoutes);
 app.use("/api/calendar", calendarRoutes);
 
+
 const sendMail = require("./mailer");
 
-sendMail(process.env.MAIL_AUTH_USER, "test", "test message")
+
+app.post("/api/sendEmail", (req, res) => {
+
+  const { email, subject, message } = req.body;
+  console.log(email, subject, message)
+  sendMail(email, subject, message)
+  res.status(200).json({ success: true });
+});
+
+
+
+
+// sendMail(process.env.MAIL_AUTH_USER, "test", "test message")
 
 const port = process.env.PORT || 3001;
 
