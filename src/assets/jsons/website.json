@@ -5,6 +5,36 @@
     "themes": {
         "Taylor Swift": {
             "id": 1,
+            "MainImage":"TaylorSwift/Taylor_Swift_eras_tour.jpg",
+            "Description": [
+                "Come on Barbie, Let's Go Party!!",
+                "This party setup comes with a fun range of pink tones, crazy patterns and adorable decorations and lights, making it a glamorous sleepover."
+            ],
+            "HeaderColor": "pink",
+            "InquiryButtonColor": "blueviolet",
+            "IncludedBackgroundColor": "#bd34b9",
+            "TentCount": 4,
+            "Included": [
+                "Teepees",
+                "Mattresses with Bedding",
+                "Pillows",
+                "Balloons"
+            ],
+            "Images":[
+                "TaylorSwift/DSC00063_SWIFT_HERO1.jpg",
+                "TaylorSwift/DSC00066_SWIFT_HERO2.jpg",
+                "TaylorSwift/DSC00067_SWIFT_HERO3.jpg",
+                "TaylorSwift/DSC00069_SWIFT_HERO4.jpg",
+                "TaylorSwift/DSC00070.jpg",
+                "TaylorSwift/DSC00085.jpg",
+                "TaylorSwift/DSC00087.jpg",
+                "TaylorSwift/DSC00088.jpg",
+                "TaylorSwift/DSC00089.jpg",
+                "TaylorSwift/DSC00096.jpg",
+                "TaylorSwift/DSC00098.jpg",
+                "TaylorSwift/DSC00110.jpg",
+                "TaylorSwift/DSC00112.jpg"
+            ],
             "rows": [
                 [
                     {
