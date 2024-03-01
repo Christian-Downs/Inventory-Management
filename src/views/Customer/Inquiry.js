@@ -54,121 +54,90 @@ function Inquiry() {
 
   return (
     <div className="container-holder">
-      <div className="booking-holder-div">
-        <Row className="booking-header-row">
-          <Row className="booking-header-text-row">
-            <h1 className="booking-header-text">Book Here</h1>
-          </Row>
-          <Row className="booking-header-subtext-row">
-            <p className="booking-header-subtext">
-              Please fill out the form below to book an event
-            </p>
-          </Row>
-        </Row>
-        <Row className="booking-form-row-top">
-          <Row className="form-header">
-            <h1>Let's Start Planning Your Party!!</h1>
-          </Row>
-          <Row className="form-row">
-            <form className="form" onSubmit={handleSubmit}>
-              <Row className="form-general-information">
-                <Col>
-                  <Row>
-                    <input
-                      type="text"
-                      value={name}
-                      onChange={(e) => setName(e.target.value)}
-                      placeholder="Name"
-                      className="form-input"
-                    />
-                  </Row>
-                  <Row>
-                    <input
-                      type="text"
-                      value={guestCount}
-                      onChange={(e) => setGuestCount(e.target.value)}
-                      placeholder="Guest Count"
-                      className="form-input"
-                    />
-                  </Row>
-                </Col>
-                <Col>
-                  <Row>
-                    <input
-                      type="email"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      placeholder="Email"
-                      className="form-input"
-                    />
-                  </Row>
-                  <Row>
-                    <input
-                      type="date"
-                      value={selectedDate}
-                      onChange={(e) => setSelectedDate(e.target.value)}
-                      placeholder="Select a Date"
-                      className="form-input"
-                    />
-                  </Row>
-                </Col>
-                <Col>
-                  <Row>
-                    <input
-                      type="tel"
-                      value={phoneNumber}
-                      onChange={(e) => setPhoneNumber(e.target.value)}
-                      placeholder="Phone Number"
-                      className="form-input"
-                    />
-                  </Row>
-                  <Row>
-                    <input
-                      type="text"
-                      value={address}
-                      onChange={(e) => setAddress(e.target.value)}
-                      placeholder="Street Address"
-                      className="form-input"
-                    />
-                  </Row>
-                </Col>
-              </Row>
-
-              <Row className="form-theme-message">
-                <Col className="theme-selector-row">
-                  <label>
-                    <Row>What Theme are you interested in:</Row>
-                    <Row>
+      <div className="contact-page-container row-padding">
+        <h1 class="align-center row-padding">Book Now!</h1>
+            <div className="contact-cont pinkbg align-center">
+                <form onSubmit={handleSubmit} className="align-center flex-col">
+                  <Row className="flex-nowrap">
+                    <Col className="flex-col">
+                    <label htmlFor="name">Name:</label>
+                      <input
+                          className="input-box row-padding"
+                          type="text"
+                          id="name"
+                          value={name}
+                          onChange={(e) => setName(e.target.value)}
+                      />
+                      <label htmlFor="email">Email:</label>
+                      <input
+                          className="input-box row-padding"
+                          type="email"
+                          id="email"
+                          value={email}
+                          onChange={(e) => setEmail(e.target.value)}
+                      />
+                      <label htmlFor="guestCount">Guest Count:</label>
+                      <input
+                        type="number"
+                        id="guestCount"
+                        value={guestCount}
+                        onChange={(e) => setGuestCount(e.target.value)}
+                        className="input-box row-padding"
+                      />
+                      <label htmlFor="date">Date:</label>
+                      <input
+                        type="date"
+                        id="date"
+                        value={selectedDate}
+                        onChange={(e) => setSelectedDate(e.target.value)}
+                        className="input-box row-padding"
+                      />
+                    </Col>
+                    <Col className="flex-col">
+                    <label htmlFor="phone">Phone:</label>
+                      <input
+                        type="tel"
+                        id="phone"
+                        value={phoneNumber}
+                        onChange={(e) => setPhoneNumber(e.target.value)}
+                        placeholder="Phone Number"
+                        className="input-box row-padding"
+                      />
+                      <label htmlFor="street">Street:</label>
+                      <input
+                        type="text"
+                        id="street"
+                        value={address}
+                        onChange={(e) => setAddress(e.target.value)}
+                        placeholder="Street Address"
+                        className="input-box row-padding"
+                      />
+                      <label htmlFor="theme">Theme:</label>
                       <select
                         value={selectedTheme}
                         onChange={(e) => setSelectedTheme(e.target.value)}
-                        className="theme-selector"
+                        className="input-box row-padding"
                       >
                         <option value="">Select a theme</option>
                         {Object.keys(themes).map((theme, key) => {
                           return <option value={theme}>{theme}</option>;
                         })}
                       </select>
-                    </Row>
-                  </label>
-                </Col>
-                <Col className="message-col">
-                  <label>
-                    <textarea
-                      value={message}
-                      onChange={(e) => setMessage(e.target.value)}
-                      placeholder="Anything else you would like to add?"
-                    />
-                  </label>
-                </Col>
-              </Row>
-              <Row className="button-row">
-                <Button type="submit">Submit</Button>
-              </Row>
-            </form>
-          </Row>
-        </Row>
-      </div>
+                      <label htmlFor="message">Notes:</label>
+                      <textarea
+                          className="input-box"
+                          id="message"
+                          value={message}
+                          onChange={(e) => setMessage(e.target.value)}
+                      ></textarea>
+                    </Col>
+                  </Row>
+                  <Row className="row-padding">
+                    <button type="submit" className="submit-button">Submit</button>
+                  </Row>
+                </form>
+            </div>
+        </div>
     </div>
   );
 }
