@@ -57,16 +57,17 @@ function CarouselCustom() {
     slidesToScroll: 1,
     centerMode: true,
     focusOnSelect: true,
+    overflow: true,
     centerPadding: "0px",
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
   };
 
-  const height = "20em";
+  const height = "20rem";
   const width = "100vw";
 
   return (
-    <div style={{ height:'20em', width: '100vw', paddingLeft: 'calc(50vw-50%)', overflow:'hidden' }}>
+    <div className= "carousel-holder" style={{ height:'20rem', width: '100vw', paddingLeft: 'calc(50vw-50%)', overflow:'hidden' }}>
       <Slider {...settings}>
         {images.map((img, idx) => (
           <div key={idx}>
