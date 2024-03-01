@@ -58,7 +58,7 @@ li{
     align-items: center;
     width: 100% !important;
     margin-left: 0% !important;
-    height: 20rem;
+    height: fit-content;
 }
 
 .info-holder{
@@ -68,6 +68,7 @@ li{
 .theme-name-holder {
     text-align: center;
     font-family: 'Apple Chancery', cursive !important;
+    padding-top:  1rem;
 }
 
 .theme-header-image-col{
