@@ -8,15 +8,15 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 
-const images = [
-  "https://plus.unsplash.com/premium_photo-1689609949815-bdb46c0f2397?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dhttps://plus.unsplash.com/premium_photo-1689609949815-bdb46c0f2397?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  "https://images.unsplash.com/photo-1477574901123-6b1db202feff?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  "https://i.pinimg.com/originals/cd/59/56/cd59565449fc469cc0320b2016f135bc.jpg",
-  "https://i.pinimg.com/originals/75/88/be/7588be00d3c7a4fd57b365a2d7f2138e.jpg",
-  "https://images.unsplash.com/photo-1583512603866-910c8542ba1b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHRlZXBlZXxlbnwwfHwwfHx8MA%3D%3D",
-  "https://images.unsplash.com/photo-1525177089949-b1488a0ea5b6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHRlZXBlZXxlbnwwfHwwfHx8MA%3D%3D",
-  "https://images.unsplash.com/photo-1557124816-e9b7d5440de2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHRlZXBlZXxlbnwwfHwwfHx8MA%3D%3D",
-];
+// const images = [
+//   // "https://plus.unsplash.com/premium_photo-1689609949815-bdb46c0f2397?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dhttps://plus.unsplash.com/premium_photo-1689609949815-bdb46c0f2397?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+//   // "https://images.unsplash.com/photo-1477574901123-6b1db202feff?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+//   // "https://i.pinimg.com/originals/cd/59/56/cd59565449fc469cc0320b2016f135bc.jpg",
+//   // "https://i.pinimg.com/originals/75/88/be/7588be00d3c7a4fd57b365a2d7f2138e.jpg",
+//   // "https://images.unsplash.com/photo-1583512603866-910c8542ba1b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHRlZXBlZXxlbnwwfHwwfHx8MA%3D%3D",
+//   // "https://images.unsplash.com/photo-1525177089949-b1488a0ea5b6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHRlZXBlZXxlbnwwfHwwfHx8MA%3D%3D",
+//   // "https://images.unsplash.com/photo-1557124816-e9b7d5440de2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHRlZXBlZXxlbnwwfHwwfHx8MA%3D%3D",
+// ];
 
 function NextArrow(props) {
   const { className, style, onClick } = props;
@@ -39,46 +39,80 @@ function PrevArrow(props) {
     />
   );
 }
-
+const imageContextTaylor = require.context('assets/img/TaylorSwift', true, /\.(png|jpe?g|svg)$/);
+const imageContextSpace = require.context('assets/img/SPACE', true, /\.(png|jpe?g|svg)$/);
 
 function CarouselCustom() {
+
+  const [images, setImages] = useState([]);
+  useEffect(() => {
+    const keys = imageContextTaylor.keys();
+    const imagesTaylor = keys.map(imageContextTaylor);
+    const spaceKeys = imageContextSpace.keys();
+    const imagesSpace = spaceKeys.map(imageContextSpace);
+
+    const images = imagesTaylor.concat(imagesSpace);
+    setImages(images);
+  }, []);
+
   const [activeSlide, setActiveSlide] = useState(0);
   const [activeSlide2, setActiveSlide2] = useState(0);
 
-  const settings = {
-    dots: true,
-    infinite: true,
-    autoplay: true,
-    draggable: true,
-    speed: 700,
-    swipe: true,
-    variableWidth: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    centerMode: true,
-    focusOnSelect: true,
-    overflow: true,
-    centerPadding: "0px",
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
-  };
+ const settings = {
+  //  dots: true,
+   infinite: true,
+   autoplay: true,
+   speed: 700,
+   slidesToShow: 3,
+   slidesToScroll: 1,
+   centerMode: true,
+   focusOnSelect: true,
+   variableWidth: true,
+   adaptiveHeight: true,
+   nextArrow: <NextArrow />,
+   prevArrow: <PrevArrow />,
+   responsive: [
+     {
+       breakpoint: 1024,
+       settings: {
+         slidesToShow: 3,
+         slidesToScroll: 3,
+         infinite: true,
+        //  dots: true,
+       },
+     },
+     {
+       breakpoint: 600,
+       settings: {
+         slidesToShow: 2,
+         slidesToScroll: 2,
+       },
+     },
+     {
+       breakpoint: 480,
+       settings: {
+         slidesToShow: 1,
+         slidesToScroll: 1,
+       },
+     },
+   ],
+ };
 
-  const height = "20rem";
-  const width = "100vw";
-
-  return (
-    <div className= "carousel-holder" style={{ height:'20rem', width: '100vw', paddingLeft: 'calc(50vw-50%)', overflow:'hidden' }}>
-      <Slider {...settings}>
-        {images.map((img, idx) => (
-          <div key={idx}>
-            <img src={img} 
-            alt={`Slide ${idx}`} 
-            style={{ height: height  }} />
-          </div>
-        ))}
-      </Slider>
-    </div>
-  );
+ return (
+   <div style={{ overflow: "hidden", padding: "0 5px" }}>
+     <Slider {...settings}>
+       {images.map((img, idx) => (
+         <div key={idx} style={{ padding: "10px" }}>
+           <img
+             src={img}
+             alt={`Slide ${idx}`}
+            style={{ width: "auto", height: "20rem" }}
+           />
+         </div>
+       ))}
+     </Slider>
+   </div>
+ );
   
 }
 
