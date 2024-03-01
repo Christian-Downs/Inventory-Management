@@ -59,6 +59,21 @@ font: normal normal normal 32px/1.4em 'playfair display',
     font-weight: bold;
 }
 
+.theme-customer-header-link {
+      display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #181a1b;
+        transition: color 0.4s ease 0s;
+        font-weight: bold;
+}
+
+.theme-header-text{
+          color: #181a1b;
+            transition: color 0.4s ease 0s;
+            font-weight: bold;
+}
+
 .customer-routing-links:hover {
     border-bottom: .25rem solid #181a1b;
     color: #2e2e2e;

@@ -8,11 +8,12 @@ import { Button, Col, Image, Row } from "react-bootstrap";
 import BookingPage from "./Book";
 import "assets/css/theme.css"
 import { set } from "date-fns";
+// import image from "assets/img/SPACE/DSC00026_SPACE_HERO1.jpg"
+
 <style>
   @import
   url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap')
 </style>;
-
 
 
 
@@ -40,9 +41,10 @@ const AllThemes = () => {
 }
 
 
-
+const imageContext = require.context('assets/img', true, /\.(png|jpe?g|svg)$/);
 
 const SingleTheme = ({ themeName }) => {
+  
   const navigate = useNavigate();
   const theme = website.themes[themeName]
   const rows = theme.rows
@@ -67,12 +69,19 @@ const SingleTheme = ({ themeName }) => {
 
 
   async function loadImage (imageName) {
-    try {
-      const image = await import(`assets/img/${imageName}`);
-      return image.default;
+    try{
+      console.log(imageContext.keys())
+      return imageContext(`./${imageName}`)
     } catch (error) {
       console.error("Failed to load image", error);
     }
+
+    // try {
+    //   const image = await import(`assets/img/${imageName}`)
+    //   return image.default
+    // } catch (error) {
+    //   console.error("Failed to load image", error);
+    // }
   }
 
 
@@ -204,7 +213,7 @@ const SingleTheme = ({ themeName }) => {
                 {lowerFirstImages.map((image) => {
                   return (
                     <div className="lower-image-div">
-                      <Image src={image} className="lower-images" />
+                      <Image src={image} className="lower-images col-left" />
                     </div>
                   );
                 })}
@@ -213,7 +222,7 @@ const SingleTheme = ({ themeName }) => {
                 {lowerSecondImages.map((image) => {
                   return (
                     <div className="lower-image-div">
-                      <Image src={image} className="lower-images" />
+                      <Image src={image} className="lower-images"  />
                     </div>
                   );
                 })}

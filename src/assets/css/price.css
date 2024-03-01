@@ -1,0 +1,29 @@
+.top-level-row{
+    width: 100%;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    height: fit-content;
+    justify-content: center;
+}
+
+.top-level-div-holder{
+    width: 80%;
+    text-align: center;
+    justify-content: center;
+    padding-top:1rem;
+    padding-bottom:1rem;
+}
+
+.top-level-div{
+    width: 80%;
+    text-align: center;
+
+}
+
+.party-pricing-info {
+    width: 100%;
+    padding-top: 1rem;
+}

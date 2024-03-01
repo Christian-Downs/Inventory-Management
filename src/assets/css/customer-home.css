@@ -86,10 +86,11 @@ h4 {
 .dropdown {
     display: flex;
     bottom: .4rem;
+    place-content: center;
 }
 
-.col {
+/* .col {
     display: flex;
     align-items: baseline;
     justify-content: center;
-}
+} */

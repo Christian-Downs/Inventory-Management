@@ -131,3 +131,7 @@ li{
     padding-top: 0.3rem;
     padding-right: 0.2rem;
 }
+
+.col-left{
+    text-align: right;
+}

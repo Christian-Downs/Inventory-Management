@@ -62,16 +62,19 @@ function CustomerHeader() {
                 if (prop.customer) {
                   if (prop.name.includes("Theme")) {
                     return (
-                      <Col s={columnSize} key={key}>
+                      <Col xs={columnSize} key={key}>
                         <Dropdown
                           isOpen={themeDropdownOpen}
                           toggle={toggle}
+                          // onMouseOver={toggle}
+                          // onMouseLeave={toggle}
+                          className="customer-routing-links"
                         >
                           <DropdownToggle
                             nav
                             caret
-                            className="customer-routing-links"
                             style={{ paddingBottom: "0px" }}
+                            className="theme-header-text"
                           >
                             {prop.name}
                           </DropdownToggle>
@@ -100,7 +103,7 @@ function CustomerHeader() {
                     );
                   } else {
                     return (
-                      <Col s={columnSize}>
+                      <Col xs={columnSize}>
                         <Link
                           className="customer-routing-links"
                           href={prop.path}

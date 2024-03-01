@@ -30,6 +30,7 @@ import Theme from "views/Customer/Theme";
 import Book from "views/Customer/Book";
 import Inquiry from "views/Customer/Inquiry";
 import AboutUs from "views/Customer/AboutUs";
+import Price from "views/Customer/Price";
 
 var routes = [
   {
@@ -54,6 +55,13 @@ var routes = [
     component: <AboutUs />,
     layout: "",
   },
+  // {
+  //   path: "/price",
+  //   name: "Price",
+  //   customer: true,
+  //   component: <Price />,
+  //   layout: "",
+  // },
   {
     path: "/book",
     name: "Book",
