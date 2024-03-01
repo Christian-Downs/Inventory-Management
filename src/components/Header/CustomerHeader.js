@@ -62,12 +62,10 @@ function CustomerHeader() {
                 if (prop.customer) {
                   if (prop.name.includes("Theme")) {
                     return (
-                      <Col xs={columnSize} key={key}>
+                      <Col s={columnSize} key={key}>
                         <Dropdown
                           isOpen={themeDropdownOpen}
                           toggle={toggle}
-                          // onMouseOver={toggle}
-                          // onMouseLeave={toggle}
                         >
                           <DropdownToggle
                             nav
@@ -102,7 +100,7 @@ function CustomerHeader() {
                     );
                   } else {
                     return (
-                      <Col xs={columnSize}>
+                      <Col s={columnSize}>
                         <Link
                           className="customer-routing-links"
                           href={prop.path}

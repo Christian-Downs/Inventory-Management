@@ -89,10 +89,8 @@ function Home(props) {
               </div>
             </div>
           </Col>
-          <Col>
-            <img className="max-400"
-              src="https://static.wixstatic.com/media/d710b4_3471d61f0267453094a6d4e19f533ca2~mv2_d_1632_1224_s_2.jpg/v1/fill/w_1632,h_1224,al_c/d710b4_3471d61f0267453094a6d4e19f533ca2~mv2_d_1632_1224_s_2.jpg" />
-          </Col>
+          <img className="max-400" 
+            src="https://static.wixstatic.com/media/d710b4_3471d61f0267453094a6d4e19f533ca2~mv2_d_1632_1224_s_2.jpg/v1/fill/w_1632,h_1224,al_c/d710b4_3471d61f0267453094a6d4e19f533ca2~mv2_d_1632_1224_s_2.jpg" />
           <Col>
             <div className="customer-info">
               <h1 className="row-padding">Why Choose Us?</h1>
