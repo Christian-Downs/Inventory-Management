@@ -54,8 +54,12 @@ import {
 import CarouselCustom from "components/ImageHandling/CarouselCustom.js";
 
 import ContactPage from "components/Contact/ContactPage.js";
-
+import prettyPinkImage from 'assets/img/PINK/DSC00116_PINK_HERO1.jpg'
+import spaceImage from 'assets/img/SPACE/DSC00044.jpg'
+import glowImage from 'assets/img/GLOW/MainImage.jpg'
 function Home(props) {
+
+
   //  console.log("test") 
   const [bigChartData, setbigChartData] = React.useState("data1");
   const setBgChartData = (name) => {
@@ -103,7 +107,7 @@ function Home(props) {
           </Col>
           <img
             className="max-400"
-            src="https://static.wixstatic.com/media/d710b4_3471d61f0267453094a6d4e19f533ca2~mv2_d_1632_1224_s_2.jpg/v1/fill/w_1632,h_1224,al_c/d710b4_3471d61f0267453094a6d4e19f533ca2~mv2_d_1632_1224_s_2.jpg"
+            src={prettyPinkImage}
           />
           <Col>
             <div className="customer-info">
@@ -162,7 +166,7 @@ function Home(props) {
             <div className="row-padding ladder-animation">
               <img
                 className="max-400"
-                src="https://i.pinimg.com/originals/cd/59/56/cd59565449fc469cc0320b2016f135bc.jpg"
+                src={spaceImage}
               />
               <h3>
                 We cater to girls and boys! Check out our available list of
@@ -183,7 +187,7 @@ function Home(props) {
               </h3>
               <img
                 className="max-400"
-                src="https://pinkscharming.com/wp-content/uploads/2018/08/Two-beautifully-decorated-kids-tents-at-our-tee-pee-party.jpg"
+                src={glowImage}
               />
             </div>
           </Col>

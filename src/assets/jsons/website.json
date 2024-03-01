@@ -14,10 +14,10 @@
   "themes": {
     "Taylor Swift": {
       "id": 1,
-      "MainImage": "TaylorSwift/Taylor_Swift_eras_tour.jpg",
+      "MainImage": "TaylorSwift/DSC00063_SWIFT_HERO1.jpg",
       "Description": [
-        "Come on Barbie, Let's Go Party!!",
-        "This party setup comes with a fun range of pink tones, crazy patterns and adorable decorations and lights, making it a glamorous sleepover."
+        "It feels like the perfect night to dress up like hipsters and sleep in teepees",
+        "This party comes with all of the essentials to make your Swiftie's Era's Tour a night to remember!"
       ],
       "HeaderColor": "pink",
       "InquiryButtonColor": "blueviolet",
@@ -92,8 +92,8 @@
       "id": 2,
       "MainImage": "GLOW/MainImage.jpg",
       "Description": [
-        "Come on Barbie, Let's Go Party!!",
-        "This party setup comes with a fun range of pink tones, crazy patterns and adorable decorations and lights, making it a glamorous sleepover."
+        "Let's Glow Crazy!",
+        "This party setup comes with a blacklight to showcase the bright neon colors that will make your party glow!"
       ],
       "HeaderColor": "pink",
       "InquiryButtonColor": "blueviolet",
@@ -165,8 +165,9 @@
       "id": 3,
       "MainImage": "PINK/MainImage.jpg",
       "Description": [
-        "Come on Barbie, Let's Go Party!!",
-        "This party setup comes with a fun range of pink tones, crazy patterns and adorable decorations and lights, making it a glamorous sleepover."
+        "Every girl deserves to feel pampered and pretty in pink!",
+        "This party gives the feel of relaxation with the added fun of a sleepover.", 
+        "Add on the spa package for the ultimate experience!"
       ],
       "HeaderColor": "pink",
       "InquiryButtonColor": "blueviolet",
@@ -236,8 +237,8 @@
       "id": 4,
       "MainImage": "SPACE/MainImage.jpg",
       "Description": [
-        "Come on Barbie, Let's Go Party!!",
-        "This party setup comes with a fun range of pink tones, crazy patterns and adorable decorations and lights, making it a glamorous sleepover."
+        "Shoot for the moon, and finally touch the stars with this out of this world space themed sleepover!",
+        "This party setup comes with everything you need to have a blast and feel like you are in outer space."
       ],
       "HeaderColor": "pink",
       "InquiryButtonColor": "blueviolet",
@@ -304,9 +305,8 @@
       "id": 5,
       "MainImage": "GAMER/MainImage.jpg",
       "Description": [
-        "Come on Barbie, Let's Go Party!!",
-        "This party setup comes with a fun range of pink tones, crazy patterns and adorable decorations and lights, making it a glamorous sleepover."
-      ],
+        "Game on!", "Get ready to have a blast with this gaming themed sleepover!"
+          ],
       "HeaderColor": "pink",
       "InquiryButtonColor": "blueviolet",
       "IncludedBackgroundColor": "#bd34b9",

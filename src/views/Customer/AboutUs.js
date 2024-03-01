@@ -13,18 +13,21 @@ const AboutUs = () => {
         {/* <h1 className="row-padding">About Us</h1> */}
         <Row className="row-padding">
           <Col>
-            <h2 className='about-us-header'>Meet the Downs'</h2>
-            <p className='about-us-info'>
-              We are a company that provides a variety of services to our
-              customers. We have been in business for over 10 years and have
-              built a reputation for providing high-quality services. Our
-              services include cleaning, maintenance, and repair services.<br/><br/> We
-              are committed to providing our customers with the best possible
-              service and ensuring that they are satisfied with the work we do.
-              We are dedicated to providing our customers with the best possible
-              service and ensuring that they are satisfied with the work we do.
-              We are dedicated to providing our customers with the best possible
-              service and ensuring that they are satisfied with the work we do.
+            <h2 className="about-us-header">Meet the Downses</h2>
+            <p className="about-us-info">
+              Welcome to the heart of our family's passion, where tradition
+              blends with community spirit. The Downs family is proud to operate
+              a business deeply rooted in our hometown values, offering more
+              than just services—we're creating experiences. For years, we've
+              dedicated ourselves to not just meeting, but exceeding the
+              expectations of those we serve, weaving the fabric of our
+              community into every event we touch. Our tent rental services are
+              a testament to our commitment to elegance and sophistication,
+              providing a stylish backdrop for gatherings that range from
+              intimate celebrations to grand festivities. At the core of it all,
+              our mission remains steadfast: to enhance community bonds by
+              bringing people together under the canopy of our family's
+              hospitality.
             </p>
           </Col>
           <Col>
