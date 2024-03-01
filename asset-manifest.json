@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Inventory-Management/static/css/main.4da1a9d7.css",
-    "main.js": "/Inventory-Management/static/js/main.3e3bf305.js",
+    "main.css": "/Inventory-Management/static/css/main.9a81eb95.css",
+    "main.js": "/Inventory-Management/static/js/main.105f41c7.js",
     "static/media/header.jpg": "/Inventory-Management/static/media/header.9ee5a121426ba4b078bd.jpg",
     "static/media/fa-solid-900.ttf": "/Inventory-Management/static/media/fa-solid-900.4a2cd718d7031b732e76.ttf",
     "static/media/DSC00126.jpg": "/Inventory-Management/static/media/DSC00126.2c8acb9e63dd91b4ddc6.jpg",
@@ -59,7 +59,6 @@
     "static/media/fa-regular-400.ttf": "/Inventory-Management/static/media/fa-regular-400.d87474231f4192884802.ttf",
     "static/media/aboutus.jpg": "/Inventory-Management/static/media/aboutus.891182200638c18b2092.jpg",
     "static/media/react-logo.png": "/Inventory-Management/static/media/react-logo.561f1671ed326d663356.png",
-    "static/media/Taylor_Swift_eras_tour.jpg": "/Inventory-Management/static/media/Taylor_Swift_eras_tour.5fa56ce0ae34ed011c10.jpg",
     "static/media/anime6.png": "/Inventory-Management/static/media/anime6.c8cbccfd208a5c0858ed.png",
     "static/media/img_3115.jpg": "/Inventory-Management/static/media/img_3115.a7fd5f1e7ad59d7a3c63.jpg",
     "static/media/anime3.png": "/Inventory-Management/static/media/anime3.4438e5067f2029f9e058.png",
@@ -76,11 +75,11 @@
     "static/media/slick.ttf": "/Inventory-Management/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/Inventory-Management/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/Inventory-Management/index.html",
-    "main.4da1a9d7.css.map": "/Inventory-Management/static/css/main.4da1a9d7.css.map",
-    "main.3e3bf305.js.map": "/Inventory-Management/static/js/main.3e3bf305.js.map"
+    "main.9a81eb95.css.map": "/Inventory-Management/static/css/main.9a81eb95.css.map",
+    "main.105f41c7.js.map": "/Inventory-Management/static/js/main.105f41c7.js.map"
   },
   "entrypoints": [
-    "static/css/main.4da1a9d7.css",
-    "static/js/main.3e3bf305.js"
+    "static/css/main.9a81eb95.css",
+    "static/js/main.105f41c7.js"
   ]
 }
