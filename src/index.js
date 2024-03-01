@@ -31,16 +31,12 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <ThemeContextWrapper>
-    
     <BackgroundColorWrapper>
-      <BrowserRouter>
+      <BrowserRouter basename="/Inventory-Management">
         <Routes>
           <Route path="/admin/*" element={<AdminLayout />} />
           {/* <Route path="/rtl/*" element={<RTLLayout />} /> */}
-          <Route
-            path="*" 
-            element={<CustomerLayout />}
-          />
+          <Route path="*" element={<CustomerLayout />} />
         </Routes>
       </BrowserRouter>
     </BackgroundColorWrapper>
