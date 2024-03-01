@@ -54,14 +54,9 @@ font: normal normal normal 32px/1.4em 'playfair display',
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 1em;
-    font: 'playfair display', serif;
     color: #181a1b;
-    font-size: 1em;
-    padding-bottom: 1rem;
     transition: color 0.4s ease 0s;
     font-weight: bold;
-    height: max-content;
 }
 
 .customer-routing-links:hover {

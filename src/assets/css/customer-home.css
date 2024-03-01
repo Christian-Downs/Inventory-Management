@@ -12,6 +12,11 @@
 
 .max-400 {
     max-height: 400px;
+    width: fit-content;
+    @media only screen and (max-width:500px) {
+        /* visibility: hidden;
+        width:0rem; */
+    }
 }
 
 .customer-info {
@@ -76,4 +81,15 @@ h3 {
 
 h4 {
     opacity: 60%;
+}
+
+.dropdown {
+    display: flex;
+    bottom: .4rem;
+}
+
+.col {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
 }
