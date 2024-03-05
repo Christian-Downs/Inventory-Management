@@ -1,24 +1,25 @@
 {
   "files": {
-    "main.css": "/Inventory-Management/static/css/main.9a81eb95.css",
-    "main.js": "/Inventory-Management/static/js/main.ebc2dc84.js",
+    "main.css": "/Inventory-Management/static/css/main.d679ecea.css",
+    "main.js": "/Inventory-Management/static/js/main.07ea3139.js",
     "static/media/header.jpg": "/Inventory-Management/static/media/header.9ee5a121426ba4b078bd.jpg",
     "static/media/fa-solid-900.ttf": "/Inventory-Management/static/media/fa-solid-900.4a2cd718d7031b732e76.ttf",
     "static/media/DSC00126.jpg": "/Inventory-Management/static/media/DSC00126.2c8acb9e63dd91b4ddc6.jpg",
     "static/media/bg5.jpg": "/Inventory-Management/static/media/bg5.d60a95eb31d6400f802f.jpg",
-    "static/media/DSC00067_SWIFT_HERO3.jpg": "/Inventory-Management/static/media/DSC00067_SWIFT_HERO3.ad614971f968b2de614e.jpg",
+    "static/media/DSC00067_SWIFT_HERO3.jpg": "/Inventory-Management/static/media/DSC00067_SWIFT_HERO3.ba87a638354c6c97c9bf.jpg",
     "static/media/fa-brands-400.ttf": "/Inventory-Management/static/media/fa-brands-400.150de8eaa454d669c405.ttf",
-    "static/media/MainImage.jpg": "/Inventory-Management/static/media/MainImage.58917155f68028a4da8e.jpg",
+    "static/media/MainImage.jpg": "/Inventory-Management/static/media/MainImage.b91f8f6076a4aa285e87.jpg",
     "static/media/DSC09903_GLOW_HERO3.jpg": "/Inventory-Management/static/media/DSC09903_GLOW_HERO3.446933a69dfcdb2be95c.jpg",
     "static/media/DSC09881_GLOW_HERO2.jpg": "/Inventory-Management/static/media/DSC09881_GLOW_HERO2.42dc44a9f15c6c5e9d1a.jpg",
     "static/media/DSC00069_SWIFT_HERO4.jpg": "/Inventory-Management/static/media/DSC00069_SWIFT_HERO4.2064762119d8b18df059.jpg",
     "static/media/DSC00116_PINK_HERO1.jpg": "/Inventory-Management/static/media/DSC00116_PINK_HERO1.fcf83223dd989aef1f1d.jpg",
     "static/media/DSC09953_GAMER_HERO2.jpg": "/Inventory-Management/static/media/DSC09953_GAMER_HERO2.8494fad00d616b5890fe.jpg",
     "static/media/DSC00087.jpg": "/Inventory-Management/static/media/DSC00087.ab855ee647c10013d5d2.jpg",
-    "static/media/DSC00026_SPACE_HERO1.jpg": "/Inventory-Management/static/media/DSC00026_SPACE_HERO1.8ded326f0c5c55afa459.jpg",
+    "static/media/DSC00026_SPACE_HERO1.jpg": "/Inventory-Management/static/media/DSC00026_SPACE_HERO1.1056b509b99f0ec0a04a.jpg",
     "static/media/DSC09916.jpg": "/Inventory-Management/static/media/DSC09916.bc840da224e1eaff467f.jpg",
     "static/media/DSC00063_SWIFT_HERO1.jpg": "/Inventory-Management/static/media/DSC00063_SWIFT_HERO1.66e7ef6b230b8fa79f3b.jpg",
     "static/media/DSC00085.jpg": "/Inventory-Management/static/media/DSC00085.f638ea3a4eeb31df3ad1.jpg",
+    "static/media/MainImage copy.jpg": "/Inventory-Management/static/media/MainImage copy.58917155f68028a4da8e.jpg",
     "static/media/DSC00130.jpg": "/Inventory-Management/static/media/DSC00130.a0947f856eb919cb2e37.jpg",
     "static/media/DSC09942_GAMER_HERO1.jpg": "/Inventory-Management/static/media/DSC09942_GAMER_HERO1.830af11a58538c7bf6c5.jpg",
     "static/media/DSC00066_SWIFT_HERO2.jpg": "/Inventory-Management/static/media/DSC00066_SWIFT_HERO2.ef94cc2e655300afc007.jpg",
@@ -59,6 +60,7 @@
     "static/media/fa-regular-400.ttf": "/Inventory-Management/static/media/fa-regular-400.d87474231f4192884802.ttf",
     "static/media/aboutus.jpg": "/Inventory-Management/static/media/aboutus.891182200638c18b2092.jpg",
     "static/media/react-logo.png": "/Inventory-Management/static/media/react-logo.561f1671ed326d663356.png",
+    "static/media/423686773_782791296586066__n.jpg": "/Inventory-Management/static/media/423686773_782791296586066_516273548183313435_n.694db755b33affe5c9e3.jpg",
     "static/media/anime6.png": "/Inventory-Management/static/media/anime6.c8cbccfd208a5c0858ed.png",
     "static/media/img_3115.jpg": "/Inventory-Management/static/media/img_3115.a7fd5f1e7ad59d7a3c63.jpg",
     "static/media/anime3.png": "/Inventory-Management/static/media/anime3.4438e5067f2029f9e058.png",
@@ -75,11 +77,11 @@
     "static/media/slick.ttf": "/Inventory-Management/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/Inventory-Management/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/Inventory-Management/index.html",
-    "main.9a81eb95.css.map": "/Inventory-Management/static/css/main.9a81eb95.css.map",
-    "main.ebc2dc84.js.map": "/Inventory-Management/static/js/main.ebc2dc84.js.map"
+    "main.d679ecea.css.map": "/Inventory-Management/static/css/main.d679ecea.css.map",
+    "main.07ea3139.js.map": "/Inventory-Management/static/js/main.07ea3139.js.map"
   },
   "entrypoints": [
-    "static/css/main.9a81eb95.css",
-    "static/js/main.ebc2dc84.js"
+    "static/css/main.d679ecea.css",
+    "static/js/main.07ea3139.js"
   ]
 }
