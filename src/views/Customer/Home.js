@@ -57,8 +57,38 @@ import ContactPage from "components/Contact/ContactPage.js";
 import prettyPinkImage from 'assets/img/PINK/DSC00116_PINK_HERO1.jpg'
 import spaceImage from 'assets/img/SPACE/DSC00044.jpg'
 import glowImage from 'assets/img/GLOW/MainImage.jpg'
+import website from "assets/jsons/website.json";
+import { Image } from "react-bootstrap";
+import { Link, Route } from "react-router-dom";
+import "assets/css/theme-card.css"
+import firstConfetti from "assets/img/GLOW/DSC09932.jpg"
+import secondConfetti from "assets/img/GLOW/DSC09932.jpg"
+
+const ThemeCard = ({theme}) => {
+  const themeInfo = website.themes[theme]
+  const themeImage = themeInfo["MainImage"]
+  const image = require('assets/img/' + themeImage)
+  console.log(theme)
+
+  const link = "/theme/" + theme
+  return (
+    <Link className="theme-card" to={link} >
+      <div className="theme-card-image-holder">
+        <Image className="theme-card-image" src={image} />
+      </div>
+      <div className="theme-card-text-holder">
+        <h1 className="theme-card-text">{theme}</h1>
+      </div>
+      
+    </Link>
+  )
+
+}
+
+
 function Home(props) {
 
+  const images = require.context('assets/img', true, /\.(png|jpe?g|svg)$/);
 
   //  console.log("test") 
   const [bigChartData, setbigChartData] = React.useState("data1");
@@ -91,8 +121,8 @@ function Home(props) {
                   <h3>Design Your Own Party</h3>
                   <h4>
                     Choose from a variety of our themes to make your party fun
-                    and unique! You can also choose from a handful of our party
-                    add-ons, to add some extra fun to your party.
+                    and unique! You can also choose from a handful of our
+                    add-ons, to add some extra fun to your event.
                   </h4>
                 </div>
                 {/* <div>
@@ -117,27 +147,23 @@ function Home(props) {
                   <h3>What's Included</h3>
                   <div className="whats-included-div">
                     <h4>
-                      Delivery, set up/Styling, Takedown, laundering of linens.
+                      Delivery, Set up/Styling, Takedown, Laundering of Linens.
                       <br />
-                      Theme chosen Teepees
+                      Themed Teepees
                       <br />
-                      Twin mattresses with fitted sheets
+                      Twin Mattresses with Fitted Sheets
                       <br />
-                      Pattern Blankets
+                      Cozy Blankets
                       <br />
-                      Decorative themed Pillows
+                      Decorative Themed Pillows
                       <br />
-                      Tray tables
+                      Tray Tables with Lights
                       <br />
-                      Lantern with LED flameless candles
-                      <br />
-                      Battery operated fairy lights
-                      <br />
-                      Personalized Name Frames
+                      String Lights
                       <br />
                       Garlands
                       <br />
-                      balloon toppers
+                      Balloon Toppers
                       <br />
                     </h4>
                   </div>
@@ -160,6 +186,21 @@ function Home(props) {
             </div>
           </Col>
         </Row>
+        {/* <Col className="theme-card-holder" style={{backgroundImage: `url(${firstConfetti})`}}>
+                
+                    {
+                      Object.keys(website.themes).map((theme, key) => {
+                        return (
+                          <Row className="theme-card-row" key={key}>
+                            <ThemeCard theme={theme} />
+                          </Row>
+                        )
+                      })
+
+                    }
+              
+        </Col> */}
+
         <Row>
           <Col></Col>
           <Col>
@@ -168,23 +209,24 @@ function Home(props) {
                 className="max-400"
                 src={spaceImage}
               />
-              <h3>
+              <p  className="ladder-text">
                 We cater to girls and boys! Check out our available list of
                 themes as we offer a variety of themes for every kid! Our party
                 packages are only available for rent in the Edwardsville/St. Louis area.
                 Outside of our delivery zone? Contact us for additional info on
                 travel fees for surrounding areas.
-              </h3>
+              </p>
             </div>
           </Col>
           <Col>
             <div className="ladder-animation pt-75">
-              <h3>
+              
+              <p className="ladder-text">
                 Memorable Nights is a slumber party tent rental company that
                 delivers a unique and magical sleepover for any occasion. Simply
                 choose from one of our themes and make your dream party come
                 true!
-              </h3>
+              </p>
               <img
                 className="max-400"
                 src={glowImage}

@@ -14,6 +14,10 @@ import website from "assets/jsons/website.json";
 import routes from "routes.js";
 import { Link, Route, Routes } from "react-router-dom";
 
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap')
+</style>
+
 function CustomerHeader() {
   console.log("CustomerHeader");
   console.log("Testing");
@@ -51,7 +55,7 @@ function CustomerHeader() {
       <Row>
         <Col xs="12">
           <div className="customer-header pinkbg">
-            <h1 className="title">{website.name}</h1>
+            <p className="title">{website.name}</p>
             <h3 className="subtitle">{website.subtitle}</h3>
             <p className="title-location">{website.title_location}</p>
             {/* <div className="header-book-now-holder">

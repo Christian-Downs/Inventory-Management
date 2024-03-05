@@ -48,3 +48,17 @@ body {
     font-family: 'playfair display', serif;
     color: #2e2e2e;
 }
+
+.ladder-text {
+    font-size: large;
+}
+
+.theme-card-row{
+    object-position: center;
+    place-content: center;
+    height: fit-content;
+}
+
+.theme-card-holder{
+    padding-top: 1rem;
+}

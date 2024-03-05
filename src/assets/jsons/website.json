@@ -1,7 +1,8 @@
 {
-  "name": "Memorable Nights",
-  "subtitle": "A night to remember",
+  "name": "MEMORABLE NIGHTS",
+  "subtitle": "Slumber Party Rentals A Night to Remember",
   "title_location": "Edwardsville, IL  |  St. Louis, MO",
+  "CarouselImages": "assets/img/CarouselImages",
   "price": {
     "header": {
         "background":"red",
@@ -16,26 +17,25 @@
       "id": 1,
       "MainImage": "TaylorSwift/DSC00063_SWIFT_HERO1.jpg",
       "Description": [
-        "It feels like the perfect night to dress up like hipsters and sleep in teepees",
-        "This party comes with all of the essentials to make your Swiftie's Era's Tour a night to remember!"
+        "🎵It feels like the perfect night to dress up like hipsters and sleep in teepees!🎵",
+        "This party comes with all of the essentials to make your Swiftie's Era's Tour a night to remember!",
+        "Every Teepee comes as a different Taylor Swift era!"
       ],
       "HeaderColor": "pink",
-      "InquiryButtonColor": "blueviolet",
-      "IncludedBackgroundColor": "#bd34b9",
+      "InquiryButtonColor": "#74c1d6",
+      "IncludedBackgroundColor": "#77597e",
       "LowerImageBackgroundColor": "#b685bf",
       "TentCount": 4,
       "Included": [
-        "Delivery, set up/Styling, Takedown, laundering of linens.",
-        "Theme chosen Teepees",
-        "Twin mattresses with fitted sheets",
-        "Pattern Blankets",
-        "Decorative themed Pillows",
-        "Tray tables",
-        "Lantern with LED flameless candles",
-        "Battery operated fairy lights",
-        "Personalized Name Frames",
+        "Delivery, Set up/Styling, Takedown, Laundering of Linens",
+        "Themed Teepees",
+        "Twin Mattresses with Fitted Sheets",
+        "Cozy Blankets",
+        "Decorative Themed Pillows",
+        "Tray Tables with Lights",
+        "String Lights",
         "Garlands",
-        "balloon toppers"
+        "Balloon Toppers"
       ],
       "Images": [
         "TaylorSwift/DSC00063_SWIFT_HERO1.jpg",
@@ -101,17 +101,15 @@
       "LowerImageBackgroundColor": "#b685bf",
       "TentCount": 4,
       "Included": [
-        "Delivery, set up/Styling, Takedown, laundering of linens.",
-        "Theme chosen Teepees",
-        "Twin mattresses with fitted sheets",
-        "Pattern Blankets",
-        "Decorative themed Pillows",
-        "Tray tables",
-        "Lantern with LED flameless candles",
-        "Battery operated fairy lights",
-        "Personalized Name Frames",
+        "Delivery, Set up/Styling, Takedown, Laundering of Linens",
+        "Themed Teepees",
+        "Twin Mattresses with Fitted Sheets",
+        "Cozy Blankets",
+        "Decorative Themed Pillows",
+        "Tray Tables with Lights",
+        "String Lights",
         "Garlands",
-        "balloon toppers"
+        "Balloon Toppers"
       ],
       "Images": [
         "GLOW/DSC09881_GLOW_HERO2.jpg",
@@ -175,17 +173,15 @@
       "LowerImageBackgroundColor": "#b685bf",
       "TentCount": 2,
       "Included": [
-        "Delivery, set up/Styling, Takedown, laundering of linens.",
-        "Theme chosen Teepees",
-        "Twin mattresses with fitted sheets",
-        "Pattern Blankets",
-        "Decorative themed Pillows",
-        "Tray tables",
-        "Lantern with LED flameless candles",
-        "Battery operated fairy lights",
-        "Personalized Name Frames",
+        "Delivery, Set up/Styling, Takedown, Laundering of Linens",
+        "Themed Teepees",
+        "Twin Mattresses with Fitted Sheets",
+        "Cozy Blankets",
+        "Decorative Themed Pillows",
+        "Tray Tables with Lights",
+        "String Lights",
         "Garlands",
-        "balloon toppers"
+        "Balloon Toppers"
       ],
       "Images": [
         "PINK/DSC00116_PINK_HERO1.jpg",
@@ -246,17 +242,15 @@
       "LowerImageBackgroundColor": "#b685bf",
       "TentCount": 4,
       "Included": [
-        "Delivery, set up/Styling, Takedown, laundering of linens.",
-        "Theme chosen Teepees",
-        "Twin mattresses with fitted sheets",
-        "Pattern Blankets",
-        "Decorative themed Pillows",
-        "Tray tables",
-        "Lantern with LED flameless candles",
-        "Battery operated fairy lights",
-        "Personalized Name Frames",
+        "Delivery, Set up/Styling, Takedown, Laundering of Linens",
+        "Themed Teepees",
+        "Twin Mattresses with Fitted Sheets",
+        "Cozy Blankets",
+        "Decorative Themed Pillows",
+        "Tray Tables with Lights",
+        "String Lights",
         "Garlands",
-        "balloon toppers"
+        "Balloon Toppers"
       ],
       "Images": [
         "SPACE/DSC00026_SPACE_HERO1.jpg",
@@ -313,17 +307,15 @@
       "LowerImageBackgroundColor": "#b685bf",
       "TentCount": 4,
       "Included": [
-        "Delivery, set up/Styling, Takedown, laundering of linens.",
-        "Theme chosen Teepees",
-        "Twin mattresses with fitted sheets",
-        "Pattern Blankets",
-        "Decorative themed Pillows",
-        "Tray tables",
-        "Lantern with LED flameless candles",
-        "Battery operated fairy lights",
-        "Personalized Name Frames",
+        "Delivery, Set up/Styling, Takedown, Laundering of Linens",
+        "Themed Teepees",
+        "Twin Mattresses with Fitted Sheets",
+        "Cozy Blankets",
+        "Decorative Themed Pillows",
+        "Tray Tables with Lights",
+        "String Lights",
         "Garlands",
-        "balloon toppers"
+        "Balloon Toppers"
       ],
       "Images": [
         "GAMER/DSC00001.jpg",

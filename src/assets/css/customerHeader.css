@@ -1,10 +1,11 @@
 .customer-header {
   padding-top: 2rem;
-  padding-right: 4rem;
-  padding-left: 4rem;
+  /* padding-right: 4rem;
+  padding-left: 4rem; */
   display: flex;
   flex-direction: column;
   text-align: center;
+  align-items: center;
 }
 
 .flex {
@@ -22,12 +23,13 @@
 .title {
 font: normal normal normal 32px/1.4em 'playfair display',
     serif;
-  font-size: 3em;
-  font-weight: bold;
+  font-size: 3.2em;
   color: #0e0202;
   margin-bottom: 0.1em;
   margin-top: 0em;
-    padding-top: 0
+    padding-top: 0;
+    font-weight: lighter;
+ place-self: center;   
 }
 
 .subtitle {
@@ -35,8 +37,8 @@ font: normal normal normal 32px/1.4em 'playfair display',
     serif;
   font-size: 1.5em;
   font-weight: lighter;
-  color: #0e0202;
-    margin-bottom: 0.1em;
+    /* background: #f1d3d3; */
+   margin-bottom: 0.1em;
 }
 
 .title-location {
@@ -55,8 +57,10 @@ font: normal normal normal 32px/1.4em 'playfair display',
     justify-content: center;
     align-items: center;
     color: #181a1b;
+    font-size: fit-content;
     transition: color 0.4s ease 0s;
     font-weight: bold;
+    text-wrap: nowrap;
 }
 
 .theme-customer-header-link {

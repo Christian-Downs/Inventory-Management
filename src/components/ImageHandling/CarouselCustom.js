@@ -6,6 +6,8 @@ import "assets/css/carousel.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import website from "assets/jsons/website.json";
+import { set } from "date-fns";
 
 
 // const images = [
@@ -41,6 +43,7 @@ function PrevArrow(props) {
 }
 const imageContextTaylor = require.context('assets/img/TaylorSwift', true, /\.(png|jpe?g|svg)$/);
 const imageContextSpace = require.context('assets/img/SPACE', true, /\.(png|jpe?g|svg)$/);
+const imageContextFolder = require.context('assets/img/CarouselImages', true, /\.(png|jpe?g|svg)$/);
 
 function shuffle(array) {
   let currentIndex = array.length,
@@ -67,14 +70,19 @@ function CarouselCustom() {
 
   const [images, setImages] = useState([]);
   useEffect(() => {
-    const keys = imageContextTaylor.keys();
-    const imagesTaylor = keys.map(imageContextTaylor);
-    const spaceKeys = imageContextSpace.keys();
-    const imagesSpace = spaceKeys.map(imageContextSpace);
-
-    const images = imagesTaylor.concat(imagesSpace);
-    const shuffledImages = shuffle(images);
+    const carouselKeys = imageContextFolder.keys();
+    const imagesCarousel = carouselKeys.map(imageContextFolder);
+    const shuffledImages = shuffle(imagesCarousel);
     setImages(shuffledImages);
+
+    // const keys = imageContextTaylor.keys();
+    // const imagesTaylor = keys.map(imageContextTaylor);
+    // const spaceKeys = imageContextSpace.keys();
+    // const imagesSpace = spaceKeys.map(imageContextSpace);
+
+    // const images = imagesTaylor.concat(imagesSpace);
+    // const shuffledImages = shuffle(images);
+    // setImages(shuffledImages);
   }, []);
 
   const [activeSlide, setActiveSlide] = useState(0);
