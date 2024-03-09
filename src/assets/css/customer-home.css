@@ -100,12 +100,12 @@ h4 {
 }
 
 .mobile {
-    display: none;
+    display: none !important;
 }
 
 @media (max-width: 768px) {
     .mobile {
-        display: block;
+        display: block !important;
     }
     .desktop {
         display: none !important;

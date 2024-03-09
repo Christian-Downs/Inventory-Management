@@ -135,3 +135,12 @@ li{
 .col-left{
     text-align: right;
 }
+
+.mobile.header-holder  {
+    padding-bottom: .2rem;
+}
+
+.mobile.theme-header-image-col {
+    padding-right: 0;
+    padding-left: 0;
+}

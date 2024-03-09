@@ -152,7 +152,7 @@ const SingleTheme = ({ themeName }) => {
       return (
         <div>
           <Row
-            className="header-holder"
+            className="header-holder desktop"
             style={{ background: theme["HeaderColor"] }}
           >
             <Col className="info-holder">
@@ -178,7 +178,33 @@ const SingleTheme = ({ themeName }) => {
               <Image src={mainImage} className="theme-image" />
             </Col>
           </Row>
-
+          <Row
+            className="header-holder mobile"
+            style={{ background: theme["HeaderColor"] }}
+          >
+            <Col className="info-holder">
+              <div className="theme-name-holder">
+                <h1>{themeName}</h1>
+              </div>
+              <div className="description-holder">
+                {themeDescription.map((section) => {
+                  console.log(section);
+                  return <p>{section}</p>;
+                })}
+              </div>
+              <br></br>
+              <Button
+                className="inquiry-button"
+                style={{ background: theme["InquiryButtonColor"] }}
+                onClick={inquiryButtonHandler}
+              >
+                Inquiry 123
+              </Button>
+            </Col>
+            <Col className="theme-header-image-col mobile">
+              <Image src={mainImage} className="theme-image" />
+            </Col>
+          </Row>
           <Row
             className="included-row"
             style={{ background: theme["IncludedBackgroundColor"] }}
@@ -222,7 +248,7 @@ const SingleTheme = ({ themeName }) => {
                 {lowerSecondImages.map((image) => {
                   return (
                     <div className="lower-image-div">
-                      <Image src={image} className="lower-images"  />
+                      <Image src={image} className="lower-images" />
                     </div>
                   );
                 })}

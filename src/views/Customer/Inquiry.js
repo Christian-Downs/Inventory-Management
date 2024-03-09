@@ -65,7 +65,7 @@ function Inquiry() {
             </p>
           </Row>
         </Row>
-        <Row className="booking-form-row-top">
+        <Row className="booking-form-row-top desktop">
           <Row className="form-header">
             <h1>Let's Start Planning Your Party!!</h1>
           </Row>
@@ -160,6 +160,104 @@ function Inquiry() {
                       placeholder="Anything else you would like to add?"
                     />
                   </label>
+                </Col>
+              </Row>
+              <Row className="button-row">
+                <Button type="submit">Submit</Button>
+              </Row>
+            </form>
+          </Row>
+        </Row>
+        <Row className="booking-form-row-top mobile">
+          <Row className="form-header mobile">
+            <h1>Let's Start Planning Your Party!!</h1>
+          </Row>
+          <Row className="form-row mobile">
+            <form className="form" onSubmit={handleSubmit}>
+              <Row className="form-general-information mobile">
+                <Col>
+                  <Row className="input-mobile-row">
+                    <input
+                      type="text"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                      placeholder="Name"
+                      className="form-input mobile"
+                    />
+                  </Row>
+                  <Row className="input-mobile-row">
+                    <input
+                      type="text"
+                      value={guestCount}
+                      onChange={(e) => setGuestCount(e.target.value)}
+                      placeholder="Guest Count"
+                      className="form-input mobile"
+                    />
+                  </Row>
+
+                  <Row className="input-mobile-row">
+                    <input
+                      type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      placeholder="Email"
+                      className="form-input mobile"
+                    />
+                  </Row>
+                  <Row className="input-mobile-row">
+                    <input
+                      type="date"
+                      value={selectedDate}
+                      onChange={(e) => setSelectedDate(e.target.value)}
+                      placeholder="Select a Date"
+                      className="form-input mobile"
+                    />
+                  </Row>
+
+                  <Row className="input-mobile-row">
+                    <input
+                      type="tel"
+                      value={phoneNumber}
+                      onChange={(e) => setPhoneNumber(e.target.value)}
+                      placeholder="Phone Number"
+                      className="form-input mobile"
+                    />
+                  </Row>
+                  <Row className="input-mobile-row">
+                    <input
+                      type="text"
+                      value={address}
+                      onChange={(e) => setAddress(e.target.value)}
+                      placeholder="Street Address"
+                      className="form-input mobile"
+                    />
+                  </Row>
+                  <Row className="input-mobile-row">
+                    <label>
+                      
+                        <select
+                          value={selectedTheme}
+                          onChange={(e) => setSelectedTheme(e.target.value)}
+                          className="theme-selector mobile"
+                        >
+                          <option value="">Select a theme</option>
+                          {Object.keys(themes).map((theme, key) => {
+                            return <option value={theme}>{theme}</option>;
+                          })}
+                        </select>
+                      
+                    </label>
+                  </Row>
+                  <Row className="input-mobile-row">
+                    <label className="mobile-textarea-label">
+                      <textarea
+                        value={message}
+                        onChange={(e) => setMessage(e.target.value)}
+                        placeholder="Anything else you would like to add?"
+                        className="mobile-textarea"
+                      />
+                    </label>
+                  </Row>
                 </Col>
               </Row>
               <Row className="button-row">
