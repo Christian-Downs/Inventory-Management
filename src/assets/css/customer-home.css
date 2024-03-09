@@ -98,3 +98,19 @@ h4 {
 .whats-included-div {
     
 }
+
+.mobile {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile {
+        display: block;
+    }
+    .desktop {
+        display: none !important;
+    }
+    .contact-cont {
+        padding: 1rem 1rem;
+    }
+}

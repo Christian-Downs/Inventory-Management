@@ -186,7 +186,7 @@ function Home(props) {
             </div>
           </Col>
         </Row>
-        {/* <Col className="theme-card-holder" style={{backgroundImage: `url(${firstConfetti})`}}>
+        <Col className="theme-card-holder mobile" style={{backgroundImage: `url(${firstConfetti})`}}>
                 
                     {
                       Object.keys(website.themes).map((theme, key) => {
@@ -199,9 +199,9 @@ function Home(props) {
 
                     }
               
-        </Col> */}
+        </Col>
 
-        <Row>
+        <Row className="desktop">
           <Col></Col>
           <Col>
             <div className="row-padding ladder-animation">
