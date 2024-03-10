@@ -136,7 +136,7 @@
 
 .theme-selector.mobile {
 
-    width: 70%;
+    width: 80%;
     /* margin-left: 10% !important; */
 
 }
@@ -147,5 +147,11 @@
 }
 
 .mobile-textarea {
+    width: 100%;
+}
+
+.theme-label-mobile{
+    display: flex;
+    justify-content: center;
     width: 100%;
 }

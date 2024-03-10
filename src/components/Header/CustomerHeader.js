@@ -53,7 +53,7 @@ function CustomerHeader() {
   return (
     <div>
       <Row>
-        <Col xs="12">
+        <Col className = "customer-header-top" >
           <div className="customer-header pinkbg">
             <p className="title">{website.name}</p>
             <h3 className="subtitle">{website.subtitle}</h3>

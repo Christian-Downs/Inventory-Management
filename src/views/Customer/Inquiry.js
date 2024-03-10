@@ -27,12 +27,14 @@ function Inquiry() {
     }, []);
 
   const handleSubmit = (e) => {
+    console.log(process.env.REACT_APP_SERVER_URL)
     e.preventDefault();
     // Handle form submission logic here
     if(name === '' || email === "" || guestCount === "" || phoneNumber === "" || selectedDate === "" || address === "" || selectedTheme === ""){
         alert("All fields must be filled out");
         return;
     }
+    
     axios.post(process.env.REACT_APP_SERVER_URL + "/api/sendEmail", {
         email: "Christian.downs.15@gmail.com",
         subject: "New Booking Inquiry",
@@ -153,7 +155,7 @@ function Inquiry() {
                   </label>
                 </Col>
                 <Col className="message-col">
-                  <label>
+                  <label >
                     <textarea
                       value={message}
                       onChange={(e) => setMessage(e.target.value)}
@@ -233,7 +235,7 @@ function Inquiry() {
                     />
                   </Row>
                   <Row className="input-mobile-row">
-                    <label>
+                    <label className="theme-label-mobile">
                       
                         <select
                           value={selectedTheme}
