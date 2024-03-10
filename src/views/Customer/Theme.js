@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
 import website from 'assets/jsons/website.json'
-import { formToJSON } from "axios";
+import { all, formToJSON } from "axios";
 import { parseJsonText } from "typescript";
 import "assets/css/customer.css"
 import { Button, Col, Image, Row } from "react-bootstrap";
@@ -87,6 +87,7 @@ const SingleTheme = ({ themeName }) => {
 
   const [lowerFirstImages, setFirstLowerImages] = useState([]);
   const [lowerSecondImages, setSecondLowerImages] = useState([]);
+  const [allImages, setAllImages] = useState([]);
 
   const imageNames = theme["Images"];
 
@@ -94,8 +95,10 @@ const SingleTheme = ({ themeName }) => {
     if (imageNames) {
       var images1 = [];
       var images2 = [];
+      var allImages = []
       for(let i = 0; i < imageNames.length; i++){
         loadImage(imageNames[i]).then((image) => {
+          allImages.push(image)
           if(i % 2 == 0){
             images1.push(image)
           } else {
@@ -103,6 +106,7 @@ const SingleTheme = ({ themeName }) => {
           }
         });
       }
+      setAllImages(allImages);
       setFirstLowerImages(images1);
       setSecondLowerImages(images2);
     }
@@ -152,7 +156,7 @@ const SingleTheme = ({ themeName }) => {
       return (
         <div>
           <Row
-            className="header-holder"
+            className="header-holder desktop"
             style={{ background: theme["HeaderColor"] }}
           >
             <Col className="info-holder">
@@ -178,7 +182,33 @@ const SingleTheme = ({ themeName }) => {
               <Image src={mainImage} className="theme-image" />
             </Col>
           </Row>
-
+          <Row
+            className="header-holder mobile"
+            style={{ background: theme["HeaderColor"] }}
+          >
+            <Col className="info-holder">
+              <div className="theme-name-holder">
+                <h1>{themeName}</h1>
+              </div>
+              <div className="description-holder">
+                {themeDescription.map((section) => {
+                  console.log(section);
+                  return <p>{section}</p>;
+                })}
+              </div>
+              <br></br>
+              <Button
+                className="inquiry-button"
+                style={{ background: theme["InquiryButtonColor"] }}
+                onClick={inquiryButtonHandler}
+              >
+                Inquiry
+              </Button>
+            </Col>
+            <Col className="theme-header-image-col mobile">
+              <Image src={mainImage} className="theme-image" />
+            </Col>
+          </Row>
           <Row
             className="included-row"
             style={{ background: theme["IncludedBackgroundColor"] }}
@@ -205,7 +235,7 @@ const SingleTheme = ({ themeName }) => {
             </Col>
           </Row>
           <div
-            className="lower-image-master-holder"
+            className="lower-image-master-holder desktop"
             style={{ background: theme["LowerImageBackgroundColor"] }}
           >
             <Row className="lower-image-holder-row">
@@ -222,15 +252,29 @@ const SingleTheme = ({ themeName }) => {
                 {lowerSecondImages.map((image) => {
                   return (
                     <div className="lower-image-div">
-                      <Image src={image} className="lower-images"  />
+                      <Image src={image} className="lower-images" />
                     </div>
                   );
                 })}
               </Col>
             </Row>
           </div>
-
+          <div
+            className="lower-image-master-holder mobile"
+            style={{ background: theme["LowerImageBackgroundColor"] }}
+          >
+            <Col className="lower-image-holder-col-mobile">
+              {allImages.map((image) => {
+                return (
+                  <div className="lower-image-div">
+                    <Image src={image} className="lower-images" />
+                  </div>
+                );
+              })}
+            </Col>
+          </div>
           {/* <BookingPage theme={theme} /> */}
+          
         </div>
       );
   } else {

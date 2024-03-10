@@ -125,6 +125,7 @@ li{
 
 .lower-image-master-holder {
     padding-top:2rem;
+    padding-bottom: 1rem;
 }
 
 .lower-image-div {
@@ -134,4 +135,13 @@ li{
 
 .col-left{
     text-align: right;
+}
+
+.mobile.header-holder  {
+    padding-bottom: .2rem;
+}
+
+.mobile.theme-header-image-col {
+    padding-right: 0;
+    padding-left: 0;
 }

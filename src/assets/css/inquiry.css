@@ -110,3 +110,48 @@
     display:grid;
     justify-content: center;
 }
+
+.form-header.mobile{
+    text-align: center;
+}
+
+.form-row.mobile{
+
+}
+
+.form-input.mobile {
+
+    width: 80%;
+    /* margin-left: 0 !important; */
+}
+
+.form-general-information.mobile{
+    /* display: flex !important;
+    justify-content: center; */
+}
+
+.input-mobile-row{
+    justify-content: center;
+}
+
+.theme-selector.mobile {
+
+    width: 80%;
+    /* margin-left: 10% !important; */
+
+}
+
+.mobile-textarea-label {
+    width: 80%;
+    text-align: center;
+}
+
+.mobile-textarea {
+    width: 100%;
+}
+
+.theme-label-mobile{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
