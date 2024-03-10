@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Inventory-Management/static/css/main.d679ecea.css",
-    "main.js": "/Inventory-Management/static/js/main.75a00623.js",
+    "main.css": "/Inventory-Management/static/css/main.b1deb42b.css",
+    "main.js": "/Inventory-Management/static/js/main.14100b7a.js",
     "static/media/header.jpg": "/Inventory-Management/static/media/header.9ee5a121426ba4b078bd.jpg",
     "static/media/fa-solid-900.ttf": "/Inventory-Management/static/media/fa-solid-900.4a2cd718d7031b732e76.ttf",
     "static/media/DSC00126.jpg": "/Inventory-Management/static/media/DSC00126.2c8acb9e63dd91b4ddc6.jpg",
@@ -77,11 +77,11 @@
     "static/media/slick.ttf": "/Inventory-Management/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/Inventory-Management/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/Inventory-Management/index.html",
-    "main.d679ecea.css.map": "/Inventory-Management/static/css/main.d679ecea.css.map",
-    "main.75a00623.js.map": "/Inventory-Management/static/js/main.75a00623.js.map"
+    "main.b1deb42b.css.map": "/Inventory-Management/static/css/main.b1deb42b.css.map",
+    "main.14100b7a.js.map": "/Inventory-Management/static/js/main.14100b7a.js.map"
   },
   "entrypoints": [
-    "static/css/main.d679ecea.css",
-    "static/js/main.75a00623.js"
+    "static/css/main.b1deb42b.css",
+    "static/js/main.14100b7a.js"
   ]
 }
