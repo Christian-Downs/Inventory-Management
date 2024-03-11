@@ -40,7 +40,7 @@
         ]
     },
     "Addons":{
-      "header": "Add-Ons",
+      "header": "Memorable Upgrades",
       "items": [
         {"name": "Spa", "price":50, "image":"spa.jpg"},
         {"name": "Popcorn", "price":25, "image":"popcorn.jpg"}
