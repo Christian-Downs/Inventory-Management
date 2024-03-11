@@ -7,8 +7,20 @@
     "background": "pink",
     "included":{
       "background": "pink",
-      "header": "What's Included",
+      "header": "Party Pricing",
+      "subHeader": "Party Pricing cost includes styling and collection the following day!",
       "target_lenght": 50,
+      "items": [
+        "Delivery, Set up/Styling, Takedown, Laundering of Linens",
+        "Themed Teepees",
+        "Twin Mattresses with Fitted Sheets",
+        "Cozy Blankets",
+        "Decorative Themed Pillows",
+        "Tray Tables with Lights",
+        "String Lights",
+        "Garlands",
+        "Balloon Toppers"
+      ],
       "Prices": {
         "2 Tents":"$350",
         "3 Tents":"$400",
@@ -21,7 +33,7 @@
 
     },
     "header": {
-        "background":"red",
+        "background":"pink",
         "large_text": "Party Pricing & Details",
         "small_text": [
             "We are so excited to help you create the perfect sleepover party experience with teepee rentals for birthday parties, special events, and other celebrations. We offer several themes for boys and girls which you can browse above in our theme gallery. Whether you have a party of 2 or 8, we’ve got you covered! Choose from our list of themes or share your unique and original ideas with us and we will help create the party of your dreams. "
