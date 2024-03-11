@@ -32,7 +32,7 @@ const Price = () => {
             <p className="party-pricing-title">{includedSection.header}</p>
           </Row>
 
-          
+
           <Col className="party-pricing-col">
             {Object.keys(includedItems).map((price) => {
               console.log(includedSection.target_lenght);
@@ -53,8 +53,44 @@ const Price = () => {
           </Col>
         </div>
       </Row>
+            
+      <table className='table'>
+        {/* <tr>
+          <th>Company</th>
+          <th>Contact</th>
+          <th>Country</th>
+        </tr> */}
+        {
+          Object.keys(includedItems).map((price) => {
+            return (
+              <tr className='table-row'>
+                <td className='table-option'>{price}</td>
+                <td className='table-price'>{includedItems[price]}</td>
+              </tr>
+            )
+          })
+        }
+      </table>
+
+
+    
     </div>
   );
 };
+
+
+const AddonCard = (addon) => {
+  return (
+    <div className="addon-card">
+      <div className="addon-card-header">
+        <p className="addon-card-title">{addon.title}</p>
+        <p className="addon-card-price">{addon.price}</p>
+      </div>
+      <div className="addon-card-body">
+        <p className="addon-card-description">{addon.description}</p>
+      </div>
+    </div>
+  );
+}
 
 export default Price;

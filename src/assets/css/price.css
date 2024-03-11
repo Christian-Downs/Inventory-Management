@@ -1,4 +1,4 @@
-.top-level-row{
+.top-level-row {
     width: 100%;
     margin-left: 0 !important;
     padding-left: 0 !important;
@@ -9,15 +9,15 @@
     justify-content: center;
 }
 
-.top-level-div-holder{
+.top-level-div-holder {
     width: 100%;
     text-align: center;
     justify-content: center;
-    padding-top:1rem;
-    padding-bottom:1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
-.top-level-div{
+.top-level-div {
     width: 100%;
     text-align: center;
 
@@ -25,24 +25,25 @@
 
 .party-pricing-info {
     width: 100%;
-        margin-left: 0 !important;
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-        padding-top: 0 !important;
-        padding-bottom: 0 !important;
-        height: fit-content;
-        justify-content: center;
-        justify-self: center;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    height: fit-content;
+    justify-content: center;
+    justify-self: center;
 }
-.party-pricing-div-holder{
+
+.party-pricing-div-holder {
     width: 100%;
     text-align: center;
     justify-content: center;
-    padding-top:1rem;
-    padding-bottom:1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
-.party-pricing-title-row{
+.party-pricing-title-row {
     width: 100%;
     margin-left: 0 !important;
     padding-left: 0 !important;
@@ -53,13 +54,13 @@
     justify-content: center;
 }
 
-.price-holder{
-display: flex;
+.price-holder {
+    display: flex;
     align-items: center;
     margin-bottom: 10px;
 }
 
-.price-title{
+.price-title {
 
     flex-grow: 1;
 }
@@ -75,7 +76,25 @@ display: flex;
 }
 
 
-.price-price{
+.price-price {
     white-space: nowrap;
-    flex-shrink:0
+    flex-shrink: 0
+}
+
+.table {
+    border-collapse: collapse;
+    border-width: 0;
+
+}
+
+.table-option {
+    width: 50%;
+    border-style: none;
+    border-width: medium;
+}
+
+.table-price {
+    width: 50%;
+    border-style: none;
+    border-width: medium;
 }

@@ -30,12 +30,14 @@
     "Addons":{
       "header": "Add-Ons",
       "items": [
-        "Spa Package: $50",
-        "Movie Projector: $50",
-        "Customized Balloons: $25",
-        "Customized Party Favors: $25",
-        "Customized Invitations: $25",
-        "Customized T-Shirts: $25"
+        {"name": "spa", "price":50, "image":"Addon/spa.png"},
+        {"name": "popcorn", "price":25, "image":"Addon/popcorn.png"},
+        {"name": "candy", "price":25, "image":"Addon/candy.png"},
+        {"name": "breakfast", "price":25, "image":"Addon/breakfast.png"},
+        {"name": "movie", "price":25, "image":"Addon/movie.png"},
+        {"name": "photo", "price":25, "image":"Addon/photo.png"},
+        {"name": "balloons", "price":25, "image":"Addon/balloons.png"},
+        {"name": "games", "price":25, "image":"Addon/games.png"}
       ]
     }
     
