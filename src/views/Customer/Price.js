@@ -1,15 +1,17 @@
-import React from 'react';
-import { Col, Row } from 'react-bootstrap';
+import React, { useEffect } from "react";
+import { Col, Image, Row } from "react-bootstrap";
 import "assets/css/price.css";
+import "assets/css/addon-card.css";
 import website from "assets/jsons/website.json";
 
-
 const Price = () => {
-    const price_page = website.price_page;
-    const includedSection = price_page.included;
-    const includedItems = price_page.included.Prices
-    console.log(price_page)
-    console.log(includedItems)
+  const price_page = website.price_page;
+  const includedSection = price_page.included;
+  const includedItems = price_page.included.Prices;
+  const addons = price_page.Addons;
+  console.log(addons);
+  console.log(price_page);
+  console.log(includedItems);
   return (
     <div>
       <Row className="top-level-row">
@@ -31,21 +33,12 @@ const Price = () => {
           <Row className="party-pricing-title-row">
             <p className="party-pricing-title">{includedSection.header}</p>
           </Row>
-
-
           <Col className="party-pricing-col">
             {Object.keys(includedItems).map((price) => {
-              console.log(includedSection.target_lenght);
-              const periods_to_add =
-                includedSection.target_lenght -
-                price.length -
-                includedItems[price].length;
-              console.log(periods_to_add)
-
               return (
                 <Row className="price-holder">
                   <span className="price-title">{price}</span>
-                  <span className="dots"></span>
+                  -
                   <span className="price-price">{includedItems[price]}</span>
                 </Row>
               );
@@ -53,44 +46,74 @@ const Price = () => {
           </Col>
         </div>
       </Row>
-            
-      <table className='table'>
-        {/* <tr>
-          <th>Company</th>
-          <th>Contact</th>
-          <th>Country</th>
-        </tr> */}
-        {
-          Object.keys(includedItems).map((price) => {
-            return (
-              <tr className='table-row'>
-                <td className='table-option'>{price}</td>
-                <td className='table-price'>{includedItems[price]}</td>
-              </tr>
-            )
-          })
-        }
-      </table>
-
-
-    
+      <Col className="addon-col">
+      
+        {Object.keys(addons.items).map((addon) => {
+          return AddonCard(addons.items[addon]);
+        })}
+        {/* {Object.keys(addons.items).map((addon) => {
+          return AddonCard(addons.items[addon]);
+        })}
+        {Object.keys(addons.items).map((addon) => {
+          return AddonCard(addons.items[addon]);
+        })} */}
+      </Col>
     </div>
   );
 };
 
+const imageContext = require.context(
+  "assets/img/addon",
+  true,
+  /\.(png|jpe?g|svg)$/
+);
+
+
+
 
 const AddonCard = (addon) => {
+  const [image, setImage] = React.useState("");
+  const [style, setStyle] = React.useState({ display: "none" });
+
+
+  const modalId = "modal" + addon.name;
+
+
+
+  useEffect(() => {
+    // imageContext(`./${addon.image}`).then((image) => {
+    //   setImage(image.default);
+    // });
+    setImage(imageContext(`./${addon.image}`));
+  }, []);
+
+  const openModal = () => {
+      setStyle({ display: "block" });
+  }
+
+  const closeModal = () => {
+    setStyle({ display: "none" });
+  }
+
   return (
     <div className="addon-card">
       <div className="addon-card-header">
-        <p className="addon-card-title">{addon.title}</p>
-        <p className="addon-card-price">{addon.price}</p>
+        <p className="addon-card-title">
+          {addon.name}
+          
+        </p>
+        <p className="addon-card-price">${addon.price}</p>
       </div>
       <div className="addon-card-body">
-        <p className="addon-card-description">{addon.description}</p>
+        <Image className="addon-card-image" src={image} onClick={openModal}/>
+        <div id={modalId} className="modal" style={style}>
+          <span class="close" onClick={closeModal}>&times;</span>
+          <Image src={image} className="modal-content" id="img01" />
+          <div id="caption">{addon.name}</div>
+        </div>
       </div>
     </div>
   );
-}
+};
 
 export default Price;

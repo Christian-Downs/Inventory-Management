@@ -10,11 +10,11 @@
       "header": "What's Included",
       "target_lenght": 50,
       "Prices": {
-        "Two - Four Tents":"$350",
-        "Five Tents":"$400",
-        "Six Tents": "$450",
-        "Seven Tents": "$500",
-        "Eight Tents": "$550"
+        "2 Tents":"$350",
+        "3 Tents":"$400",
+        "4 Tents": "$450",
+        "5 Tents": "$500",
+        "6 Tents": "$550"
       },
       "Additional": "Additional $50 for Any Additional Tents",
       "Deposit": "A $100 deposit is required to secure your date. The remaining balance is due 7 days prior to your event. We accept cash, check, or Venmo."
@@ -30,14 +30,9 @@
     "Addons":{
       "header": "Add-Ons",
       "items": [
-        {"name": "spa", "price":50, "image":"Addon/spa.png"},
-        {"name": "popcorn", "price":25, "image":"Addon/popcorn.png"},
-        {"name": "candy", "price":25, "image":"Addon/candy.png"},
-        {"name": "breakfast", "price":25, "image":"Addon/breakfast.png"},
-        {"name": "movie", "price":25, "image":"Addon/movie.png"},
-        {"name": "photo", "price":25, "image":"Addon/photo.png"},
-        {"name": "balloons", "price":25, "image":"Addon/balloons.png"},
-        {"name": "games", "price":25, "image":"Addon/games.png"}
+        {"name": "Spa", "price":50, "image":"spa.jpg"},
+        {"name": "Popcorn", "price":25, "image":"popcorn.jpg"}
+
       ]
     }
     

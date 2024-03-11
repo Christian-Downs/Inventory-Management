@@ -61,18 +61,7 @@
 }
 
 .price-title {
-
     flex-grow: 1;
-}
-
-.dots {
-    flex-grow: 0;
-    /* prevent the dots from taking up more space than necessary */
-    text-align: right;
-    /* aligns the dots to the right */
-    margin: 0 1em;
-    border-bottom: 1px dotted #000;
-    /* adds space around the dots */
 }
 
 
@@ -81,20 +70,15 @@
     flex-shrink: 0
 }
 
-.table {
-    border-collapse: collapse;
-    border-width: 0;
+
+.addon-col {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0 !important;
+    margin: 0 !important;
 
 }
 
-.table-option {
-    width: 50%;
-    border-style: none;
-    border-width: medium;
-}
-
-.table-price {
-    width: 50%;
-    border-style: none;
-    border-width: medium;
-}
