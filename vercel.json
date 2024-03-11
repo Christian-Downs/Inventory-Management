@@ -19,11 +19,12 @@
     }
   ],
   "env": {
-    "API_URL": "@api_url"
+    "API_URL": "@api_url",
+    "REACT_APP_SERVER_URL": "@REACT_APP_SERVER_URL"
   },
   "build": {
     "env": {
-      "REACT_APP_CUSTOM_ENV_VARIABLE": "@react_app_custom_env_variable"
+      "REACT_APP_SERVER_URL": "@REACT_APP_SERVER_URL"
     }
   }
 }
