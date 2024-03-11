@@ -32,7 +32,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <ThemeContextWrapper>
     <BackgroundColorWrapper>
-      <BrowserRouter basename="/Inventory-Management">
+      <BrowserRouter >
         <Routes>
           <Route path="/admin/*" element={<AdminLayout />} />
           {/* <Route path="/rtl/*" element={<RTLLayout />} /> */}

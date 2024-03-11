@@ -2,7 +2,7 @@
   "name": "memorable-nights",
   "version": "1.2.2",
   "private": true,
-  "homepage": "https://christian-downs.github.io/Inventory-Management/",
+  "homepage": ".",
   "dependencies": {
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
