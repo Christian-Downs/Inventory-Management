@@ -70,21 +70,11 @@ display: flex;
     text-align: right;
     /* aligns the dots to the right */
     margin: 0 1em;
+    border-bottom: 1px dotted #000;
     /* adds space around the dots */
 }
 
-.dots::after {
-    content: '.........................................................';
-    display: inline-block;
-    /* makes it inline with text */
-    white-space: nowrap;
-    overflow: hidden;
-    /* ensures no extra dots are visible beyond the element's width */
-    text-overflow: ellipsis;
-    /* helps to cut off the content with dots if it overflows */
-    max-width: 100%;
-    /* restricts the width to not exceed its parent */
-}
+
 .price-price{
     white-space: nowrap;
     flex-shrink:0

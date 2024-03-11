@@ -31,6 +31,8 @@ const Price = () => {
           <Row className="party-pricing-title-row">
             <p className="party-pricing-title">{includedSection.header}</p>
           </Row>
+
+          
           <Col className="party-pricing-col">
             {Object.keys(includedItems).map((price) => {
               console.log(includedSection.target_lenght);
