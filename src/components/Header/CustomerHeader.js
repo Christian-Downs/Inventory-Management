@@ -61,7 +61,7 @@ function CustomerHeader() {
             {/* <div className="header-book-now-holder">
               <Button className="book-now-button">Book Now</Button>
             </div> */}
-            <Row>
+            <Row style={{width:"100%"}}>
               {routes.map((prop, key) => {
                 if (prop.customer) {
                   if (prop.name.includes("Theme")) {

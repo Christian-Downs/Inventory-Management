@@ -10,7 +10,7 @@
 }
 
 .top-level-div-holder{
-    width: 80%;
+    width: 100%;
     text-align: center;
     justify-content: center;
     padding-top:1rem;
@@ -18,12 +18,74 @@
 }
 
 .top-level-div{
-    width: 80%;
+    width: 100%;
     text-align: center;
 
 }
 
 .party-pricing-info {
     width: 100%;
-    padding-top: 1rem;
+        margin-left: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        height: fit-content;
+        justify-content: center;
+        justify-self: center;
+}
+.party-pricing-div-holder{
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    padding-top:1rem;
+    padding-bottom:1rem;
+}
+
+.party-pricing-title-row{
+    width: 100%;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    height: fit-content;
+    justify-content: center;
+}
+
+.price-holder{
+display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.price-title{
+
+    flex-grow: 1;
+}
+
+.dots {
+    flex-grow: 0;
+    /* prevent the dots from taking up more space than necessary */
+    text-align: right;
+    /* aligns the dots to the right */
+    margin: 0 1em;
+    /* adds space around the dots */
+}
+
+.dots::after {
+    content: '.........................................................';
+    display: inline-block;
+    /* makes it inline with text */
+    white-space: nowrap;
+    overflow: hidden;
+    /* ensures no extra dots are visible beyond the element's width */
+    text-overflow: ellipsis;
+    /* helps to cut off the content with dots if it overflows */
+    max-width: 100%;
+    /* restricts the width to not exceed its parent */
+}
+.price-price{
+    white-space: nowrap;
+    flex-shrink:0
 }

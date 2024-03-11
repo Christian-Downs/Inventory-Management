@@ -5,8 +5,11 @@ import website from "assets/jsons/website.json";
 
 
 const Price = () => {
-    const price_page = website.price;
-
+    const price_page = website.price_page;
+    const includedSection = price_page.included;
+    const includedItems = price_page.included.Prices
+    console.log(price_page)
+    console.log(includedItems)
   return (
     <div>
       <Row className="top-level-row">
@@ -20,8 +23,33 @@ const Price = () => {
           </div>
         </div>
       </Row>
-      <Row className="party-pricing-info">
-            
+      <Row
+        className="party-pricing-info"
+        style={{ background: includedSection.background }}
+      >
+        <div className="party=pricing-info-div-holder">
+          <Row className="party-pricing-title-row">
+            <p className="party-pricing-title">{includedSection.header}</p>
+          </Row>
+          <Col className="party-pricing-col">
+            {Object.keys(includedItems).map((price) => {
+              console.log(includedSection.target_lenght);
+              const periods_to_add =
+                includedSection.target_lenght -
+                price.length -
+                includedItems[price].length;
+              console.log(periods_to_add)
+
+              return (
+                <Row className="price-holder">
+                  <span className="price-title">{price}</span>
+                  <span className="dots"></span>
+                  <span className="price-price">{includedItems[price]}</span>
+                </Row>
+              );
+            })}
+          </Col>
+        </div>
       </Row>
     </div>
   );

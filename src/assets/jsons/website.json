@@ -3,14 +3,42 @@
   "subtitle": "Slumber Party Rentals",
   "title_location": "Edwardsville, IL  |  St. Louis, MO",
   "CarouselImages": "assets/img/CarouselImages",
-  "price": {
+  "price_page": {
+    "background": "pink",
+    "included":{
+      "background": "pink",
+      "header": "What's Included",
+      "target_lenght": 50,
+      "Prices": {
+        "Two - Four Tents":"$350",
+        "Five Tents":"$400",
+        "Six Tents": "$450",
+        "Seven Tents": "$500",
+        "Eight Tents": "$550"
+      },
+      "Additional": "Additional $50 for Any Additional Tents",
+      "Deposit": "A $100 deposit is required to secure your date. The remaining balance is due 7 days prior to your event. We accept cash, check, or Venmo."
+
+    },
     "header": {
         "background":"red",
         "large_text": "Party Pricing & Details",
         "small_text": [
             "We are so excited to help you create the perfect sleepover party experience with teepee rentals for birthday parties, special events, and other celebrations. We offer several themes for boys and girls which you can browse above in our theme gallery. Whether you have a party of 2 or 8, we’ve got you covered! Choose from our list of themes or share your unique and original ideas with us and we will help create the party of your dreams. "
         ]
+    },
+    "Addons":{
+      "header": "Add-Ons",
+      "items": [
+        "Spa Package: $50",
+        "Movie Projector: $50",
+        "Customized Balloons: $25",
+        "Customized Party Favors: $25",
+        "Customized Invitations: $25",
+        "Customized T-Shirts: $25"
+      ]
     }
+    
   },
   "themes": {
     "Taylor Swift": {
