@@ -57,7 +57,7 @@ var routes = [
   // },
   {
     path: "/price",
-    name: "Price",
+    name: "Pricing",
     customer: true,
     component: <Price />,
     layout: "",

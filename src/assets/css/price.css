@@ -8,6 +8,10 @@
     height: fit-content;
     justify-content: center;
 }
+.price-subheader{
+    margin:auto 5px
+}
+
 
 .top-level-div-holder {
     width: 80%;
@@ -140,6 +144,15 @@
     justify-content: center;
 }
 
+.party-pricing-title-image-div.addon{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.party-pricing-title-image.addon{
+    width: 25rem;
+}
+
 .party-pricing-included-col{
     width: fit-content;
     text-wrap: nowrap;
@@ -163,6 +176,7 @@
 
 .desktop{
     .party-included-div{
+            height: 100%;
                 /* background: round pink; */
                     width: fit-content;
                     /* background: round; */
@@ -174,7 +188,13 @@
     }
 }
 
+.addon-header{
+    margin-top: 30px;
+}
 
+.addon-header-text{
+    font-family: 'Apple Chancery' !important;
+}
 
 .addon-col {
     display: flex;
@@ -204,7 +224,10 @@
     }
 }
 
-
+.party-pricing-info-text{
+    font-size: x-large;
+    
+}
 .party-info-row.mobile > .party-info-divider {
     /* min-width: calc(var(--party-width) * .5); */
     /* width: calc(var(--party-width) * .5) */
@@ -217,8 +240,5 @@
             text-size-adjust: 100%;
             font-size: xx-large;
         }
-    .party-pricing-info-text{
-        font-size: x-large;
-        
-    }
+
 }

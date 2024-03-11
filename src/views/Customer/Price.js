@@ -122,6 +122,10 @@ const Price = () => {
           </div>
         </Row>
       </Col>
+      <div className="party-pricing-title-image-div addon">
+            <Image className="party-pricing-title-image addon" src={ribbon} />
+            <h1 className="party-pricing-title">{addons.header}</h1>
+          </div>
       <Col className="addon-col">
         {Object.keys(addons.items).map((addon) => {
           return AddonCard(addons.items[addon]);
