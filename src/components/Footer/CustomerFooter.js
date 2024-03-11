@@ -16,6 +16,7 @@ const CustomerFooter = () => {
                 <img
                   src={facebook_icon}
                   style={{ height: "21px", width: "21px" }}
+                  alt = "Facebook"
                 ></img>
               </NavLink>
             </NavItem>
@@ -27,6 +28,7 @@ const CustomerFooter = () => {
                 <img
                   src={instagram_icon}
                   style={{ height: "21px", width: "21px" }}
+                  alt= "Instagram"
                 ></img>
               </NavLink>
             </NavItem>

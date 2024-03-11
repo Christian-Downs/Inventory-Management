@@ -4,11 +4,11 @@ import {
   CardHeader,
   CardBody,
   CardTitle,
-  Table,
+  
   Row,
   Col,
 } from "reactstrap";import { useState } from "react";
-import { Input, FormGroup, Label, Button } from "reactstrap";
+import { Button } from "reactstrap";
 import { getPackages } from "Controller/PackageController";
 import PackageTable from "components/Tables/PackageTable";
 import { checkOutPackages } from "Controller/PackageController";
@@ -16,7 +16,7 @@ import { checkInPackages } from "Controller/PackageController";
 import { deletePackagesById } from "Controller/PackageController";
 
 function Packages() {
-  const [searchTerm, setSearchTerm] = useState(""); // "a"
+  // const [searchTerm, setSearchTerm] = useState(""); // "a"
   const [packages, setPackages] = useState([]); // [1, 2, 3]
     const [selectedIds, setSelectedIds] = useState([]); // [1, 2, 3]
     const [isLoading, setIsLoading] = useState(true);

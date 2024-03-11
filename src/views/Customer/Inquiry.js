@@ -24,7 +24,7 @@ function Inquiry() {
             console.log(location.state.themeName);
             setSelectedTheme(location.state.themeName);
         }
-    }, []);
+    }, [location.state]);
 
   const handleSubmit = (e) => {
     console.log(process.env.REACT_APP_SERVER_URL)

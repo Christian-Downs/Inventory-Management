@@ -1,13 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Navigate, useNavigate, useParams } from "react-router-dom";
+import {  useNavigate, useParams } from "react-router-dom";
 import website from 'assets/jsons/website.json'
-import { all, formToJSON } from "axios";
-import { parseJsonText } from "typescript";
 import "assets/css/customer.css"
 import { Button, Col, Image, Row } from "react-bootstrap";
-import BookingPage from "./Book";
 import "assets/css/theme.css"
-import { set } from "date-fns";
 // import image from "assets/img/SPACE/DSC00026_SPACE_HERO1.jpg"
 
 <style>
@@ -48,7 +44,7 @@ const SingleTheme = ({ themeName }) => {
   const navigate = useNavigate();
   const theme = website.themes[themeName]
   const rows = theme.rows
-  const id = theme.id
+  // const id = theme.id
   const themeDescription = theme["Description"];
   const mainImageString = theme["MainImage"];
   console.log(themeDescription)
@@ -99,7 +95,7 @@ const SingleTheme = ({ themeName }) => {
       for(let i = 0; i < imageNames.length; i++){
         loadImage(imageNames[i]).then((image) => {
           allImages.push(image)
-          if(i % 2 == 0){
+          if(i % 2 === 0){
             images1.push(image)
           } else {
             images2.push(image)
@@ -112,13 +108,13 @@ const SingleTheme = ({ themeName }) => {
     }
   }, [imageNames]);
 
-  const ImageSection = ({ section }) => {
-    return (
-      <div>
-        <Image src={section.image} />
-      </div>
-    )
-  }
+  // const ImageSection = ({ section }) => {
+  //   return (
+  //     <div>
+  //       <Image src={section.image} />
+  //     </div>
+  //   )
+  // }
 
 
   const inquiryButtonHandler = () => {  
@@ -127,32 +123,32 @@ const SingleTheme = ({ themeName }) => {
   }
 
 
-  const TextSection = ({ section }) => {
-    console.log("Test")
-    console.log(section)
-    return (
-      <div>
-        <h2>{section.title}</h2>
-        <ul className="custom-marker">
-          <li>{section.description}</li>
-        </ul>
-        {/* <p>{section.description}</p> */}
-      </div>
-    )
-  }
-  var color = "#ffe6e6"
+  // const TextSection = ({ section }) => {
+  //   console.log("Test")
+  //   console.log(section)
+  //   return (
+  //     <div>
+  //       <h2>{section.title}</h2>
+  //       <ul className="custom-marker">
+  //         <li>{section.description}</li>
+  //       </ul>
+  //       {/* <p>{section.description}</p> */}
+  //     </div>
+  //   )
+  // }
+  // var color = "#ffe6e6"
 
-  const colorChanger = () => {
-    if (color == "#ffe6e6") {
-      color = "whiite"
-    }
-    else {
-      color = "#ffe6e6"
-    }
-    return color;
-  }
+  // const colorChanger = () => {
+  //   if (color == "#ffe6e6") {
+  //     color = "whiite"
+  //   }
+  //   else {
+  //     color = "#ffe6e6"
+  //   }
+  //   return color;
+  // }
 
-  if(themeName != undefined){
+  if(themeName !== undefined){
       return (
         <div>
           <Row
@@ -290,7 +286,7 @@ const SingleTheme = ({ themeName }) => {
 const Theme = () => {
   const { themeName } = useParams();
   console.log(themeName)
-  if(themeName == undefined){
+  if(themeName === undefined){
     return AllThemes()
   } else {
     return SingleTheme({themeName})

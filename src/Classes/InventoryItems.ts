@@ -1,6 +1,6 @@
 // src/InventoryItem.ts
 
-import { updateInventoryItem, checkInItem, checkOutItem } from "../Controller/InventoryController";
+import { updateInventoryItem, } from "../Controller/InventoryController";
 
 export class InventoryItem {
     id: number;

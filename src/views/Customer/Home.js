@@ -17,52 +17,39 @@
 */
 import React from "react";
 // nodejs library that concatenates classes
-import classNames from "classnames";
+// import classNames from "classnames";
 // react plugin used to create charts
-import { Line, Bar } from "react-chartjs-2";
+// import { Line, Bar } from "react-chartjs-2";
 import "assets/css/customer-home.css";
 import "assets/css/customer.css"
 // reactstrap components
 import {
-  Button,
-  ButtonGroup,
-  Card,
-  CardHeader,
-  CardBody,
-  CardTitle,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  UncontrolledDropdown,
-  Label,
-  FormGroup,
-  Input,
-  Table,
+
   Row,
   Col,
-  UncontrolledTooltip,
+
 } from "reactstrap";
 
 // core components
-import {
-  chartExample1,
-  chartExample2,
-  chartExample3,
-  chartExample4,
-} from "variables/charts.js";
+// import {
+//   chartExample1,
+//   chartExample2,
+//   chartExample3,
+//   chartExample4,
+// } from "variables/charts.js";
 
 import CarouselCustom from "components/ImageHandling/CarouselCustom.js";
 
-import ContactPage from "components/Contact/ContactPage.js";
+// import ContactPage from "components/Contact/ContactPage.js";
 import prettyPinkImage from 'assets/img/PINK/DSC00116_PINK_HERO1.jpg'
 import spaceImage from 'assets/img/SPACE/DSC00044.jpg'
 import glowImage from 'assets/img/GLOW/MainImage.jpg'
 import website from "assets/jsons/website.json";
 import { Image } from "react-bootstrap";
-import { Link, Route } from "react-router-dom";
+import { Link} from "react-router-dom";
 import "assets/css/theme-card.css"
 import firstConfetti from "assets/img/GLOW/DSC09932.jpg"
-import secondConfetti from "assets/img/GLOW/DSC09932.jpg"
+// import secondConfetti from "assets/img/GLOW/DSC09932.jpg"
 
 const ThemeCard = ({theme}) => {
   const themeInfo = website.themes[theme]
@@ -88,13 +75,13 @@ const ThemeCard = ({theme}) => {
 
 function Home(props) {
 
-  const images = require.context('assets/img', true, /\.(png|jpe?g|svg)$/);
+  // const images = require.context('assets/img', true, /\.(png|jpe?g|svg)$/);
 
   //  console.log("test") 
-  const [bigChartData, setbigChartData] = React.useState("data1");
-  const setBgChartData = (name) => {
-    setbigChartData(name);
-  };
+  // const [bigChartData, setbigChartData] = React.useState("data1");
+  // const setBgChartData = (name) => {
+  //   setbigChartData(name);
+  // };
   return (
     <>
       <div className="customer-content">
@@ -138,6 +125,7 @@ function Home(props) {
           <img
             className="max-400"
             src={prettyPinkImage}
+            alt="prettyPinkImage"
           />
           <Col>
             <div className="customer-info">
@@ -208,6 +196,7 @@ function Home(props) {
               <img
                 className="max-400"
                 src={spaceImage}
+                alt="spaceImage"
               />
               <p  className="ladder-text">
                 We cater to girls and boys! Check out our available list of
@@ -230,6 +219,7 @@ function Home(props) {
               <img
                 className="max-400"
                 src={glowImage}
+                alt="glowImage"
               />
             </div>
           </Col>

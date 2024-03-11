@@ -1,7 +1,7 @@
-import React, { useRef, useEffect } from "react";
+import React, {  useEffect } from "react";
 import { useState } from "react";
-import axios from "axios";
-import { Input, FormGroup, Label, Button } from "reactstrap";
+// import axios from "axios";
+import {  Button } from "reactstrap";
 import AddItemModal from "components/Modals/AddInventoryModal";
 import {
   checkOutItems,
@@ -15,7 +15,7 @@ import {
   CardHeader,
   CardBody,
   CardTitle,
-  Table,
+  // Table,
   Row,
   Col,
 } from "reactstrap";
@@ -30,7 +30,7 @@ import InventoryTable  from "components/Tables/InventoryTable";
 function Inventory() {
   const [refreshInventory, setRefreshInventory] = useState(false);
 
-  const [searchTerm, setSearchTerm] = useState(""); // "a"
+  // const [searchTerm, setSearchTerm] = useState(""); // "a"
 
   const [modal, setModal] = useState(false);
 
@@ -40,7 +40,7 @@ function Inventory() {
 
   const [selectedIds, setSelectedIds] = useState([]); // [1, 2, 3]
 
-  const serverUrl = process.env.REACT_APP_SERVER_URL;
+  // const serverUrl = process.env.REACT_APP_SERVER_URL;
   useEffect(() => {
     const fetchItems = async () => {
       getInventory().then((items1) => {
@@ -72,20 +72,20 @@ function Inventory() {
     });
   };
 
-  const handleCheckboxChange = (e, id) => {
-    if (e.target.checked) {
-      setSelectedIds([...selectedIds, id]);
-    } else {
-      setSelectedIds(selectedIds.filter((itemId) => itemId !== id));
-    }
-  };
+  // const handleCheckboxChange = (e, id) => {
+  //   if (e.target.checked) {
+  //     setSelectedIds([...selectedIds, id]);
+  //   } else {
+  //     setSelectedIds(selectedIds.filter((itemId) => itemId !== id));
+  //   }
+  // };
 
   const clearedSelectedIds = () => {
     setSelectedIds([]);
   };
 
   const checkOut = async () => {
-    if (selectedIds.length != 0) {
+    if (selectedIds.length !== 0) {
       var newItems = await checkOutItems(selectedIds);
       console.log(newItems);
       clearedSelectedIds();
@@ -95,7 +95,7 @@ function Inventory() {
   };
 
   const checkIn = async () => {
-    if (selectedIds.length != 0) {
+    if (selectedIds.length !== 0) {
       var newItems = await checkInItems(selectedIds);
       console.log(newItems);
       clearedSelectedIds();
@@ -105,7 +105,7 @@ function Inventory() {
   };
 
   const deleteItems = async () => {
-    if (selectedIds.length != 0) {
+    if (selectedIds.length !== 0) {
       for (var i = 0; i < selectedIds.length; i++) {
         await deleteItemsById(selectedIds[i]);
       }

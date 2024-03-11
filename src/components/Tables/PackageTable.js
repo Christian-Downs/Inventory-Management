@@ -1,23 +1,23 @@
-import React, { useRef, useEffect } from "react";
+import React, {  useEffect } from "react";
 import { useState } from "react";
-import axios from "axios";
+// import axios from "axios";
 import { Input, FormGroup, Label, Button } from "reactstrap";
-import AddItemModal from "components/Modals/AddInventoryModal";
-import {
-  checkOutItems,
-  checkInItems,
-  deleteItemsById,
-} from "Controller/InventoryController";
+// import AddItemModal from "components/Modals/AddInventoryModal";
+// import {
+//   checkOutItems,
+//   checkInItems,
+//   deleteItemsById,
+// } from "Controller/InventoryController";
 
 // reactstrap components
 import {
-  Card,
-  CardHeader,
-  CardBody,
-  CardTitle,
+  // Card,
+  // CardHeader,
+  // CardBody,
+  // CardTitle,
   Table,
-  Row,
-  Col,
+  // Row,
+  // Col,
 } from "reactstrap";
 import "assets/css/add-inventory-custom.css";
 
@@ -39,7 +39,7 @@ function PackageTable({
 
   //const [selectedIds, setSelectedIds] = useState([]); // [1, 2, 3]
 
-  const serverUrl = process.env.REACT_APP_SERVER_URL;
+  // const serverUrl = process.env.REACT_APP_SERVER_URL;
   const fetchItems = async () => {
     getPackages().then((items1) => {
       setItems(items1);
