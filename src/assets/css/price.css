@@ -1,4 +1,4 @@
-.top-level-row{
+.top-level-row {
     width: 100%;
     margin-left: 0 !important;
     padding-left: 0 !important;
@@ -9,21 +9,216 @@
     justify-content: center;
 }
 
-.top-level-div-holder{
+.top-level-div-holder {
     width: 80%;
     text-align: center;
     justify-content: center;
-    padding-top:1rem;
-    padding-bottom:1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
-.top-level-div{
-    width: 80%;
+.book-now-button-div{
+    width: fit-content;
+        height: fit-content;
+        position: relative;
+        margin-left: 5rem;
+}
+
+.book-now-button{
+
+}
+
+
+.top-level-div {
+    width: 100%;
     text-align: center;
 
 }
 
-.party-pricing-info {
+.party-pricing-title-image-div{
+    position: relative;
+    text-align: center;
+}
+
+.party-pricing-title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.party-pricing-title-div{
     width: 100%;
+    text-align: center;
+    justify-content: center;
     padding-top: 1rem;
+    padding-bottom: 1rem;
+
+}
+
+.party-pricing-title{
+    width: 100%;
+        font-family: 'Apple Chancery' !important;
+}
+
+.party-pricing-subtext{
+    font-family: cursive;
+    font-size: medium;
+}
+
+.party-included-col{
+    display:flex;
+    flex-direction: column;
+    align-content: center;
+    width: 80%;
+}
+
+.party-included-div{
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+
+.party-pricing-info {
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    height: fit-content;
+    justify-content: space-evenly;
+    justify-self: center;
+}
+.party-pricing-info-col{
+    display:flex;
+    justify-content: center;
+    height: 100%;
+    width: 80%;
+}
+
+
+
+.party-info-row{
+    --party-width :40rem;
+    width: var(--party-width);
+    align-self: center;
+}
+
+.party-info-row > .party-info-divider{
+    /* min-width: calc(var(--party-width) * .5); */
+    width:calc(var(--party-width) * .5);
+    display: flex;
+    justify-content: center;
+}
+.party-pricing-info-div-holder {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+        /* background: round pink; */
+            /* width: fit-content; */
+            /* background: round; */
+            background-color: pink;
+            border-radius: 25px;
+            background-position: left top;
+            padding: 25px;
+            height: fit-content(110%);
+}
+
+.party-pricing-title-row {
+    width: 100%;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    height: fit-content;
+    justify-content: center;
+}
+
+.party-pricing-included-col{
+    width: fit-content;
+    text-wrap: nowrap;
+    
+}
+.included-list{
+    list-style-position: outside;
+    text-align-last: left;
+    /* padding-left: 15px; */
+}
+
+.included-item{
+    text-wrap: wrap;
+    /* white-space: nowrap; */
+    text-align: left !important;
+}
+
+.item-holder{
+    display: inline
+}
+
+.desktop{
+    .party-included-div{
+                /* background: round pink; */
+                    width: fit-content;
+                    /* background: round; */
+                    background-color: pink;
+                    border-radius: 25px;
+                    background-position: left top;
+                    
+                    height: fit-content(110%);
+    }
+}
+
+
+
+.addon-col {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+
+@media (max-width: 768px) {
+    /* .mobile {
+        display: flex !important;
+    
+    }     */
+
+    .top-level-div-holder{
+        width: 100%;
+    }
+    .party-info-row.mobile {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+.party-info-row.mobile > .party-info-divider {
+    /* min-width: calc(var(--party-width) * .5); */
+    /* width: calc(var(--party-width) * .5) */
+}
+
+.mobile{
+    .party-pricing-info-div-holder {
+            background-color: white;
+            flex-direction: column;
+            text-size-adjust: 100%;
+            font-size: xx-large;
+        }
+    .party-pricing-info-text{
+        font-size: x-large;
+        
+    }
 }
