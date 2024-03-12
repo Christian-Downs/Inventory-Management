@@ -175,7 +175,7 @@ const SingleTheme = ({ themeName }) => {
               </Button>
             </Col>
             <Col className="theme-header-image-col">
-              <Image src={mainImage} className="theme-image" />
+              <img src={mainImage} className="theme-image" />
             </Col>
           </Row>
           <Row
@@ -202,7 +202,7 @@ const SingleTheme = ({ themeName }) => {
               </Button>
             </Col>
             <Col className="theme-header-image-col mobile">
-              <Image src={mainImage} className="theme-image" />
+              <img src={mainImage} className="theme-image" />
             </Col>
           </Row>
           <Row
@@ -239,7 +239,7 @@ const SingleTheme = ({ themeName }) => {
                 {lowerFirstImages.map((image) => {
                   return (
                     <div className="lower-image-div">
-                      <Image src={image} className="lower-images col-left" />
+                      <img src={image} className="lower-images col-left" />
                     </div>
                   );
                 })}
@@ -248,7 +248,7 @@ const SingleTheme = ({ themeName }) => {
                 {lowerSecondImages.map((image) => {
                   return (
                     <div className="lower-image-div">
-                      <Image src={image} className="lower-images" />
+                      <img src={image} className="lower-images" />
                     </div>
                   );
                 })}
@@ -263,7 +263,7 @@ const SingleTheme = ({ themeName }) => {
               {allImages.map((image) => {
                 return (
                   <div className="lower-image-div">
-                    <Image src={image} className="lower-images" />
+                    <img src={image} className="lower-images" />
                   </div>
                 );
               })}
