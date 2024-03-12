@@ -6,10 +6,10 @@ import { Button, Col, Image, Row } from "react-bootstrap";
 import "assets/css/theme.css"
 // import image from "assets/img/SPACE/DSC00026_SPACE_HERO1.jpg"
 
-<style>
+{/* <style>
   @import
   url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap')
-</style>;
+</style>; */}
 
 
 

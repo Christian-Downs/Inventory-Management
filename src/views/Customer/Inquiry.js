@@ -27,7 +27,7 @@ function Inquiry() {
     }, [location.state]);
 
   const handleSubmit = (e) => {
-    console.log(process.env.REACT_APP_SERVER_URL)
+
     e.preventDefault();
     // Handle form submission logic here
     if(name === '' || email === "" || guestCount === "" || phoneNumber === "" || selectedDate === "" || address === "" || selectedTheme === ""){
@@ -35,10 +35,12 @@ function Inquiry() {
         return;
     }
     
-    axios.post(process.env.REACT_APP_SERVER_URL + "/api/sendEmail", {
+    axios.post(website["server-url"] + "/api/sendEmail", {
         email: "Christian.downs.15@gmail.com",
         subject: "New Booking Inquiry",
         message: `Name: ${name}\nEmail: ${email}\nGuest Count: ${guestCount}\nPhone Number: ${phoneNumber}\nDate: ${selectedDate}\nAddress: ${address}\nTheme: ${selectedTheme}\nMessage: ${message}`
+    }).catch((response) => {
+      alert("Email Failed to Send");
     }).then((response) => {
         console.log(response);
         alert("Email Sent!");
