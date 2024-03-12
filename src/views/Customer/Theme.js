@@ -32,10 +32,10 @@ const AllThemes = () => {
 }
 
 
-const imageContext = require.context('assets/img', true, /\.(png|jpe?g|svg)$/);
+
 
 const SingleTheme = ({ themeName }) => {
-  
+  const imageContext = require.context('assets/img', true, /\.(png|jpe?g|svg)$/);
   const navigate = useNavigate();
   const theme = website.themes[themeName]
   const rows = theme.rows
@@ -66,13 +66,6 @@ const SingleTheme = ({ themeName }) => {
     } catch (error) {
       console.error("Failed to load image", error);
     }
-
-    // try {
-    //   const image = await import(`assets/img/${imageName}`)
-    //   return image.default
-    // } catch (error) {
-    //   console.error("Failed to load image", error);
-    // }
   }
 
 
@@ -103,14 +96,6 @@ const SingleTheme = ({ themeName }) => {
     }
   }, [imageNames]);
 
-  // const ImageSection = ({ section }) => {
-  //   return (
-  //     <div>
-  //       <Image src={section.image} />
-  //     </div>
-  //   )
-  // }
-
 
   const inquiryButtonHandler = () => {  
     console.log("Inquiry button clicked")
@@ -118,30 +103,6 @@ const SingleTheme = ({ themeName }) => {
   }
 
 
-  // const TextSection = ({ section }) => {
-  //   console.log("Test")
-  //   console.log(section)
-  //   return (
-  //     <div>
-  //       <h2>{section.title}</h2>
-  //       <ul className="custom-marker">
-  //         <li>{section.description}</li>
-  //       </ul>
-  //       {/* <p>{section.description}</p> */}
-  //     </div>
-  //   )
-  // }
-  // var color = "#ffe6e6"
-
-  // const colorChanger = () => {
-  //   if (color == "#ffe6e6") {
-  //     color = "whiite"
-  //   }
-  //   else {
-  //     color = "#ffe6e6"
-  //   }
-  //   return color;
-  // }
 
   if(themeName !== undefined){
       return (
