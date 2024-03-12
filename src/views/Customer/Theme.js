@@ -33,11 +33,13 @@ const AllThemes = () => {
 
 
 
-
-const SingleTheme = ({ themeName }) => {
   const imageContext = require.context('assets/img', true, /\.(png|jpe?g|svg)$/);
+function SingleTheme ( {themeName, website} ) {
+
   const navigate = useNavigate();
+  console.log(website)
   const theme = website.themes[themeName]
+  console.log(theme)
   const rows = theme.rows
   // const id = theme.id
   const themeDescription = theme["Description"];
@@ -245,7 +247,8 @@ const Theme = () => {
   if(themeName === undefined){
     return AllThemes()
   } else {
-    return SingleTheme({themeName})
+    console.log(website)
+    return SingleTheme({themeName, website})
   }
   
 
