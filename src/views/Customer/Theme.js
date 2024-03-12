@@ -71,7 +71,7 @@ function SingleTheme ( {themeName, website} ) {
       const keys = imageContext.keys()
       const imagePath = keys.find(key => key.includes(imageName));
       if(imagePath){
-        return imageContext(imagePath);
+        return await imageContext(imagePath);
       }
       //  imageContext.keys().map((item, index) => {
       //     if(item.includes(imageName)){
@@ -97,7 +97,7 @@ function SingleTheme ( {themeName, website} ) {
       var images2 = [];
       var allImages = []
       for(let i = 0; i < imageNames.length; i++){
-        var test = loadImage(imageNames[i]).then((image) => {
+        loadImage(imageNames[i]).then((image) => {
           console.log(image)
           allImages.push(image)
           if(i % 2 === 0){
@@ -106,7 +106,6 @@ function SingleTheme ( {themeName, website} ) {
             images2.push(image)
           }
         });
-        console.log(test)
       }
       setAllImages(allImages);
       setFirstLowerImages(images1);
