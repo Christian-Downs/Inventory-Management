@@ -54,17 +54,31 @@ function SingleTheme ( {themeName, website} ) {
   //Load images dynamically
   useEffect(() => {
     if (mainImageString) {
-      loadImage(mainImageString).then((image) => {
-        setMainImage(image);
+      imageContext.keys().map((item, index) => {
+        if(item.includes(mainImageString)){
+          setMainImage(imageContext(item))
+        }
       });
+      // loadImage(mainImageString).then((image) => {
+      //   setMainImage(image);
+      // });
     }
   }, [mainImageString]);
 
 
   async function loadImage (imageName) {
     try{
-      console.log(imageContext.keys())
-      return imageContext(`./${imageName}`)
+      const keys = imageContext.keys()
+      const imagePath = keys.find(key => key.includes(imageName));
+      if(imagePath){
+        return imageContext(imagePath);
+      }
+      //  imageContext.keys().map((item, index) => {
+      //     if(item.includes(imageName)){
+      //       return imageContext(item)
+      //     }
+      // });
+      // return imageContext(`./${imageName}`);
     } catch (error) {
       console.error("Failed to load image", error);
     }
@@ -83,7 +97,8 @@ function SingleTheme ( {themeName, website} ) {
       var images2 = [];
       var allImages = []
       for(let i = 0; i < imageNames.length; i++){
-        loadImage(imageNames[i]).then((image) => {
+        var test = loadImage(imageNames[i]).then((image) => {
+          console.log(image)
           allImages.push(image)
           if(i % 2 === 0){
             images1.push(image)
@@ -91,6 +106,7 @@ function SingleTheme ( {themeName, website} ) {
             images2.push(image)
           }
         });
+        console.log(test)
       }
       setAllImages(allImages);
       setFirstLowerImages(images1);
