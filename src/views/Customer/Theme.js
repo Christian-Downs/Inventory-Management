@@ -66,12 +66,12 @@ function SingleTheme ( {themeName, website} ) {
   }, [mainImageString]);
 
 
-  async function loadImage (imageName) {
+  function loadImage (imageName) {
     try{
       const keys = imageContext.keys()
       const imagePath = keys.find(key => key.includes(imageName));
       if(imagePath){
-        return await imageContext(imagePath);
+        return imageContext(imagePath);
       }
       //  imageContext.keys().map((item, index) => {
       //     if(item.includes(imageName)){
@@ -97,7 +97,7 @@ function SingleTheme ( {themeName, website} ) {
       var images2 = [];
       var allImages = []
       for(let i = 0; i < imageNames.length; i++){
-        loadImage(imageNames[i]).then((image) => {
+          var image = loadImage(imageNames[i])
           console.log(image)
           allImages.push(image)
           if(i % 2 === 0){
@@ -105,7 +105,7 @@ function SingleTheme ( {themeName, website} ) {
           } else {
             images2.push(image)
           }
-        });
+
       }
       setAllImages(allImages);
       setFirstLowerImages(images1);
