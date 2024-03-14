@@ -163,6 +163,7 @@ const BookingPage = ({ theme }) => {
                     <Row className='d-flex  booking-right-col-row'>
                         <Col xs={12} md={8} className='button-col'>
                             <button type="button" className="booking-button" onClick={handleBooking}>Book Now</button>
+
                         </Col>
                     </Row>
                 </Col>

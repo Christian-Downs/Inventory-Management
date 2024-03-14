@@ -33,7 +33,7 @@ const AllThemes = () => {
 
 
 
-  const imageContext = require.context('assets/img', true, /\.(png|jpe?g|svg)$/);
+  const imageContext = require.context('assets/img', true, /\.(png|jpe?g|svg|gif)$/);
 function SingleTheme ( {themeName, website} ) {
 
   const navigate = useNavigate();
@@ -44,10 +44,10 @@ function SingleTheme ( {themeName, website} ) {
   // const id = theme.id
   const themeDescription = theme["Description"];
   const mainImageString = theme["MainImage"];
-  console.log(themeDescription)
-  console.log(rows)
+  // console.log(themeDescription)
+  // console.log(rows)
 
-  console.log(theme)
+  // console.log(theme)
   // Now you can use the themeName variable to render content based on the theme
 
   const [mainImage, setMainImage] = useState('');
@@ -199,6 +199,9 @@ function SingleTheme ( {themeName, website} ) {
               <div className="extra-teepee-div">
                 <p className="extra-teepee-text">
                   *additional teepees and accessories avaliable*
+                </p>
+                <p className="extra-teepee-text">
+                  *subject to awesome upgrades at any time*
                 </p>
               </div>
             </Col>

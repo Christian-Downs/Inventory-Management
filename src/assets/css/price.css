@@ -126,7 +126,8 @@
         /* background: round pink; */
             /* width: fit-content; */
             /* background: round; */
-            background-color: pink;
+            /* background-color: pink; */
+            border: black solid;
             border-radius: 25px;
             background-position: left top;
             padding: 25px;
@@ -180,7 +181,8 @@
                 /* background: round pink; */
                     width: fit-content;
                     /* background: round; */
-                    background-color: pink;
+                    /* background-color: pink; */
+                    border: black solid;
                     border-radius: 25px;
                     background-position: left top;
                     

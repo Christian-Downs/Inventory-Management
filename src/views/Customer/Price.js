@@ -12,7 +12,7 @@ const Price = () => {
   const includedItems = includedSection.items;
   const prices = price_page.included.Prices;
   const addons = price_page.Addons;
- const navigate = useNavigate();
+  const navigate = useNavigate();
   const bookNowButtonHandler = () => {
     navigate("/book", {});
   };
@@ -38,7 +38,7 @@ const Price = () => {
 
       <Col
         className="party-pricing-info"
-        // style={{ background: includedSection.background }}
+      // style={{ background: includedSection.background }}
       >
         <div className="party-pricing-title-div">
           <div className="party-pricing-title-image-div">
@@ -53,7 +53,9 @@ const Price = () => {
         <Row className="party-info-row desktop">
           <div className="party-info-divider">
             <div className="party-pricing-info-col">
-              <div className="party-pricing-info-div-holder">
+              <div className="party-pricing-info-div-holder"
+                style={{ background: includedSection.background }}
+              >
                 <h2>Party Packages:</h2>
                 {Object.keys(prices).map((price) => {
                   return (
@@ -65,13 +67,19 @@ const Price = () => {
                     </div>
                   );
                 })}
+                <p>
+                  {includedSection.Additional}
+                </p>
               </div>
             </div>
           </div>
 
           <div className="party-info-divider">
             <div className="party-included-col">
-              <div className="party-included-div">
+              <div className="party-included-div"
+                style={{ background: includedSection.background }}
+
+              >
                 <h2 className="included-header">Included:</h2>
                 <ul className="included-list">
                   {Object.keys(includedItems).map((item) => {
@@ -123,9 +131,9 @@ const Price = () => {
         </Row>
       </Col>
       <div className="party-pricing-title-image-div addon">
-            <Image className="party-pricing-title-image addon" src={ribbon} />
-            <h1 className="party-pricing-title">{addons.header}</h1>
-          </div>
+        <Image className="party-pricing-title-image addon" src={ribbon} />
+        <h1 className="party-pricing-title">{addons.header}</h1>
+      </div>
       <Col className="addon-col">
         {Object.keys(addons.items).map((addon) => {
           return AddonCard(addons.items[addon]);
