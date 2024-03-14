@@ -33,7 +33,7 @@ const AllThemes = () => {
 
 
 
-  const imageContext = require.context('assets/img', true, /\.(png|jpe?g|svg)$/);
+  const imageContext = require.context('assets/img', true, /\.(png|jpe?g|svg|gif)$/);
 function SingleTheme ( {themeName, website} ) {
 
   const navigate = useNavigate();
@@ -44,10 +44,10 @@ function SingleTheme ( {themeName, website} ) {
   // const id = theme.id
   const themeDescription = theme["Description"];
   const mainImageString = theme["MainImage"];
-  console.log(themeDescription)
-  console.log(rows)
+  // console.log(themeDescription)
+  // console.log(rows)
 
-  console.log(theme)
+  // console.log(theme)
   // Now you can use the themeName variable to render content based on the theme
 
   const [mainImage, setMainImage] = useState('');
@@ -119,7 +119,9 @@ function SingleTheme ( {themeName, website} ) {
     navigate("/book", { state: { themeName: themeName } });
   }
 
-
+  const IncludedTextColorHeader = theme["IncludedTextColorHeader"]? theme["IncludedTextColorHeader"] + " !important" : "auto"
+  const includedTextStyle = {style: {color: IncludedTextColorHeader}}
+  console.log(IncludedTextColorHeader)
 
   if(themeName !== undefined){
       return (
@@ -184,7 +186,9 @@ function SingleTheme ( {themeName, website} ) {
           >
             <Col className="included-col">
               <div className="included-header-div">
-                <h2 className="included-header-text">PACKAGE INCLUDES</h2>
+                <h2 className="included-header-text"
+                style={ includedTextStyle }
+                >PACKAGE INCLUDES</h2>
                 <h3 className="included-header-teepee-count">
                   --UP TO {theme["TentCount"]} TEEPEES --
                 </h3>
@@ -199,6 +203,9 @@ function SingleTheme ( {themeName, website} ) {
               <div className="extra-teepee-div">
                 <p className="extra-teepee-text">
                   *additional teepees and accessories avaliable*
+                </p>
+                <p className="extra-teepee-text">
+                  *subject to awesome upgrades at any time*
                 </p>
               </div>
             </Col>

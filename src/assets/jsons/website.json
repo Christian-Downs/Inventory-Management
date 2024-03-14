@@ -6,8 +6,8 @@
   "CarouselImages": "assets/img/CarouselImages",
   "price_page": {
     "background": "pink",
-    "included":{
-      "background": "pink",
+    "included": {
+      "background": "#f2e3f7",
       "header": "Party Pricing",
       "subHeader": "Party Pricing cost includes styling and collection the following day!",
       "target_lenght": 50,
@@ -23,32 +23,47 @@
         "Balloon Toppers"
       ],
       "Prices": {
-        "2 Tents":"$350",
-        "3 Tents":"$400",
-        "4 Tents": "$450",
-        "5 Tents": "$500",
-        "6 Tents": "$550"
+        "2-3 Tents": "$299",
+        "4 Tents": "$374",
+        "5 Tents": "$449",
+        "6 Tents": "$524"
+        
       },
-      "Additional": "Additional $50 for Any Additional Tents",
+      "Additional": "*$75 per additional tent*",
       "Deposit": "A $100 deposit is required to secure your date. The remaining balance is due 7 days prior to your event. We accept cash, check, or Venmo."
-
     },
     "header": {
-        "background":"pink",
-        "large_text": "Party Pricing & Details",
-        "small_text": [
-            "We are so excited to help you create the perfect sleepover party experience with teepee rentals for birthday parties, special events, and other celebrations. We offer several themes for boys and girls which you can browse above in our theme gallery. Whether you have a party of 2 or 8, we’ve got you covered! Choose from our list of themes or share your unique and original ideas with us and we will help create the party of your dreams. "
-        ]
+      "background": "pink",
+      "large_text": "Party Pricing & Details",
+      "small_text": [
+        "We are so excited to help you create the perfect sleepover party experience with teepee rentals for birthday parties, special events, and other celebrations. We offer several themes for boys and girls which you can browse above in our theme gallery. Whether you have a party of 2 or 8, we’ve got you covered! Choose from our list of themes or share your unique and original ideas with us and we will help create the party of your dreams. "
+      ]
     },
-    "Addons":{
+    "Addons": {
       "header": "Memorable Upgrades",
       "items": [
-        {"name": "Spa", "price":50, "image":"spa.jpg"},
-        {"name": "Popcorn", "price":25, "image":"popcorn.jpg"}
-
+        {
+          "name": "Personalized Robe",
+          "price": 20,
+          "image": "robe.png"
+        },
+        {
+          "name": "Makeup Bag",
+          "price": 15,
+          "image": "makeupbag.png"
+        },
+        {
+          "name": "Lounge Pajama Set",
+          "price": 45,
+          "image": "pajamas.png"
+        },
+        {
+          "name": "Personalized T-shirts",
+          "price": 18,
+          "image": "t-shirt.png"
+        }
       ]
     }
-    
   },
   "themes": {
     "Taylor Swift": {
@@ -61,7 +76,7 @@
       ],
       "HeaderColor": "pink",
       "InquiryButtonColor": "#74c1d6",
-      "IncludedBackgroundColor": "#77597e",
+      "IncludedBackgroundColor": "#b685bf",
       "LowerImageBackgroundColor": "#b685bf",
       "TentCount": 4,
       "Included": [
@@ -79,16 +94,10 @@
         "TaylorSwift/DSC00063_SWIFT_HERO1.jpg",
         "TaylorSwift/DSC00066_SWIFT_HERO2.jpg",
         "TaylorSwift/DSC00067_SWIFT_HERO3.jpg",
-        "TaylorSwift/DSC00069_SWIFT_HERO4.jpg",
         "TaylorSwift/DSC00070.jpg",
         "TaylorSwift/DSC00085.jpg",
-        "TaylorSwift/DSC00087.jpg",
-        "TaylorSwift/DSC00088.jpg",
-        "TaylorSwift/DSC00089.jpg",
         "TaylorSwift/DSC00096.jpg",
-        "TaylorSwift/DSC00098.jpg",
-        "TaylorSwift/DSC00110.jpg",
-        "TaylorSwift/DSC00112.jpg"
+        "TaylorSwift/DSC00098.jpg"
       ],
       "rows": [
         [
@@ -135,8 +144,11 @@
       ],
       "HeaderColor": "pink",
       "InquiryButtonColor": "blueviolet",
-      "IncludedBackgroundColor": "#bd34b9",
-      "LowerImageBackgroundColor": "#b685bf",
+      "IncludedBackgroundColor": "#3100c2d1",
+      "IncludedTextColorHeader": "white",
+      "IncludedTextColor": "white",
+      "IncludedTextColorSubText": "white",
+      "LowerImageBackgroundColor": "#3100c2d1",
       "TentCount": 4,
       "Included": [
         "Delivery, Set up/Styling, Takedown, Laundering of Linens",
@@ -150,16 +162,11 @@
         "Balloon Toppers"
       ],
       "Images": [
-        "GLOW/DSC09881_GLOW_HERO2.jpg",
         "GLOW/DSC09903_GLOW_HERO3.jpg",
         "GLOW/DSC09914.jpg",
         "GLOW/DSC09916.jpg",
-        "GLOW/DSC09918.jpg",
-        "GLOW/DSC09919.jpg",
-        "GLOW/DSC09920.jpg",
-        "GLOW/DSC09922.jpg",
-        "GLOW/DSC09929.jpg",
-        "GLOW/DSC09932.jpg"
+        "GLOW/DSC09918.jpg"
+
       ],
       "rows": [
         [
@@ -202,7 +209,7 @@
       "MainImage": "PINK/MainImage.jpg",
       "Description": [
         "Every girl deserves to feel pampered and pretty in pink!",
-        "This party gives the feel of relaxation with the added fun of a sleepover.", 
+        "This party gives the feel of relaxation with the added fun of a sleepover.",
         "Add on the spa package for the ultimate experience!"
       ],
       "HeaderColor": "pink",
@@ -223,14 +230,10 @@
       ],
       "Images": [
         "PINK/DSC00116_PINK_HERO1.jpg",
-        "PINK/DSC00126.jpg",
-        "PINK/DSC00130.jpg",
         "PINK/DSC00131.jpg",
         "PINK/DSC00143.jpg",
-        "PINK/DSC00144.jpg",
-        "PINK/DSC00145.jpg",
-        "PINK/DSC00146.jpg"
-      ],
+        "PINK/DSC00145.jpg"
+            ],
       "rows": [
         [
           {
@@ -337,8 +340,9 @@
       "id": 5,
       "MainImage": "GAMER/MainImage.jpg",
       "Description": [
-        "Game on!", "Get ready to have a blast with this gaming themed sleepover!"
-          ],
+        "Game on!",
+        "Get ready to have a blast with this gaming themed sleepover!"
+      ],
       "HeaderColor": "pink",
       "InquiryButtonColor": "blueviolet",
       "IncludedBackgroundColor": "#bd34b9",
@@ -397,6 +401,132 @@
             "description": "Test"
           }
         ]
+      ]
+    },
+    "Unicorn": {
+      "id": 2,
+      "MainImage": "UNICORN/maingif.gif",
+      "Description": [
+        "Rainbows and Unicorns! ",
+        "This party comes with a cuddly unicorn companion to make your party magical!"
+      ],
+      "HeaderColor": "pink",
+      "InquiryButtonColor": "blueviolet",
+      "IncludedBackgroundColor": "#bd34b9",
+      "LowerImageBackgroundColor": "#b685bf",
+      "TentCount": 4,
+      "Included": [
+        "Delivery, Set up/Styling, Takedown, Laundering of Linens",
+        "Themed Teepees",
+        "Twin Mattresses with Fitted Sheets",
+        "Cozy Blankets",
+        "Decorative Themed Pillows",
+        "Tray Tables with Lights",
+        "String Lights",
+        "Garlands",
+        "Balloon Toppers"
+      ],
+      "Images": [
+        "UNICORN/IMG_6805.jpg",
+        "UNICORN/IMG_6815.jpg"
+      ]
+    },
+    "Sweet Dreams": {
+      "id": 2,
+      "MainImage": "comingSoon.png",
+      "Description": [
+        "Let's Glow Crazy!",
+        "This party setup comes with a blacklight to showcase the bright neon colors that will make your party glow!"
+      ],
+      "HeaderColor": "pink",
+      "InquiryButtonColor": "blueviolet",
+      "IncludedBackgroundColor": "#bd34b9",
+      "LowerImageBackgroundColor": "#b685bf",
+      "TentCount": 4,
+      "Included": [
+        "Delivery, Set up/Styling, Takedown, Laundering of Linens",
+        "Themed Teepees",
+        "Twin Mattresses with Fitted Sheets",
+        "Cozy Blankets",
+        "Decorative Themed Pillows",
+        "Tray Tables with Lights",
+        "String Lights",
+        "Garlands",
+        "Balloon Toppers"
+      ],
+      "Images": [
+        "GLOW/DSC09881_GLOW_HERO2.jpg",
+        "GLOW/DSC09903_GLOW_HERO3.jpg",
+        "GLOW/DSC09914.jpg",
+        "GLOW/DSC09916.jpg",
+        "GLOW/DSC09918.jpg",
+        "GLOW/DSC09919.jpg",
+        "GLOW/DSC09920.jpg",
+        "GLOW/DSC09922.jpg",
+        "GLOW/DSC09929.jpg",
+        "GLOW/DSC09932.jpg"
+      ]
+    },
+    "Sweet 16": {
+      "id": 2,
+      "MainImage": "comingSoon.png",
+      "Description": [
+        "Let's Glow Crazy!",
+        "This party setup comes with a blacklight to showcase the bright neon colors that will make your party glow!"
+      ],
+      "HeaderColor": "pink",
+      "InquiryButtonColor": "blueviolet",
+      "IncludedBackgroundColor": "#bd34b9",
+      "LowerImageBackgroundColor": "#b685bf",
+      "TentCount": 4,
+      "Included": [
+        "Delivery, Set up/Styling, Takedown, Laundering of Linens",
+        "Themed Teepees",
+        "Twin Mattresses with Fitted Sheets",
+        "Cozy Blankets",
+        "Decorative Themed Pillows",
+        "Tray Tables with Lights",
+        "String Lights",
+        "Garlands",
+        "Balloon Toppers"
+      ],
+      "Images": [
+      ]
+    },
+    "Coming Soon": {
+      "id": 2,
+      "MainImage": "comingSoon.png",
+      "Description": [
+        "Let's Glow Crazy!",
+        "This party setup comes with a blacklight to showcase the bright neon colors that will make your party glow!"
+      ],
+      "HeaderColor": "pink",
+      "InquiryButtonColor": "blueviolet",
+      "IncludedBackgroundColor": "#bd34b9",
+      "LowerImageBackgroundColor": "#b685bf",
+      "TentCount": 4,
+      "Included": [
+        "Delivery, Set up/Styling, Takedown, Laundering of Linens",
+        "Themed Teepees",
+        "Twin Mattresses with Fitted Sheets",
+        "Cozy Blankets",
+        "Decorative Themed Pillows",
+        "Tray Tables with Lights",
+        "String Lights",
+        "Garlands",
+        "Balloon Toppers"
+      ],
+      "Images": [
+        "GLOW/DSC09881_GLOW_HERO2.jpg",
+        "GLOW/DSC09903_GLOW_HERO3.jpg",
+        "GLOW/DSC09914.jpg",
+        "GLOW/DSC09916.jpg",
+        "GLOW/DSC09918.jpg",
+        "GLOW/DSC09919.jpg",
+        "GLOW/DSC09920.jpg",
+        "GLOW/DSC09922.jpg",
+        "GLOW/DSC09929.jpg",
+        "GLOW/DSC09932.jpg"
       ]
     }
   }

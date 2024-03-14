@@ -19,39 +19,39 @@ function Inquiry() {
 
   const themes = website.themes;
 
-    useEffect(() => {
-        if(location.state){
-            console.log(location.state.themeName);
-            setSelectedTheme(location.state.themeName);
-        }
-    }, [location.state]);
+  useEffect(() => {
+    if (location.state) {
+      console.log(location.state.themeName);
+      setSelectedTheme(location.state.themeName);
+    }
+  }, [location.state]);
 
   const handleSubmit = (e) => {
 
     e.preventDefault();
     // Handle form submission logic here
-    if(name === '' || email === "" || guestCount === "" || phoneNumber === "" || selectedDate === "" || address === "" || selectedTheme === ""){
-        alert("All fields must be filled out");
-        return;
+    if (name === '' || email === "" || guestCount === "" || phoneNumber === "" || selectedDate === "" || address === "" || selectedTheme === "") {
+      alert("All fields must be filled out");
+      return;
     }
-    
+
     axios.post(website["server-url"] + "/api/sendEmail", {
-        email: "Christian.downs.15@gmail.com",
-        subject: "New Booking Inquiry",
-        message: `Name: ${name}\nEmail: ${email}\nGuest Count: ${guestCount}\nPhone Number: ${phoneNumber}\nDate: ${selectedDate}\nAddress: ${address}\nTheme: ${selectedTheme}\nMessage: ${message}`
+      email: "Christian.downs.15@gmail.com",
+      subject: "New Booking Inquiry",
+      message: `Name: ${name}\nEmail: ${email}\nGuest Count: ${guestCount}\nPhone Number: ${phoneNumber}\nDate: ${selectedDate}\nAddress: ${address}\nTheme: ${selectedTheme}\nMessage: ${message}`
     }).catch((response) => {
       alert("Email Failed to Send");
     }).then((response) => {
-        console.log(response);
-        alert("Email Sent!");
-        setName("");
-        setEmail("");
-        setGuestCount("");
-        setPhoneNumber("");
-        setSelectedDate("");
-        setAddress("");
-        setSelectedTheme("");
-        setMessage("");
+      console.log(response);
+      alert("Email Sent!");
+      setName("");
+      setEmail("");
+      setGuestCount("");
+      setPhoneNumber("");
+      setSelectedDate("");
+      setAddress("");
+      setSelectedTheme("");
+      setMessage("");
     });
   };
 
@@ -169,6 +169,11 @@ function Inquiry() {
               <Row className="button-row">
                 <Button type="submit">Submit</Button>
               </Row>
+              <Row className="button-row">
+                <p>
+                    *By clicking "Submit" you agree to our Terms and Conditions*
+                  </p>
+              </Row>
             </form>
           </Row>
         </Row>
@@ -238,18 +243,18 @@ function Inquiry() {
                   </Row>
                   <Row className="input-mobile-row">
                     <label className="theme-label-mobile">
-                      
-                        <select
-                          value={selectedTheme}
-                          onChange={(e) => setSelectedTheme(e.target.value)}
-                          className="theme-selector mobile"
-                        >
-                          <option value="">Select a theme</option>
-                          {Object.keys(themes).map((theme, key) => {
-                            return <option value={theme}>{theme}</option>;
-                          })}
-                        </select>
-                      
+
+                      <select
+                        value={selectedTheme}
+                        onChange={(e) => setSelectedTheme(e.target.value)}
+                        className="theme-selector mobile"
+                      >
+                        <option value="">Select a theme</option>
+                        {Object.keys(themes).map((theme, key) => {
+                          return <option value={theme}>{theme}</option>;
+                        })}
+                      </select>
+
                     </label>
                   </Row>
                   <Row className="input-mobile-row">
@@ -266,6 +271,9 @@ function Inquiry() {
               </Row>
               <Row className="button-row">
                 <Button type="submit">Submit</Button>
+                <p>
+                  *By clicking "Submit" you agree to our Terms and Conditions*
+                </p>
               </Row>
             </form>
           </Row>

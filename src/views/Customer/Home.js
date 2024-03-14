@@ -55,7 +55,7 @@ const ThemeCard = ({theme}) => {
   const themeInfo = website.themes[theme]
   const themeImage = themeInfo["MainImage"]
   const image = require('assets/img/' + themeImage)
-  console.log(theme)
+  // console.log(theme)
 
   const link = "/theme/" + theme
   return (
