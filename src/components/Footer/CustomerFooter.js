@@ -10,7 +10,7 @@ const CustomerFooter = () => {
           <Nav>
             <NavItem>
               <NavLink
-                href="https://www.facebook.com/MemorableNights"
+                href="https://www.facebook.com/profile.php?id=61557017951967"
                 target="_blank"
               >
                 <img
@@ -22,7 +22,7 @@ const CustomerFooter = () => {
             </NavItem>
             <NavItem>
               <NavLink
-                href="https://www.instagram.com/MemorableNights"
+                href="https://www.instagram.com/memorablenightsslumberparties/"
                 target="_blank"
               >
                 <img
