@@ -119,7 +119,9 @@ function SingleTheme ( {themeName, website} ) {
     navigate("/book", { state: { themeName: themeName } });
   }
 
-
+  const IncludedTextColorHeader = theme["IncludedTextColorHeader"]? theme["IncludedTextColorHeader"] + " !important" : "auto"
+  const includedTextStyle = {style: {color: IncludedTextColorHeader}}
+  console.log(IncludedTextColorHeader)
 
   if(themeName !== undefined){
       return (
@@ -184,7 +186,9 @@ function SingleTheme ( {themeName, website} ) {
           >
             <Col className="included-col">
               <div className="included-header-div">
-                <h2 className="included-header-text">PACKAGE INCLUDES</h2>
+                <h2 className="included-header-text"
+                style={ includedTextStyle }
+                >PACKAGE INCLUDES</h2>
                 <h3 className="included-header-teepee-count">
                   --UP TO {theme["TentCount"]} TEEPEES --
                 </h3>
