@@ -119,36 +119,36 @@ function SingleTheme ( {themeName, website} ) {
     navigate("/book", { state: { themeName: themeName } });
   }
 
-  const includedTextStyleHeaderText = useRef(null);
-  const IncludedTextColor = useRef(null);
-  const includedTextStyleHeaderSubText = useRef(null);
+  // const includedTextStyleHeaderText = useRef(null);
+  // const IncludedTextColor = useRef(null);
+  // const includedTextStyleHeaderSubText = useRef(null);
 
-  // const IncludedTextColorHeader = theme["IncludedTextColorHeader"]? "white" : "auto"
+  // // const IncludedTextColorHeader = theme["IncludedTextColorHeader"]? "white" : "auto"
 
-  useEffect(() => {
-    if(theme["IncludedTextColorSubText"] && includedTextStyleHeaderSubText.current){
-      includedTextStyleHeaderSubText.current.style.setProperty('color', theme["IncludedTextColorSubText"], 'important')
-    }
-  }, [theme["IncludedTextColorSubText"]])
+  // useEffect(() => {
+  //   if(theme["IncludedTextColorSubText"] && includedTextStyleHeaderSubText.current){
+  //     includedTextStyleHeaderSubText.current.style.setProperty('color', theme["IncludedTextColorSubText"], 'important')
+  //   }
+  // }, [theme["IncludedTextColorSubText"]])
 
 
-  useEffect(() => {
+  // useEffect(() => {
 
-    if(theme["IncludedTextColorHeader"] && includedTextStyleHeaderText.current){
-      includedTextStyleHeaderText.current.style.setProperty('color', theme["IncludedTextColorHeader"], 'important')
-    }
-  }, [theme["IncludedTextColorHeader"]])
-  // var includedTextStyle = {color: IncludedTextColorHeader}
+  //   if(theme["IncludedTextColorHeader"] && includedTextStyleHeaderText.current){
+  //     includedTextStyleHeaderText.current.style.setProperty('color', theme["IncludedTextColorHeader"], 'important')
+  //   }
+  // }, [theme["IncludedTextColorHeader"]])
+  // // var includedTextStyle = {color: IncludedTextColorHeader}
 
-  useEffect(() => {
-    if(theme["IncludedTextColor"] && IncludedTextColor.current){
-      const items = IncludedTextColor.current.querySelectorAll('.included-item-list')
-      items.forEach(item => {
-        item.style.setProperty('color', theme["IncludedTextColor"], 'important')
-      })
-      // IncludedTextColor.current.style.setProperty('color', theme["IncludedTextColor"], 'important')
-    }
-  }, [theme["IncludedTextColor"]])
+  // useEffect(() => {
+  //   if(theme["IncludedTextColor"] && IncludedTextColor.current){
+  //     const items = IncludedTextColor.current.querySelectorAll('.included-item-list')
+  //     items.forEach(item => {
+  //       item.style.setProperty('color', theme["IncludedTextColor"], 'important')
+  //     })
+  //     // IncludedTextColor.current.style.setProperty('color', theme["IncludedTextColor"], 'important')
+  //   }
+  // }, [theme["IncludedTextColor"]])
 
   if(themeName !== undefined){
       return (
@@ -214,16 +214,14 @@ function SingleTheme ( {themeName, website} ) {
             <Col className="included-col">
               <div className="included-header-div">
                 <h2 className="included-header-text"
-                ref={ includedTextStyleHeaderText }
                 >PACKAGE INCLUDES</h2>
                 <h3 className="included-header-teepee-count"
-                  ref={ includedTextStyleHeaderSubText}
                 >
                   --UP TO {theme["TentCount"]} TEEPEES --
                 </h3>
               </div>
               <div className="included-list-div">
-                <ul className="included-list-ul" ref={IncludedTextColor}>
+                <ul className="included-list-ul" >
                   {theme["Included"].map((section) => {
                     return <li className="included-item-list">{section}</li>;
                   })}
