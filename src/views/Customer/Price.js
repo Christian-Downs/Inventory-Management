@@ -174,7 +174,7 @@ const AddonCard = (addon) => {
     <div className="addon-card">
       <div className="addon-card-header">
         <p className="addon-card-title">{addon.name}</p>
-        <p className="addon-card-price">${addon.price}</p>
+        <p className="addon-card-price">{addon.price}</p>
       </div>
       <div className="addon-card-body">
         <Image className="addon-card-image" src={image} onClick={openModal} />

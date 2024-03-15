@@ -44,23 +44,35 @@
       "items": [
         {
           "name": "Personalized Robe",
-          "price": 20,
+          "price": "$20",
           "image": "robe.png"
         },
         {
           "name": "Makeup Bag",
-          "price": 15,
+          "price": "$15",
           "image": "makeupbag.png"
         },
         {
           "name": "Lounge Pajama Set",
-          "price": 45,
+          "price": "$45",
           "image": "pajamas.png"
         },
         {
           "name": "Personalized T-shirts",
-          "price": 18,
+          "price": "$18",
           "image": "t-shirt.png"
+        }, {
+          "name":"Balloon Arch",
+          "price": "$15 Per Foot",
+          "image": "DSC00026_SPACE_HERO1.jpg"
+        }, {
+          "name": "Karaoke Machine",
+          "price": "$50",
+          "image": "karaokeMachine.png"
+        }, {
+          "name":"Paloroid Camera",
+          "price": "From $50",
+          "image": "polaroid.png"
         }
       ]
     }
