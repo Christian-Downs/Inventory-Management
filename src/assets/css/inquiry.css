@@ -155,3 +155,9 @@
     justify-content: center;
     width: 100%;
 }
+
+.mobile {
+    h1{
+        font-size: 2rem;
+    }
+}
