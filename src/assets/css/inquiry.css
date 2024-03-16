@@ -156,6 +156,13 @@
     width: 100%;
 }
 
+
+.button-row-text-row{
+    width: 100%;
+    justify-content: center;
+    margin-left: 0 !important;
+}
+
 .mobile {
     h1{
         font-size: 2rem;
