@@ -34,7 +34,8 @@ function CustomerHeader() {
   useEffect(() => {
     if (dropdownOpen && dropdownMenuRef.current) {
       const menu = dropdownMenuRef.current;
-      menu.style.transform = "translate3d(0px, 0px, 0px)";
+      menu.style.transform = "translate3d(0px, 0px, 0px) !important";
+      menu.style.width = "100%";
     } else {
       // dropdownMenuRef.current.style.display = "none";
     }

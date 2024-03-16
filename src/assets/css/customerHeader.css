@@ -127,3 +127,16 @@ font: normal normal normal 32px/1.4em 'playfair display',
   display:flex !important;
   position: static !important;
 }
+.customer-dropdown-header{
+  width: 100%;
+}
+
+.dropdown-menu:before{
+  left:50% !important;
+}
+
+@media (max-width: 480px) {
+  .dropdown-menu:before{
+    left: 10% !important;
+  } 
+}

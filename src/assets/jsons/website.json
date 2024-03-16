@@ -82,14 +82,14 @@
       "id": 1,
       "MainImage": "TaylorSwift/DSC00063_SWIFT_HERO1.jpg",
       "Description": [
-        "🎵It feels like the perfect night to dress up like hipsters and sleep in teepees!🎵",
-        "This party comes with all of the essentials to make your Swiftie's Era's Tour a night to remember!",
+        "🎵I promise that you'll never find another like ME!🎵",
+        "This party set up is sure to give your Swiftie the Era's Tour of their dreams!",
         "Every Teepee comes as a different Taylor Swift era!"
       ],
-      "HeaderColor": "pink",
+      "HeaderColor": "#fdf9f9",
       "InquiryButtonColor": "#74c1d6",
-      "IncludedBackgroundColor": "#b685bf",
-      "LowerImageBackgroundColor": "#b685bf",
+      "IncludedBackgroundColor": "rgb(255 230 230)",
+      "LowerImageBackgroundColor": "#fdf9f9",
       "TentCount": 4,
       "Included": [
         "Delivery, Set up/Styling, Takedown, Laundering of Linens",
@@ -154,13 +154,10 @@
         "Let's Glow Crazy!",
         "This party setup comes with a blacklight to showcase the bright neon colors that will make your party glow!"
       ],
-      "HeaderColor": "pink",
-      "InquiryButtonColor": "blueviolet",
-      "IncludedBackgroundColor": "#3100c2d1",
-      "IncludedTextColorHeader": "white",
-      "IncludedTextColor": "white",
-      "IncludedTextColorSubText": "white",
-      "LowerImageBackgroundColor": "#3100c2d1",
+      "HeaderColor": "#fdf9f9",
+      "InquiryButtonColor": "#74c1d6",
+      "IncludedBackgroundColor": "rgb(255 230 230)",
+      "LowerImageBackgroundColor": "#fdf9f9",
       "TentCount": 4,
       "Included": [
         "Delivery, Set up/Styling, Takedown, Laundering of Linens",
@@ -221,13 +218,13 @@
       "MainImage": "PINK/MainImage.jpg",
       "Description": [
         "Every girl deserves to feel pampered and pretty in pink!",
-        "This party gives the feel of relaxation with the added fun of a sleepover.",
+        "This party offers a mature pink style with the added fun of a sleepover.",
         "Add on the spa package for the ultimate experience!"
       ],
-      "HeaderColor": "pink",
-      "InquiryButtonColor": "blueviolet",
-      "IncludedBackgroundColor": "#bd34b9",
-      "LowerImageBackgroundColor": "#b685bf",
+      "HeaderColor": "#fdf9f9",
+      "InquiryButtonColor": "#74c1d6",
+      "IncludedBackgroundColor": "rgb(255 230 230)",
+      "LowerImageBackgroundColor": "#fdf9f9",
       "TentCount": 2,
       "Included": [
         "Delivery, Set up/Styling, Takedown, Laundering of Linens",
@@ -289,10 +286,10 @@
         "Shoot for the moon, and finally touch the stars with this out of this world space themed sleepover!",
         "This party setup comes with everything you need to have a blast and feel like you are in outer space."
       ],
-      "HeaderColor": "pink",
-      "InquiryButtonColor": "blueviolet",
-      "IncludedBackgroundColor": "#bd34b9",
-      "LowerImageBackgroundColor": "#b685bf",
+      "HeaderColor": "#fdf9f9",
+      "InquiryButtonColor": "#74c1d6",
+      "IncludedBackgroundColor": "rgb(255 230 230)",
+      "LowerImageBackgroundColor": "#fdf9f9",
       "TentCount": 4,
       "Included": [
         "Delivery, Set up/Styling, Takedown, Laundering of Linens",
@@ -353,12 +350,13 @@
       "MainImage": "GAMER/MainImage.jpg",
       "Description": [
         "Game on!",
-        "Get ready to have a blast with this gaming themed sleepover!"
+        "Get ready to have a blast with this gaming themed sleepover!",
+        "Got a favorite game? We will try to customize to your preference, just let us know!"
       ],
-      "HeaderColor": "pink",
-      "InquiryButtonColor": "blueviolet",
-      "IncludedBackgroundColor": "#bd34b9",
-      "LowerImageBackgroundColor": "#b685bf",
+      "HeaderColor": "#fdf9f9",
+      "InquiryButtonColor": "#74c1d6",
+      "IncludedBackgroundColor": "rgb(255 230 230)",
+      "LowerImageBackgroundColor": "#fdf9f9",
       "TentCount": 4,
       "Included": [
         "Delivery, Set up/Styling, Takedown, Laundering of Linens",
@@ -416,16 +414,16 @@
       ]
     },
     "Unicorn": {
-      "id": 2,
+      "id": 6,
       "MainImage": "UNICORN/maingif.gif",
       "Description": [
         "Rainbows and Unicorns! ",
         "This party comes with a cuddly unicorn companion to make your party magical!"
       ],
-      "HeaderColor": "pink",
-      "InquiryButtonColor": "blueviolet",
-      "IncludedBackgroundColor": "#bd34b9",
-      "LowerImageBackgroundColor": "#b685bf",
+      "HeaderColor": "#fdf9f9",
+      "InquiryButtonColor": "#74c1d6",
+      "IncludedBackgroundColor": "rgb(255 230 230)",
+      "LowerImageBackgroundColor": "#fdf9f9",
       "TentCount": 4,
       "Included": [
         "Delivery, Set up/Styling, Takedown, Laundering of Linens",
@@ -444,16 +442,16 @@
       ]
     },
     "Sweet Dreams": {
-      "id": 2,
+      "id": 7,
       "MainImage": "comingSoon.png",
       "Description": [
-        "Let's Glow Crazy!",
-        "This party setup comes with a blacklight to showcase the bright neon colors that will make your party glow!"
+        "Who needs to count sheep when you can count ice cream?",
+        "This party comes with deliciously adorable decorations to make your party extra sweet!"
       ],
-      "HeaderColor": "pink",
-      "InquiryButtonColor": "blueviolet",
-      "IncludedBackgroundColor": "#bd34b9",
-      "LowerImageBackgroundColor": "#b685bf",
+      "HeaderColor": "#fdf9f9",
+      "InquiryButtonColor": "#74c1d6",
+      "IncludedBackgroundColor": "rgb(255 230 230)",
+      "LowerImageBackgroundColor": "#fdf9f9",
       "TentCount": 4,
       "Included": [
         "Delivery, Set up/Styling, Takedown, Laundering of Linens",
@@ -467,29 +465,20 @@
         "Balloon Toppers"
       ],
       "Images": [
-        "GLOW/DSC09881_GLOW_HERO2.jpg",
-        "GLOW/DSC09903_GLOW_HERO3.jpg",
-        "GLOW/DSC09914.jpg",
-        "GLOW/DSC09916.jpg",
-        "GLOW/DSC09918.jpg",
-        "GLOW/DSC09919.jpg",
-        "GLOW/DSC09920.jpg",
-        "GLOW/DSC09922.jpg",
-        "GLOW/DSC09929.jpg",
-        "GLOW/DSC09932.jpg"
+
       ]
     },
     "Sweet 16": {
-      "id": 2,
+      "id": 8,
       "MainImage": "comingSoon.png",
       "Description": [
-        "Let's Glow Crazy!",
-        "This party setup comes with a blacklight to showcase the bright neon colors that will make your party glow!"
+        "... or 7 ... or 12 ... or 9 ...",
+        "The point is, this luxurious 'Sweet Dreams' glow up will make your party sweet at any age! "
       ],
-      "HeaderColor": "pink",
-      "InquiryButtonColor": "blueviolet",
-      "IncludedBackgroundColor": "#bd34b9",
-      "LowerImageBackgroundColor": "#b685bf",
+      "HeaderColor": "#fdf9f9",
+      "InquiryButtonColor": "#74c1d6",
+      "IncludedBackgroundColor": "rgb(255 230 230)",
+      "LowerImageBackgroundColor": "#fdf9f9",
       "TentCount": 4,
       "Included": [
         "Delivery, Set up/Styling, Takedown, Laundering of Linens",
@@ -506,16 +495,18 @@
       ]
     },
     "Coming Soon": {
-      "id": 2,
+      "id": 9,
       "MainImage": "comingSoon.png",
       "Description": [
-        "Let's Glow Crazy!",
-        "This party setup comes with a blacklight to showcase the bright neon colors that will make your party glow!"
+        "Here are some of the coming soon themes:",
+        "• Noahs Ark",
+        "• Gone Bananas",
+        "• Flower Power"
       ],
-      "HeaderColor": "pink",
-      "InquiryButtonColor": "blueviolet",
-      "IncludedBackgroundColor": "#bd34b9",
-      "LowerImageBackgroundColor": "#b685bf",
+      "HeaderColor": "#fdf9f9",
+      "InquiryButtonColor": "#74c1d6",
+      "IncludedBackgroundColor": "rgb(255 230 230)",
+      "LowerImageBackgroundColor": "#fdf9f9",
       "TentCount": 4,
       "Included": [
         "Delivery, Set up/Styling, Takedown, Laundering of Linens",
@@ -529,16 +520,7 @@
         "Balloon Toppers"
       ],
       "Images": [
-        "GLOW/DSC09881_GLOW_HERO2.jpg",
-        "GLOW/DSC09903_GLOW_HERO3.jpg",
-        "GLOW/DSC09914.jpg",
-        "GLOW/DSC09916.jpg",
-        "GLOW/DSC09918.jpg",
-        "GLOW/DSC09919.jpg",
-        "GLOW/DSC09920.jpg",
-        "GLOW/DSC09922.jpg",
-        "GLOW/DSC09929.jpg",
-        "GLOW/DSC09932.jpg"
+
       ]
     }
   }
