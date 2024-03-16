@@ -175,8 +175,8 @@ const AddonCard = (addon) => {
         <p className="addon-card-title">{addon.name}</p>
         <p className="addon-card-price">{addon.price}</p>
       </div>
-      {/*<div className="addon-card-body">
-        <Image className="addon-card-image" src={image} onClick={openModal} />
+      <div className="addon-card-body">
+        <Image className="addon-card-image" src={image}/>
         <div id={modalId} className="modal" style={style}>
           <span class="close" onClick={closeModal}>
             &times;
@@ -184,7 +184,7 @@ const AddonCard = (addon) => {
           <Image src={image} className="modal-content" id="img01" />
           <div id="caption">{addon.name}</div>
   </div>
-  </div>*/}
+  </div>
     </div>
   );
 };
