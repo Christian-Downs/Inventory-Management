@@ -4,6 +4,7 @@ import "assets/css/inquiry.css";
 import { Row, Col, Button } from "react-bootstrap";
 import website from "assets/jsons/website.json";
 import axios from "axios";
+import FAQ from "./FAQ";
 
 function Inquiry() {
   const [name, setName] = useState("");
@@ -171,8 +172,8 @@ function Inquiry() {
               </Row>
               <Row className="button-row">
                 <p>
-                    *By clicking "Submit" you agree to our Terms and Conditions*
-                  </p>
+                  *By clicking "Submit" you agree to our Terms and Conditions*
+                </p>
               </Row>
             </form>
           </Row>
@@ -270,15 +271,21 @@ function Inquiry() {
                 </Col>
               </Row>
               <Row className="button-row">
-                <Button type="submit">Submit</Button>
-                <p>
-                  *By clicking "Submit" you agree to our Terms and Conditions*
-                </p>
+                <Row className="submit-button-row-row">
+                  <Button type="submit">Submit</Button>
+                </Row>
+                <Row className="button-row-text-row">
+                  <p>
+                    *By clicking "Submit" you agree to our Terms and Conditions*
+                  </p>
+                </Row>
+
               </Row>
             </form>
           </Row>
         </Row>
       </div>
+      <FAQ />
     </div>
   );
 }

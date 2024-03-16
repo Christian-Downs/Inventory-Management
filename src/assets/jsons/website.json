@@ -4,6 +4,52 @@
   "subtitle": "Slumber Party Rentals",
   "title_location": "Edwardsville, IL  |  St. Louis, MO",
   "CarouselImages": "assets/img/CarouselImages",
+  "faq": {
+    "questions": [
+      {
+        "question": "Do you provide bed pillows?",
+        "answer": "We understand everybody has a pillow preference, so we do not provide sleeping pillows for your slumber party."
+      },
+      {
+        "question": "What is your service area?",
+        "answer": "We service within 30 miles of the St. Louis Metropolitan area on either side of the river!"
+      },
+      {
+        "question": "How much space is needed?",
+        "answer": "Each of our teepees is 4.5 ft by 6 ft, each with a twin size bed. We will need at least 16 ft by 24 ft of open space, depending on the number of teepees rented for your event. When we quote your price, we will take a careful look at your space and determine the best and safest layout for your party!"
+      },
+      {
+        "question": "What is included in each package?",
+        "answer": [
+          "Complete set up and breakdown of the party.",
+          "Travel fees",
+          "Teepees",
+          "Decorative pillows",
+          "Throw blankets",
+          "Bed trays",
+          "LED lights",
+          "Themed decor",
+          "Ballon toppers"
+        ]
+      },
+      {
+        "question": "What can I do to prepare for set up??",
+        "answer": "Our goal is to provide a magical sleepover experience for all of our clients. In order to accomplish this, we ask that you please have the area in which we are seting up be smoke and pet free, and as clean as possible. For the convenience and safety of our clients and decorating team, we also ask that you move as much furniture from the area as possible. More space and less furniture means maximum slumber party fun!"
+      },
+      {
+        "question": "Can I have food or drinks in my teepee?",
+        "answer": "No. We ask that you refrain from having food or drinks inside the teepees at your party. "
+      },
+      {
+        "question": "What themes do you offer?",
+        "answer":[ "Taylor Swift", "Glow", "Pretty in Pink", "Space", "Gaming", "Unicorn", "Sweet Dreams", "Sweet 16", "And more to come!"]
+      },
+      {
+        "question": "What is your cancellation policy?",
+        "answer": "We understand that things come up and plans change. We will do our best to accommodate your needs. If you need to cancel your party, please let us know as soon as possible. We do not offer refunds, however we would be happy to reschule your party for a later date."
+      }
+    ]
+  },
   "price_page": {
     "background": "pink",
     "included": {
@@ -27,7 +73,6 @@
         "4 Tents": "$374",
         "5 Tents": "$449",
         "6 Tents": "$524"
-        
       },
       "Additional": "*$75 per additional tent*",
       "Deposit": "A $100 deposit is required to secure your date. The remaining balance is due 7 days prior to your event. We accept cash, check, or Venmo."
@@ -61,16 +106,19 @@
           "name": "Personalized T-shirts",
           "price": "$18",
           "image": "t-shirt.png"
-        }, {
-          "name":"Balloon Arch",
+        },
+        {
+          "name": "Balloon Arch",
           "price": "$15 Per Foot",
           "image": "DSC00026_SPACE_HERO1.jpg"
-        }, {
+        },
+        {
           "name": "Karaoke Machine",
           "price": "$50",
           "image": "karaokeMachine.png"
-        }, {
-          "name":"Paloroid Camera",
+        },
+        {
+          "name": "Paloroid Camera",
           "price": "From $50",
           "image": "polaroid.png"
         }
@@ -175,7 +223,6 @@
         "GLOW/DSC09914.jpg",
         "GLOW/DSC09916.jpg",
         "GLOW/DSC09918.jpg"
-
       ],
       "rows": [
         [
@@ -242,7 +289,7 @@
         "PINK/DSC00131.jpg",
         "PINK/DSC00143.jpg",
         "PINK/DSC00145.jpg"
-            ],
+      ],
       "rows": [
         [
           {
@@ -464,9 +511,7 @@
         "Garlands",
         "Balloon Toppers"
       ],
-      "Images": [
-
-      ]
+      "Images": []
     },
     "Sweet 16": {
       "id": 8,
@@ -491,8 +536,7 @@
         "Garlands",
         "Balloon Toppers"
       ],
-      "Images": [
-      ]
+      "Images": []
     },
     "Coming Soon": {
       "id": 9,
@@ -519,9 +563,7 @@
         "Garlands",
         "Balloon Toppers"
       ],
-      "Images": [
-
-      ]
+      "Images": []
     }
   }
 }
