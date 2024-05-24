@@ -33,7 +33,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 ReactGA.initialize(process.env.REACT_APP_TRACKING_ID);
 
 const Analytics = () => {
-
+  console.log(process.env.REACT_APP_TRACKING_ID)
   const location = useLocation();
   React.useEffect(() => {
     ReactGA.set({ page: location.pathname });
