@@ -17,7 +17,8 @@
 */
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Navigate, useLocation } from "react-router-dom";
+import ReactGA from 'react-ga';
 
 import AdminLayout from "layouts/Admin/Admin.js";
 import CustomerLayout from "layouts/Customer/Customer.js";
@@ -29,10 +30,24 @@ import BackgroundColorWrapper from "./components/BackgroundColorWrapper/Backgrou
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
+ReactGA.initialize(process.env.REACT_APP_TRACKING_ID);
+
+const Analytics = () => {
+
+  const location = useLocation();
+  React.useEffect(() => {
+    ReactGA.set({ page: location.pathname });
+    ReactGA.pageview(location.pathname + location.search);
+  }, [location]);
+  return null;
+};
+
+
 root.render(
   <ThemeContextWrapper>
     <BackgroundColorWrapper>
       <BrowserRouter >
+        <Analytics />
         <Routes>
           {/* <Route path="/admin/*" element={<AdminLayout />} /> */}
           {/* <Route path="/rtl/*" element={<RTLLayout />} /> */}
