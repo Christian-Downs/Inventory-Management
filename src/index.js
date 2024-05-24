@@ -18,7 +18,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Route, Routes, Navigate, useLocation } from "react-router-dom";
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 
 import AdminLayout from "layouts/Admin/Admin.js";
 import CustomerLayout from "layouts/Customer/Customer.js";
@@ -36,8 +36,11 @@ const Analytics = () => {
   console.log(process.env.REACT_APP_TRACKING_ID)
   const location = useLocation();
   React.useEffect(() => {
-    ReactGA.set({ page: location.pathname });
-    ReactGA.pageview(location.pathname + location.search);
+    ReactGA.send({
+      hitType: "pageview",
+      page: location.pathname + location.search,
+    });
+
   }, [location]);
   return null;
 };
