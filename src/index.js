@@ -36,9 +36,12 @@ const Analytics = () => {
   console.log(process.env.REACT_APP_TRACKING_ID)
   const location = useLocation();
   React.useEffect(() => {
+    console.log(location.pathname + location.search)
     ReactGA.send({
       hitType: "pageview",
       page: location.pathname + location.search,
+      title: location.pathname,
+      location: window.location.href,
     });
 
   }, [location]);
