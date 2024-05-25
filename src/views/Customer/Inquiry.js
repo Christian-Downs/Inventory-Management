@@ -36,7 +36,7 @@ function Inquiry() {
       return;
     }
 
-    axios.post(website["server-url"] + "/api/sendEmail", {
+    axios.post(website["server-url"] + "/api/sendEmail.js", {
       email: "Christian.downs.15@gmail.com",
       subject: "New Booking Inquiry",
       message: `Name: ${name}\nEmail: ${email}\nGuest Count: ${guestCount}\nPhone Number: ${phoneNumber}\nDate: ${selectedDate}\nAddress: ${address}\nTheme: ${selectedTheme}\nMessage: ${message}`
