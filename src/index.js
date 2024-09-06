@@ -29,12 +29,17 @@ import ThemeContextWrapper from "./components/ThemeWrapper/ThemeWrapper";
 import BackgroundColorWrapper from "./components/BackgroundColorWrapper/BackgroundColorWrapper";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+if (process.env.REACT_APP_TRACKING_ID) {
+  ReactGA.initialize(process.env.REACT_APP_TRACKING_ID);
+} else {
+  console.warn("Tracking ID is missing or undefined.");
+}
 
-ReactGA.initialize(process.env.REACT_APP_TRACKING_ID);
+//ReactGA.initialize(process.env.REACT_APP_TRACKING_ID);
 
 const Analytics = () => {
   console.log(process.env.REACT_APP_TRACKING_ID)
-  const location = useLocation();
+  const location = useLocation(); 
   React.useEffect(() => {
     console.log(location.pathname + location.search)
     ReactGA.send({
