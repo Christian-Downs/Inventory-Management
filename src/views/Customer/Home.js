@@ -105,7 +105,7 @@ function Home(props) {
                   </h4>
                 </div>
                 <div>
-                  <h3>Design Your Own Party</h3>
+                  <h3>Design Your Own Party</h3> test
                   <h4>
                     Choose from a variety of our themes to make your party fun
                     and unique! You can also choose from a handful of our
